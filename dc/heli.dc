@@ -1,0 +1,51 @@
+layer heli is import coaches;
+
+	 class HeliWeb is
+         -- PQ: sequence Patient;    -- queue of patients waiting to see a coach
+         -- CQ: sequence Coach;      -- queue of free coaches
+         PQ: sequence integer;    -- queue of patients' ids waiting to see a coach
+         CQ: sequence integer;      -- queue of free coaches ids
+     end HeliWeb;	 
+	 
+     relation recvGoal (HeliWeb, Patient) is 1 : 0..1;
+     relation recvActivity (HeliWeb, Patient) is  1 : 0..1;
+
+     action recvGoal(h:HeliWeb; p:Patient) is
+     when true do
+         -- (TODO) Assign id to the patient and add patient to list
+         --h.PQ := h.PQ + <p.id>; -- How to add an integer to a sequence?
+	     -- Get last coach from the sequence and add new patient
+         --h.CQ.head.PQ.add(p.id); -- How to get the last coach of a sequence?
+    end;
+
+     action recvActivity(h:HeliWeb; p:Patient) is
+     when (true) do
+         -- Compute & Update adherance of the patient  
+		 --p.adh:= 1.0 - (now - p.t_last_activity) ; -- 
+		 --p.t_last_activity := now;
+		 -- Get coach of the patient from the CQ and send ADH 
+		 -- How to search in sequence?
+		 --sendAdherence(CQ.head, p);
+     end;
+
+     action sendAdherence(h:HeliWeb; c:Coach; p:Patient) is
+     when p.id in c.PQ do
+	     --recvAdherance(p,c);
+     end;
+	 
+     -- Patient Actions
+     refined sendGoal(p:Patient; h:HeliWeb) 
+	 of sendGoal(p) is -- Registration starts from sending Goal to HeliWeb 
+     when true do
+	     ...
+         recvGoal(h, p);
+     end;
+
+     refined sendActivity(p:Patient; h:HeliWeb) 
+	 of sendActivity(p) is
+     when true do
+	     ...
+	     recvActivity(h, p);
+     end;	 
+
+end heli;
