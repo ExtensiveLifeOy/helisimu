@@ -1,4 +1,15 @@
-layer heli is import coaches;
+layer heli is
+
+ type Activity is
+         weight: real;
+		 steps: integer;
+		 fruits: integer;
+	 end Activity;
+  
+	 type Goal is
+		 typ: (control_weight, walk_steps_aweek, eat_fruits_aweek);    
+		 val: real;  -- reals will include integers values
+	 end Goal;
 
 	 class HeliWeb is
          -- PQ: sequence Patient;    -- queue of patients waiting to see a coach
@@ -7,11 +18,64 @@ layer heli is import coaches;
          CQ: sequence integer;      -- queue of free coaches ids
      end HeliWeb;	 
 	 
-     relation recvGoal (HeliWeb, Patient) is 1 : 0..1;
-     relation recvActivity (HeliWeb, Patient) is  1 : 0..1;
+	 class Coach is
+         PQ: set integer;    -- queue of patients' id attended by the coach
+    end Coach;
+	 
+	class World is
+         date : real;
+		 --weather?
+    end World;
+	 
+	 class Patient is
+	     id: integer;
+		 goal: Goal;    -- Target goal for Activity
+         t_registered : time;
+		 act: Activity;
+         t_last_activity : real; --last day when active
 
-     action recvGoal(h:HeliWeb; p:Patient) is
+		 messages : integer;
+		 
+		 m: real; -- Motivation to comply
+		 ns: real; -- Number of times an Activity was Sent (used to compute Compliance history)
+		 v: real; -- compliance history 
+     	 adh: real;    -- Adherance of the patient (idem. PECS model)
+		 prob: real;   -- Probability of sending Activity
+	 end Patient;
+	 
+	 
+     relation recvGoal (HeliWeb, Patient) is 0..1 : 0..99;
+     relation recvActivity (HeliWeb, Patient) is  0..1 : 0..1;
+	relation sendPatientMessage (Coach, Patient) is 0..1 : 0..1;
+     relation recvPatientAdherence (Patient, Coach) is 0..1 : 0..1;
+     relation recvPatientMessage (Patient, Coach) is 0..1 : 0..1;
+
+
+	 relation coachOfPatient (Coach, Patient) is 0..1 : 0..10;
+	 
+	function example (i:integer;times:integer) :integer is
+		return i;
+
+	 end; 
+	 
+	 action register(c:Coach;p:Patient) is
+     when (not coachOfPatient(c,p)) do
+		coachOfPatient(c,p);
+	 end;
+	 
+	 
+	 action nextDay(w:World) is
      when true do
+		w.date:=w.date+1.0;
+	 end;
+	 
+     action recvGoal(h:HeliWeb; p:Patient; times:integer) is
+     when true do
+	 
+	 	
+		
+		--p.ns := example(p.ns)
+		-- p.ns := p.ns+1;
          -- (TODO) Assign id to the patient and add patient to list
          --h.PQ := h.PQ + <p.id>; -- How to add an integer to a sequence?
 	     -- Get last coach from the sequence and add new patient
@@ -27,25 +91,74 @@ layer heli is import coaches;
 		 -- How to search in sequence?
 		 --sendAdherence(CQ.head, p);
      end;
-
-     action sendAdherence(h:HeliWeb; c:Coach; p:Patient) is
-     when p.id in c.PQ do
-	     --recvAdherance(p,c);
-     end;
 	 
      -- Patient Actions
-     refined sendGoal(p:Patient; h:HeliWeb) 
-	 of sendGoal(p) is -- Registration starts from sending Goal to HeliWeb 
-     when true do
-	     ...
-         recvGoal(h, p);
+
+	action sendMessage1(c:Coach; p:Patient) is
+     when (p.prob < 27.0 and p.adh < 3.0 and coachOfPatient(c,p)) do
+         --recvPatientMessage(p,c);-- Why cannot uncomment this line?
+		 p.messages := p.messages+1;
+     end;
+	
+	 action sendMessage2(c:Coach; p:Patient) is
+     when (p.prob < 20.0 and p.adh < 1.0 and coachOfPatient(c,p)) do
+         --recvPatientMessage(p,c);-- Why cannot uncomment this line?
+		 p.messages := p.messages+1;
+     end;
+	 
+	 
+     action recvAdherence(p:Patient; c:Coach) is
+	 when p.id in c.PQ and p.adh < 0.5 do 
+ 		 sendPatientMessage(c,p);
      end;
 
-     refined sendActivity(p:Patient; h:HeliWeb) 
-	 of sendActivity(p) is
+	 
+	 action sendGoal(p:Patient; h:HeliWeb) is -- Registration starts from sending Goal 
      when true do
-	     ...
-	     recvActivity(h, p);
-     end;	 
+         recvGoal(h, p)
+	     || p.m:=1.0;
+		 --p.adh:=1.0;
+		 --p.t_registered @; -- now?
+   		 --p.t_last_activity := p.t_registered; -- Why cannot uncomment this line?
+     end;
 
+     action sendActivity(p:Patient; h:HeliWeb; w:World) is -- Patients send their Activity periodically 
+     when (p.t_last_activity<w.date) do
+	        p.prob:=1.0
+		 || p.ns := p.ns + 1.0
+		 || p.t_last_activity := w.date
+         -- Compute & Update adherance of the patient  
+		 || p.adh:= 5.0 - (w.date - p.ns) -- think of better calculation, e.g. use old adh
+		 -- Get coach of the patient from the CQ and send ADH 
+		 -- How to search in sequence?
+		 --sendAdherence(CQ.head, p);
+		 
+		||if (p.ns + 1.0) = 1.0 then 
+		p.prob := p.ns + 1.0;
+		elsif (p.ns + 1.0) = 2.0 then
+		p.prob := (p.ns + 1.0) * (p.ns + 1.0);
+		elsif (p.ns + 1.0) = 3.0 then
+		p.prob := (p.ns + 1.0) * (p.ns + 1.0) * (p.ns + 1.0);
+		elsif (p.ns + 1.0) = 4.0 then
+		p.prob := (p.ns + 1.0) * (p.ns + 1.0) * (p.ns + 1.0) * (p.ns + 1.0);
+		end if;
+     end;
+
+	 --  this fucntion will execute based on probabilities
+	 action adjustProbabilities(p:Patient) is
+	 when true do 
+		 -- v = 1 - (0.1)^ns; 
+		 p.prob:= p.m * p.v * p.adh;
+	 end; 
+
+ --    action recvMessage(p:Patient) is 
+      -- Patient will change behaviour (probability of sending activity) based on 
+	  -- received motivational messages
+ --    when true do
+	     --adjustProbabilities(p); -- Whay cannot call this action/function?
+		 --p.v:= 1.0 - (0.1)^ns; -- How to call an exponential function e.g. exp(0.1, ns)?
+--		 p.prob:= p.m * p.v * p.adh;
+--     end;
+	 	 
+	 
 end heli;
