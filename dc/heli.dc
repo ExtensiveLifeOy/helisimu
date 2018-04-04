@@ -22,10 +22,11 @@ layer heli is
          PQ: set integer;    -- queue of patients' id attended by the coach
     end Coach;
 	 
+        ---- represents all external environment 
 	class World is
          date : real;
-		 --weather?
-    end World;
+	 weather: (sunny, cloudy);
+        end World;
 	 
 	 class Patient is
 	     id: integer;
