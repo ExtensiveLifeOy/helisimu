@@ -42,6 +42,8 @@ layer heli is
 		 v: real; -- compliance history 
      	 adh: real;    -- Adherance of the patient (idem. PECS model)
 		 prob: real;   -- Probability of sending Activity
+		 
+		 status: (hapa_motivation, hapa_volition);  -- adding HAPA status
 	 end Patient;
 	 
 	 
