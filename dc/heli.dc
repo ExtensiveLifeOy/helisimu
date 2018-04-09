@@ -41,17 +41,12 @@ layer heli is
      	 adh: real;    -- Adherance of the patient (idem. PECS model)
 	 end Patient;
 	 
-     relation recvGoal (HeliWeb, Patient) is 0..1 : 0..99;
      relation recvActivity (HeliWeb, Patient) is  0..1 : 0..99;
 
-	 relation sendPatientMessage (Coach, Patient) is 0..1 : 0..1;
      relation recvPatientAdherence (Patient, Coach) is 0..1 : 0..1;
      relation recvPatientMessage (Patient, Coach) is 0..1 : 0..1;
 
-     relation computeAdherance (World, Patient) is  0..1 : 0..99;
-
-
-	 relation registerPatient (HeliWeb, Patient) is 0..1 : 0..10;
+	 relation isPatientOfHeli (HeliWeb, Patient) is 0..1 : 0..10;
 	 relation coachOfPatient (Coach, Patient) is 0..1 : 0..10;
 
 	 -- Util functions
@@ -68,19 +63,11 @@ layer heli is
 	 action nextDay(w:World) is
      when true do
 		w.day:=w.day+1.0;
-	 end;
-	 	 
-     action recvGoal(h:HeliWeb; p:Patient; w:World) is
-     when (p.t_registered = 0.0) do 
-	     registerPatient(h, p)
-	     ||p.t_registered := w.day
-		 ||p.t_last_activity := w.day
-	     ||p.m:=1.0; 
-     end;
+	 end;	 	 
 
  	 action registerHeliPatient(h:HeliWeb;p:Patient) is
-     when (p.t_registered=0.0) do
-		registerPatient(h,p);
+     when (p.t_registered=0.0 and not isPatientOfHeli(h,p)) do
+		isPatientOfHeli(h,p);
 	 end;
 
 	 action registerCoach(c:Coach;p:Patient) is
@@ -93,9 +80,8 @@ layer heli is
  		 p.nmsg_sent := p.nmsg_sent + 1.0;
      end;
 	 
-	 action computeAdherance(w:World; p:Patient) is
-	 when (p.t_registered>0.0) do -- every two weeks
-		 p.adh := p.nmsg_sent / w.day; 
+	 function computeAdherance(w:World; p:Patient) : real is	 
+		 return p.nmsg_sent / w.day; 
 	 end;
 
      -- Coach Actions
@@ -109,23 +95,20 @@ layer heli is
      when (p.t_registered > 0.0 and p.adh < 0.6 and coachOfPatient(c,p)) do
 		 p.nmsg_rcvd := p.nmsg_rcvd+1;
      end;
-	 
-     action recvAdherence(p:Patient; c:Coach) is
-	 when (p.t_registered > 0.0 and coachOfPatient(c,p) and p.adh <0.8) do 
- 		 sendPatientMessage(c,p);
-     end;
-	 
+	     
      -- Patient Actionmsg_sent
-	 action sendGoal(p:Patient; h:HeliWeb) is -- Registration starts from sending Goal 
+	 action sendGoalToHeLi(p:Patient; h:HeliWeb; w:World) is -- Registration starts from sending Goal 
      when (p.t_registered = 0.0) do
-         recvGoal(h, p)
-		 ||registerPatient(h, p);
+          isPatientOfHeli(h,p)
+	     ||p.t_registered := w.day
+		 ||p.t_last_activity := w.day
+	     ||p.m:=1.0; 
      end;
 
      action sendActivity(p:Patient; h:HeliWeb; w:World) is -- Patients send their Activity periodically 
-     when (registerPatient(h,p) and p.t_last_activity<w.day and p.m > 0.0 and p.t_registered >0.0) do
+     when (isPatientOfHeli(h,p) and p.t_last_activity<w.day and p.m > 0.0 and p.t_registered >0.0) do
 		 recvActivity(h, p)
-		 || computeAdherance(w,p)
+		 || p.adh := computeAdherance(w,p)
 		 || p.t_last_activity := w.day;
 	 end;
 	 	 
