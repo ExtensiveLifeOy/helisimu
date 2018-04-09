@@ -106,12 +106,29 @@ layer heli is
 	     ||p.m:=1.0; 
      end;
 
-     action sendActivity(p:Patient; h:HeliWeb; w:World) is -- Patients send their Activity periodically 
+     action sendActivityNormal(p:Patient; h:HeliWeb; w:World) is -- Patients send their Activity periodically 
      when (isPatientOfHeli(h,p) and p.t_last_activity<w.day and p.m > 0.0 and p.t_registered >0.0) do
 		 recvActivity(h, p)
 		 || p.adh := computeAdherance(w,p)
-		 || p.t_last_activity := w.day;
+		 || p.act := Activity( weight:=75.0, steps:=5000, fruits:=1)
+		 || p.t_last_activity := w.day;		 
 	 end;
+	 
+	 action sendActivityUpWeight(p:Patient; h:HeliWeb; w:World) is -- Patients send their Activity periodically 
+     when (isPatientOfHeli(h,p) and p.t_last_activity<w.day and p.m > 0.0 and p.t_registered >0.0) do
+		 recvActivity(h, p)
+		 || p.adh := computeAdherance(w,p)
+		 || p.act := Activity( weight:=76.0, steps:=4000, fruits:=2)
+		 || p.t_last_activity := w.day;		 
+	 end;
+	 
+	 action sendActivityDownWeight(p:Patient; h:HeliWeb; w:World) is -- Patients send their Activity periodically 
+     when (isPatientOfHeli(h,p) and p.t_last_activity<w.day and p.m > 0.0 and p.t_registered >0.0) do
+		 recvActivity(h, p)
+		 || p.adh := computeAdherance(w,p)
+		 || p.act := Activity( weight:=74.0, steps:=12000, fruits:=0)
+		 || p.t_last_activity := w.day;		 
+	 end;	 	 
 	 	 
 	 --  this function will execute based on probabilities
 	 action adjustProbabilities(p:Patient) is
