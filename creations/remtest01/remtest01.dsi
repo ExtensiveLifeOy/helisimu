@@ -1,0 +1,97 @@
+instance remtest01 of heli is 
+
+  object HeliWeb_1 of HeliWeb is
+    PQ := <
+    >;
+    CQ := <
+    >;
+  end
+  object Coach_1 of Coach is
+    PQ := {
+    };
+  end
+  object World_1 of World is
+    date := 4.0;
+    weather := enum sunny(
+    );
+  end
+  object Patient_1_1 of Patient is
+    id := 0;
+    goal := Goal(
+      typ := enum control_weight(
+      );
+      val := 0.0;
+    );
+    t_registered := +0.0;
+    act := Activity(
+      weight := 0.0;
+      steps := 0;
+      fruits := 0;
+    );
+    t_last_activity := 0.0;
+    messages := 2;
+    m := 0.0;
+    ns := 0.0;
+    v := 0.0;
+    adh := 0.0;
+    prob := 0.0;
+    status := enum hapa_motivation(
+    );
+  end
+  object Patient_1_2 of Patient is
+    id := 0;
+    goal := Goal(
+      typ := enum control_weight(
+      );
+      val := 0.0;
+    );
+    t_registered := +0.0;
+    act := Activity(
+      weight := 0.0;
+      steps := 0;
+      fruits := 0;
+    );
+    t_last_activity := 0.0;
+    messages := 0;
+    m := 0.0;
+    ns := 0.0;
+    v := 0.0;
+    adh := 0.0;
+    prob := 0.0;
+    status := enum hapa_motivation(
+    );
+  end
+  object Patient_1_3 of Patient is
+    id := 0;
+    goal := Goal(
+      typ := enum control_weight(
+      );
+      val := 0.0;
+    );
+    t_registered := +0.0;
+    act := Activity(
+      weight := 0.0;
+      steps := 0;
+      fruits := 0;
+    );
+    t_last_activity := 0.0;
+    messages := 0;
+    m := 1.0;
+    ns := 0.0;
+    v := 0.0;
+    adh := 0.0;
+    prob := 0.0;
+    status := enum hapa_motivation(
+    );
+  end
+
+  relation recvGoal from HeliWeb to Patient is
+    (HeliWeb_1, Patient_1_3)
+  end
+  relation coachOfPatient from Coach to Patient is
+    (Coach_1, Patient_1_1)
+  end
+
+  omega := +0.0;
+  deadlines := {};
+end

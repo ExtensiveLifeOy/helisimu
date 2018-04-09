@@ -38,7 +38,8 @@ layer heli is
 		 m: real; -- Motivation to comply
 		 v: real; -- compliance history 
 		 prob: real;   -- Probability of sending Activity
-     	 adh: real;    -- Adherance of the patient (idem. PECS model)
+     	 adh: real;    -- Adherance of the patient (idem. PECS model)		 
+		 status: (hapa_motivation, hapa_volition);  -- adding HAPA status
 	 end Patient;
 	 
      relation recvActivity (HeliWeb, Patient) is  0..1 : 0..99;
@@ -112,7 +113,7 @@ layer heli is
 		 || p.t_last_activity := w.day;
 	 end;
 	 	 
-	 --  this fucntion will execute based on probabilities
+	 --  this function will execute based on probabilities
 	 action adjustProbabilities(p:Patient) is
 	 when p.t_registered > 0.0 do 
 	     p.v:= 1.0 - pow(0.1,p.nmsg_sent) -- 1.0 - powint(0.1,p.nmsg_sent,1.0)
