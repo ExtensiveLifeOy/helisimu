@@ -1,0 +1,77 @@
+instance hbm of heli is 
+
+  object HeliWeb_1 of HeliWeb is
+  end
+  object Coach_1 of Coach is
+  end
+  object World_1 of World is
+    day := 0.0;
+  end
+  object Patient_1 of Patient is
+    id := 0;
+    t_registered := 0.0;
+    t_last_activity := 0.0;
+    goal := Goal(
+      typ := enum control_weight(
+      );
+      val := 0.0;
+    );
+    act := Activity(
+      weight := 0.0;
+      steps := 0;
+      fruits := 0;
+    );
+    nmsg_rcvd := 0;
+    nmsg_sent := 0.0;
+    m := 0.0;
+    v := 0.0;
+    prob := 0.0;
+    adh := 0.0;
+  end
+  object Patient_2 of Patient is
+    id := 0;
+    t_registered := 0.0;
+    t_last_activity := 0.0;
+    goal := Goal(
+      typ := enum walk_steps_aweek(
+      );
+      val := 0.0;
+    );
+    act := Activity(
+      weight := 0.0;
+      steps := 0;
+      fruits := 0;
+    );
+    nmsg_rcvd := 0;
+    nmsg_sent := 0.0;
+    m := 0.0;
+    v := 0.0;
+    prob := 0.0;
+    adh := 0.0;
+  end
+  object Patient_3 of Patient is
+    id := 0;
+    t_registered := 0.0;
+    t_last_activity := 0.0;
+    goal := Goal(
+      typ := enum eat_fruits_aweek(
+      );
+      val := 0.0;
+    );
+    act := Activity(
+      weight := 0.0;
+      steps := 0;
+      fruits := 0;
+    );
+    nmsg_rcvd := 0;
+    nmsg_sent := 0.0;
+    m := 0.0;
+    v := 0.0;
+    prob := 0.0;
+    adh := 0.0;
+  end
+
+
+  omega := +0.0;
+  deadlines := {};
+end

@@ -1,6 +1,6 @@
 layer heli is
 
- type Activity is
+     type Activity is
          weight: real;
 		 steps: integer;
 		 fruits: integer;
@@ -11,155 +11,144 @@ layer heli is
 		 val: real;  -- reals will include integers values
 	 end Goal;
 
-	 class HeliWeb is
-         -- PQ: sequence Patient;    -- queue of patients waiting to see a coach
-         -- CQ: sequence Coach;      -- queue of free coaches
-         PQ: sequence integer;    -- queue of patients' ids waiting to see a coach
-         CQ: sequence integer;      -- queue of free coaches ids
-     end HeliWeb;	 
+	 class HeliWeb is 
+	 end HeliWeb;	 
 	 
-	 class Coach is
-         PQ: set integer;    -- queue of patients' id attended by the coach
-    end Coach;
-	 
-        ---- represents all external environment 
-	class World is
-         date : real;
-	 weather: (sunny, cloudy);
-        end World;
-	 
+	 class Coach is 
+	 end Coach;
+	 	 
+     ---- represents all external environment 
+	 class World is
+         day : real;
+     end World;
+
 	 class Patient is
 	     id: integer;
-		 goal: Goal;    -- Target goal for Activity
-         t_registered : time;
-		 act: Activity;
+		 
+         t_registered : real; --registration day
          t_last_activity : real; --last day when active
+		 
+		 goal: Goal;    -- Target goal for Activity
+		 act: Activity;  -- Reported Activity
 
-		 messages : integer;
+		 nmsg_rcvd : integer; -- Number of messages received from the coach
+		 nmsg_sent : real; -- Number of times an Activity was Sent in a week
+		 
 		 
 		 m: real; -- Motivation to comply
-		 ns: real; -- Number of times an Activity was Sent (used to compute Compliance history)
 		 v: real; -- compliance history 
-     	 adh: real;    -- Adherance of the patient (idem. PECS model)
 		 prob: real;   -- Probability of sending Activity
+     	 adh: real;    -- Adherance of the patient (idem. PECS model)
 	 end Patient;
 	 
-	 
      relation recvGoal (HeliWeb, Patient) is 0..1 : 0..99;
-     relation recvActivity (HeliWeb, Patient) is  0..1 : 0..1;
-	relation sendPatientMessage (Coach, Patient) is 0..1 : 0..1;
+     relation recvActivity (HeliWeb, Patient) is  0..1 : 0..99;
+
+	 relation sendPatientMessage (Coach, Patient) is 0..1 : 0..1;
      relation recvPatientAdherence (Patient, Coach) is 0..1 : 0..1;
      relation recvPatientMessage (Patient, Coach) is 0..1 : 0..1;
 
+     relation computeAdherance (World, Patient) is  0..1 : 0..99;
 
+
+	 relation registerPatient (HeliWeb, Patient) is 0..1 : 0..10;
 	 relation coachOfPatient (Coach, Patient) is 0..1 : 0..10;
-	 
-	function example (i:integer;times:integer) :integer is
-		return i;
 
+	 -- Util functions
+	 function exp(x:real) :real is
+	     return (1.0 + x + x*x/2.0 + x*x*x/6.0 + x*x*x*x/24.0 + x*x*x*x*x/120.0 + x*x*x*x*x*x/720.0 + x*x*x*x*x*x*x/5040.0 + x*x*x*x*x*x*x*x/40320.0 + x*x*x*x*x*x*x*x*x/362880.0 + x*x*x*x*x*x*x*x*x*x/3628800.0 );
+	 end; 
+
+	 function pow (a:real;b:real) :real is
+		 -- a^b = exp(b * ln(a)) a = 0.1 --> ln(a) = -2.3025
+	     return 1.0/exp(2.3025*b);
 	 end; 
 	 
-	 action register(c:Coach;p:Patient) is
-     when (not coachOfPatient(c,p)) do
+     -- Actions	 
+	 action nextDay(w:World) is
+     when true do
+		w.day:=w.day+1.0;
+	 end;
+	 	 
+     action recvGoal(h:HeliWeb; p:Patient; w:World) is
+     when (p.t_registered = 0.0) do 
+	     registerPatient(h, p)
+	     ||p.t_registered := w.day
+		 ||p.t_last_activity := w.day
+	     ||p.m:=1.0; 
+     end;
+
+ 	 action registerHeliPatient(h:HeliWeb;p:Patient) is
+     when (p.t_registered=0.0) do
+		registerPatient(h,p);
+	 end;
+
+	 action registerCoach(c:Coach;p:Patient) is
+     when (p.t_registered>0.0 and not coachOfPatient(c,p)) do
 		coachOfPatient(c,p);
 	 end;
 	 
-	 
-	 action nextDay(w:World) is
-     when true do
-		w.date:=w.date+1.0;
-	 end;
-	 
-     action recvGoal(h:HeliWeb; p:Patient; times:integer) is
-     when true do
-	 
-	 	
-		
-		--p.ns := example(p.ns)
-		-- p.ns := p.ns+1;
-         -- (TODO) Assign id to the patient and add patient to list
-         --h.PQ := h.PQ + <p.id>; -- How to add an integer to a sequence?
-	     -- Get last coach from the sequence and add new patient
-         --h.CQ.head.PQ.add(p.id); -- How to get the last coach of a sequence?
-    end;
-
-     action recvActivity(h:HeliWeb; p:Patient) is
-     when (true) do
-         -- Compute & Update adherance of the patient  
-		 --p.adh:= 1.0 - (now - p.t_last_activity) ; -- 
-		 --p.t_last_activity := now;
-		 -- Get coach of the patient from the CQ and send ADH 
-		 -- How to search in sequence?
-		 --sendAdherence(CQ.head, p);
+    action recvActivity(h:HeliWeb; p:Patient) is
+     when (p.t_registered > 0.0) do
+ 		 p.nmsg_sent := p.nmsg_sent + 1.0;
      end;
 	 
-     -- Patient Actions
+	 action computeAdherance(w:World; p:Patient) is
+	 when (p.t_registered>0.0) do -- every two weeks
+		 p.adh := p.nmsg_sent / w.day; 
+	 end;
 
-	action sendMessage1(c:Coach; p:Patient) is
-     when (p.prob < 27.0 and p.adh < 3.0 and coachOfPatient(c,p)) do
-         --recvPatientMessage(p,c);-- Why cannot uncomment this line?
-		 p.messages := p.messages+1;
+     -- Coach Actions
+
+	 action sendMessage1(c:Coach; p:Patient) is
+     when (p.t_registered > 0.0 and p.adh < 0.4 and coachOfPatient(c,p)) do
+ 		 p.nmsg_rcvd := p.nmsg_rcvd+1;
      end;
 	
 	 action sendMessage2(c:Coach; p:Patient) is
-     when (p.prob < 20.0 and p.adh < 1.0 and coachOfPatient(c,p)) do
-         --recvPatientMessage(p,c);-- Why cannot uncomment this line?
-		 p.messages := p.messages+1;
+     when (p.t_registered > 0.0 and p.adh < 0.6 and coachOfPatient(c,p)) do
+		 p.nmsg_rcvd := p.nmsg_rcvd+1;
      end;
-	 
 	 
      action recvAdherence(p:Patient; c:Coach) is
-	 when p.id in c.PQ and p.adh < 0.5 do 
+	 when (p.t_registered > 0.0 and coachOfPatient(c,p) and p.adh <0.8) do 
  		 sendPatientMessage(c,p);
      end;
-
 	 
+     -- Patient Actionmsg_sent
 	 action sendGoal(p:Patient; h:HeliWeb) is -- Registration starts from sending Goal 
-     when true do
+     when (p.t_registered = 0.0) do
          recvGoal(h, p)
-	     || p.m:=1.0;
-		 --p.adh:=1.0;
-		 --p.t_registered @; -- now?
-   		 --p.t_last_activity := p.t_registered; -- Why cannot uncomment this line?
+		 ||registerPatient(h, p);
      end;
 
      action sendActivity(p:Patient; h:HeliWeb; w:World) is -- Patients send their Activity periodically 
-     when (p.t_last_activity<w.date) do
-	        p.prob:=1.0
-		 || p.ns := p.ns + 1.0
-		 || p.t_last_activity := w.date
-         -- Compute & Update adherance of the patient  
-		 || p.adh:= 5.0 - (w.date - p.ns) -- think of better calculation, e.g. use old adh
-		 -- Get coach of the patient from the CQ and send ADH 
-		 -- How to search in sequence?
-		 --sendAdherence(CQ.head, p);
-		 
-		||if (p.ns + 1.0) = 1.0 then 
-		p.prob := p.ns + 1.0;
-		elsif (p.ns + 1.0) = 2.0 then
-		p.prob := (p.ns + 1.0) * (p.ns + 1.0);
-		elsif (p.ns + 1.0) = 3.0 then
-		p.prob := (p.ns + 1.0) * (p.ns + 1.0) * (p.ns + 1.0);
-		elsif (p.ns + 1.0) = 4.0 then
-		p.prob := (p.ns + 1.0) * (p.ns + 1.0) * (p.ns + 1.0) * (p.ns + 1.0);
-		end if;
-     end;
-
+     when (registerPatient(h,p) and p.t_last_activity<w.day and p.m > 0.0 and p.t_registered >0.0) do
+		 recvActivity(h, p)
+		 || computeAdherance(w,p)
+		 || p.t_last_activity := w.day;
+	 end;
+	 	 
 	 --  this fucntion will execute based on probabilities
 	 action adjustProbabilities(p:Patient) is
-	 when true do 
-		 -- v = 1 - (0.1)^ns; 
-		 p.prob:= p.m * p.v * p.adh;
+	 when p.t_registered > 0.0 do 
+	     p.v:= 1.0 - pow(0.1,p.nmsg_sent) -- 1.0 - powint(0.1,p.nmsg_sent,1.0)
+		 || p.prob:= p.m * p.v * p.adh;
 	 end; 
 
- --    action recvMessage(p:Patient) is 
-      -- Patient will change behaviour (probability of sending activity) based on 
-	  -- received motivational messages
- --    when true do
-	     --adjustProbabilities(p); -- Whay cannot call this action/function?
-		 --p.v:= 1.0 - (0.1)^ns; -- How to call an exponential function e.g. exp(0.1, ns)?
---		 p.prob:= p.m * p.v * p.adh;
---     end;
-	 	 
-	 
-end heli;
+	 --function powint(a:real;b:integer; t:real) :real is
+	 --	 for i in 1..b loop
+	 --	     t = t*a;
+	 --	 end loop
+	 --	 return t;
+	 --end
+
+	 --function ln(x:real) :real is
+	 --    -- if x in[-1,1] ln(1+a) = a - a^2/2 + a^3/3 - a^4/4 + a^5/5 - a^6/6 + a^7/7 ...
+	 --    -- if x in[-1,1] ln(1+x/1-x) = 2x + 2x^3/3 + 2x^5/5 + 2x^7/7 + 2x^9/9 + 2x^11/11 ...	 
+	 --    return ((x - 1.0) - (x - 1.0)*(x - 1.0)/2.0 + (x - 1.0)*(x - 1.0)*(x - 1.0)/3.0 - (x - 1.0)*(x - 1.0)*(x - 1.0)*(x - 1.0)/4.0 + (x - 1.0)*(x - 1.0)*(x - 1.0)*(x - 1.0)*(x - 1.0)/5.0 - (x - 1.0)*(x - 1.0)*(x - 1.0)*(x - 1.0)*(x - 1.0)*(x - 1.0)/6.0 + (x - 1.0)*(x - 1.0)*(x - 1.0)*(x - 1.0)*(x - 1.0)*(x - 1.0)*(x - 1.0)/7.0);
+	 --    --return 2.0*(((x+1.0)/(1.0-x)) + ((x+1.0)/(1.0-x))*((x+1.0)/(1.0-x))*((x+1.0)/(1.0-x))/3.0 + ((x+1.0)/(1.0-x))*((x+1.0)/(1.0-x))*((x+1.0)/(1.0-x))*((x+1.0)/(1.0-x))*((x+1.0)/(1.0-x))/5.0 + ((x+1.0)/(1.0-x))*((x+1.0)/(1.0-x))*((x+1.0)/(1.0-x))*((x+1.0)/(1.0-x))*((x+1.0)/(1.0-x))*((x+1.0)/(1.0-x))*((x+1.0)/(1.0-x))/7.0 + ((x+1.0)/(1.0-x))*((x+1.0)/(1.0-x))*((x+1.0)/(1.0-x))*((x+1.0)/(1.0-x))*((x+1.0)/(1.0-x))*((x+1.0)/(1.0-x))*((x+1.0)/(1.0-x))*((x+1.0)/(1.0-x))*((x+1.0)/(1.0-x))/9.0 + ((x+1.0)/(1.0-x))*((x+1.0)/(1.0-x))*((x+1.0)/(1.0-x))*((x+1.0)/(1.0-x))*((x+1.0)/(1.0-x))*((x+1.0)/(1.0-x))*((x+1.0)/(1.0-x))*((x+1.0)/(1.0-x))*((x+1.0)/(1.0-x))*((x+1.0)/(1.0-x))*((x+1.0)/(1.0-x))/11.0); 
+	 --end; 
+
+
+ end heli;
