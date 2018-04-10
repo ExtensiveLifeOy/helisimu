@@ -5,7 +5,7 @@ instance hbm of heli is
   object Coach_1 of Coach is
   end
   object World_1 of World is
-    day := 0.0;
+    day := 1.0;
   end
   object Patient_1 of Patient is
     id := 0;
@@ -14,10 +14,10 @@ instance hbm of heli is
     goal := Goal(
       typ := enum control_weight(
       );
-      val := 0.0;
+      val := 75.0;
     );
     act := Activity(
-      weight := 0.0;
+      weight := 100.0;
       steps := 0;
       fruits := 0;
     );
@@ -27,6 +27,8 @@ instance hbm of heli is
     v := 0.0;
     prob := 0.0;
     adh := 0.0;
+    status := enum unknown(
+    );
   end
   object Patient_2 of Patient is
     id := 0;
@@ -35,10 +37,10 @@ instance hbm of heli is
     goal := Goal(
       typ := enum walk_steps_aweek(
       );
-      val := 0.0;
+      val := 1000.0;
     );
     act := Activity(
-      weight := 0.0;
+      weight := 100.0;
       steps := 0;
       fruits := 0;
     );
@@ -48,6 +50,8 @@ instance hbm of heli is
     v := 0.0;
     prob := 0.0;
     adh := 0.0;
+    status := enum unknown(
+    );
   end
   object Patient_3 of Patient is
     id := 0;
@@ -56,10 +60,10 @@ instance hbm of heli is
     goal := Goal(
       typ := enum eat_fruits_aweek(
       );
-      val := 0.0;
+      val := 7.0;
     );
     act := Activity(
-      weight := 0.0;
+      weight := 100.0;
       steps := 0;
       fruits := 0;
     );
@@ -69,6 +73,8 @@ instance hbm of heli is
     v := 0.0;
     prob := 0.0;
     adh := 0.0;
+    status := enum unknown(
+    );
   end
 
 
