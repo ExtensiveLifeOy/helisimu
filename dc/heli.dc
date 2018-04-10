@@ -38,8 +38,8 @@ layer heli is
 		 m: real; -- Motivation to comply
 		 v: real; -- compliance history 
 		 prob: real;   -- Probability of sending Activity
-     	 adh: real;    -- Adherance of the patient (idem. PECS model)		 
-		 status: (hapa_motivation, hapa_volition);  -- adding HAPA status
+     	 adh: real;    -- Adherence of the patient (idem. PECS model)		 
+		 status: (hapa_motivation, hapa_volition, hapa_maintenance);  -- adding HAPA status
 	 end Patient;
 	 
      relation recvActivity (HeliWeb, Patient) is  0..1 : 0..99;
@@ -76,7 +76,7 @@ layer heli is
 		coachOfPatient(c,p);
 	 end;
 	 
-    action recvActivity(h:HeliWeb; p:Patient) is
+     action recvActivity(h:HeliWeb; p:Patient) is
      when (p.t_registered > 0.0) do
  		 p.nmsg_sent := p.nmsg_sent + 1.0;
      end;
@@ -96,39 +96,28 @@ layer heli is
      when (p.t_registered > 0.0 and p.adh < 0.6 and coachOfPatient(c,p)) do
 		 p.nmsg_rcvd := p.nmsg_rcvd+1;
      end;
-	     
-     -- Patient Actionmsg_sent
+
+	 action sendMessage3(c:Coach; p:Patient) is
+     when (p.t_registered > 0.0 and p.adh < 0.8 and coachOfPatient(c,p)) do
+		 p.nmsg_rcvd := p.nmsg_rcvd+1;
+     end;
+	 
+     -- Patient Actions
 	 action sendGoalToHeLi(p:Patient; h:HeliWeb; w:World) is -- Registration starts from sending Goal 
      when (p.t_registered = 0.0) do
           isPatientOfHeli(h,p)
 	     ||p.t_registered := w.day
 		 ||p.t_last_activity := w.day
-	     ||p.m:=1.0; 
+	     ||p.m:=1.0
+         ||p.status -> hapa_motivation(); 		 
      end;
 
-     action sendActivityNormal(p:Patient; h:HeliWeb; w:World) is -- Patients send their Activity periodically 
+     action sendActivity(p:Patient; h:HeliWeb; w:World) is -- Patients send their Activity periodically 
      when (isPatientOfHeli(h,p) and p.t_last_activity<w.day and p.m > 0.0 and p.t_registered >0.0) do
 		 recvActivity(h, p)
 		 || p.adh := computeAdherance(w,p)
-		 || p.act := Activity( weight:=75.0, steps:=5000, fruits:=1)
-		 || p.t_last_activity := w.day;		 
+		 || p.t_last_activity := w.day;
 	 end;
-	 
-	 action sendActivityUpWeight(p:Patient; h:HeliWeb; w:World) is -- Patients send their Activity periodically 
-     when (isPatientOfHeli(h,p) and p.t_last_activity<w.day and p.m > 0.0 and p.t_registered >0.0) do
-		 recvActivity(h, p)
-		 || p.adh := computeAdherance(w,p)
-		 || p.act := Activity( weight:=76.0, steps:=4000, fruits:=2)
-		 || p.t_last_activity := w.day;		 
-	 end;
-	 
-	 action sendActivityDownWeight(p:Patient; h:HeliWeb; w:World) is -- Patients send their Activity periodically 
-     when (isPatientOfHeli(h,p) and p.t_last_activity<w.day and p.m > 0.0 and p.t_registered >0.0) do
-		 recvActivity(h, p)
-		 || p.adh := computeAdherance(w,p)
-		 || p.act := Activity( weight:=74.0, steps:=12000, fruits:=0)
-		 || p.t_last_activity := w.day;		 
-	 end;	 	 
 	 	 
 	 --  this function will execute based on probabilities
 	 action adjustProbabilities(p:Patient) is
@@ -151,5 +140,36 @@ layer heli is
 	 --    --return 2.0*(((x+1.0)/(1.0-x)) + ((x+1.0)/(1.0-x))*((x+1.0)/(1.0-x))*((x+1.0)/(1.0-x))/3.0 + ((x+1.0)/(1.0-x))*((x+1.0)/(1.0-x))*((x+1.0)/(1.0-x))*((x+1.0)/(1.0-x))*((x+1.0)/(1.0-x))/5.0 + ((x+1.0)/(1.0-x))*((x+1.0)/(1.0-x))*((x+1.0)/(1.0-x))*((x+1.0)/(1.0-x))*((x+1.0)/(1.0-x))*((x+1.0)/(1.0-x))*((x+1.0)/(1.0-x))/7.0 + ((x+1.0)/(1.0-x))*((x+1.0)/(1.0-x))*((x+1.0)/(1.0-x))*((x+1.0)/(1.0-x))*((x+1.0)/(1.0-x))*((x+1.0)/(1.0-x))*((x+1.0)/(1.0-x))*((x+1.0)/(1.0-x))*((x+1.0)/(1.0-x))/9.0 + ((x+1.0)/(1.0-x))*((x+1.0)/(1.0-x))*((x+1.0)/(1.0-x))*((x+1.0)/(1.0-x))*((x+1.0)/(1.0-x))*((x+1.0)/(1.0-x))*((x+1.0)/(1.0-x))*((x+1.0)/(1.0-x))*((x+1.0)/(1.0-x))*((x+1.0)/(1.0-x))*((x+1.0)/(1.0-x))/11.0); 
 	 --end; 
 
+     action eatOneFruit(p:Patient) is
+	 when p.t_registered > 0.0 do 
+	     p.act.fruits:= p.act.fruits + 1;
+	 end; 	 
+	 
+	 action walked100steps(p:Patient) is
+	 when p.t_registered > 0.0 do 
+	     p.act.steps:= p.act.steps + 100;
+	 end;
+ 	 
+	 action lost1Kg(p:Patient) is
+	 when p.t_registered > 0.0 do 
+	     p.act.weight:= p.act.weight -1.0;
+	 end;
+
+	 action add1Kg(p:Patient) is
+	 when p.t_registered > 0.0 do 
+	     p.act.weight:= p.act.weight +1.0;
+	 end;
+
+     action updateState(p:Patient) is
+	 when (true) do 
+	     if (p.t_registered = 0.0 ) then
+		     p.status ->  hapa_volition();
+         elsif (p.nmsg_sent = 0.0) 	then
+             p.status -> hapa_motivation();
+         elsif (p.nmsg_sent > 0.0) then
+             -- check target and activity to check volition/progress state 
+            p.status -> hapa_maintenance();  			 
+		 end if;
+	 end; 	 
 
  end heli;
