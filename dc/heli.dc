@@ -163,9 +163,9 @@ layer heli is
      action updateState(p:Patient) is
 	 when (true) do 
 	     if (p.t_registered = 0.0 ) then
-		     p.status ->  hapa_volition();
+		     p.status -> hapa_motivation();
          elsif (p.nmsg_sent = 0.0) 	then
-             p.status -> hapa_motivation();
+             p.status -> hapa_volition();
          elsif (p.nmsg_sent > 0.0) then
              -- check target and activity to check volition/progress state 
             p.status -> hapa_maintenance();  			 

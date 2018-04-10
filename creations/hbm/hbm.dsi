@@ -27,7 +27,7 @@ instance hbm of heli is
     v := 0.0;
     prob := 0.0;
     adh := 0.0;
-    status := enum unknown(
+    status := enum hapa_motivation(
     );
   end
   object Patient_2 of Patient is
@@ -50,7 +50,7 @@ instance hbm of heli is
     v := 0.0;
     prob := 0.0;
     adh := 0.0;
-    status := enum unknown(
+    status := enum hapa_motivation(
     );
   end
   object Patient_3 of Patient is
@@ -73,7 +73,7 @@ instance hbm of heli is
     v := 0.0;
     prob := 0.0;
     adh := 0.0;
-    status := enum unknown(
+    status := enum hapa_motivation(
     );
   end
 
