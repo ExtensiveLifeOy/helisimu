@@ -38,8 +38,8 @@ layer heli is
 		 m: real; -- Motivation to comply
 		 v: real; -- compliance history 
 		 prob: real;   -- Probability of sending Activity
-     	 adh: real;    -- Adherance of the patient (idem. PECS model)		 
-		 status: (unknown, hapa_motivation, hapa_volition);  -- adding HAPA status
+     	 adh: real;    -- Adherence of the patient (idem. PECS model)		 
+		 status: (hapa_motivation, hapa_volition, hapa_maintenance);  -- adding HAPA status
 	 end Patient;
 	 
      relation recvActivity (HeliWeb, Patient) is  0..1 : 0..99;
@@ -109,7 +109,7 @@ layer heli is
 	     ||p.t_registered := w.day
 		 ||p.t_last_activity := w.day
 	     ||p.m:=1.0
-         ||p.status:= enum hapa_motivation(); 		 
+         ||p.status -> hapa_motivation(); 		 
      end;
 
      action sendActivity(p:Patient; h:HeliWeb; w:World) is -- Patients send their Activity periodically 
@@ -162,13 +162,13 @@ layer heli is
 
      action updateState(p:Patient) is
 	 when (true) do 
-	     if (p.t_registered = 0.0) then
-		     p.status:= enum unknown();
-         elsif (p.nmesg_sent = 0.0) -- already registered but without sending activity	
-             p.status:= enum hapa_motivation();
-         else
-             -- (already sending activity and receiving msg from coach) check target and activity to check volition/progress state 
-              			 
+	     if (p.t_registered = 0.0 ) then
+		     p.status ->  hapa_volition();
+         elsif (p.nmsg_sent = 0.0) 	then
+             p.status -> hapa_motivation();
+         elsif (p.nmsg_sent > 0.0) then
+             -- check target and activity to check volition/progress state 
+            p.status -> hapa_maintenance();  			 
 		 end if;
 	 end; 	 
 
