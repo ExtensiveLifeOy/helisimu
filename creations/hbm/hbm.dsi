@@ -9,6 +9,7 @@ instance hbm of heli is
   end
   object Patient_1 of Patient is
     id := 0;
+    can_send := true;
     t_registered := 0.0;
     t_last_activity := 0.0;
     goal := Goal(
@@ -41,6 +42,7 @@ instance hbm of heli is
   end
   object Patient_2 of Patient is
     id := 0;
+    can_send := true;
     t_registered := 0.0;
     t_last_activity := 0.0;
     goal := Goal(
@@ -73,6 +75,7 @@ instance hbm of heli is
   end
   object Patient_3 of Patient is
     id := 0;
+    can_send := true;
     t_registered := 0.0;
     t_last_activity := 0.0;
     goal := Goal(

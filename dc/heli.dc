@@ -33,6 +33,7 @@ layer heli is
 	 ---- it could incluid a property for progress if needed
 	 class Patient is
 	     id: integer;
+		 can_send: boolean;
 		 
          t_registered : real; --registration day
          t_last_activity : real; --last day when active
@@ -87,15 +88,15 @@ layer heli is
 	 -- individual goals progress assume value exits
 	 function weightProgress(p: Patient): real is
 		 -- return 1.0; 
-		 return abs(p.goal.target.v1 - p.act.weight)/(p.goal.target.v1+0.000001);
+		 return 1.0 - abs(p.goal.target.v1 - p.act.weight)/(p.goal.target.v1+0.000001);
 	 end;
 	 function stepsProgress(p: Patient): real is
 		 -- return 1.0; 
-		 return abs(p.goal.target.v2 - p.act.steps)/(p.goal.target.v2+0.000001);
+		 return 1.0 - (p.goal.target.v2 - p.act.steps)/(p.goal.target.v2+0.000001);
 	 end;
 	 function fruitsProgress(p: Patient): real is
 		 -- return 1.0; 
-		 return abs(p.goal.target.v3 - p.act.fruits)/(p.goal.target.v3+0.000001);
+		 return 1.0 - (p.goal.target.v3 - p.act.fruits)/(p.goal.target.v3+0.000001);
 	 end;
 	 
 	 -- Adherence as a function of progress
@@ -135,7 +136,7 @@ layer heli is
      end;
 
      action sendActivity(p:Patient; h:HeliWeb; w:World) is -- Patients send their Activity periodically 
-     when (isPatientOfHeli(h,p) and p.t_last_activity<=w.day and p.m > 0.0 and p.t_registered >0.0) do
+     when (isPatientOfHeli(h,p) and p.t_last_activity<=w.day and p.m > 0.0 and p.t_registered >0.0 and p.can_send) do
 		  p.nmsg_sent := p.nmsg_sent + 1.0 
 		 || p.adh := computeAdherance(w,p)
 		 || p.t_last_activity := w.day;
@@ -148,21 +149,13 @@ layer heli is
 		 || p.prob:= p.m * p.v * p.adh;
 	 end; 
 
-	 --function powint(a:real;b:integer; t:real) :real is
-	 --	 for i in 1..b loop
-	 --	     t = t*a;
-	 --	 end loop
-	 --	 return t;
-	 --end
+	 action adjustAdherance(p:Patient) is
+	 when (p.adh > 1.0) do 
+	     p.adh :=1.0
+		 ||p.can_send := false;
+	 end; 
 
-	 --function ln(x:real) :real is
-	 --    -- if x in[-1,1] ln(1+a) = a - a^2/2 + a^3/3 - a^4/4 + a^5/5 - a^6/6 + a^7/7 ...
-	 --    -- if x in[-1,1] ln(1+x/1-x) = 2x + 2x^3/3 + 2x^5/5 + 2x^7/7 + 2x^9/9 + 2x^11/11 ...	 
-	 --    return ((x - 1.0) - (x - 1.0)*(x - 1.0)/2.0 + (x - 1.0)*(x - 1.0)*(x - 1.0)/3.0 - (x - 1.0)*(x - 1.0)*(x - 1.0)*(x - 1.0)/4.0 + (x - 1.0)*(x - 1.0)*(x - 1.0)*(x - 1.0)*(x - 1.0)/5.0 - (x - 1.0)*(x - 1.0)*(x - 1.0)*(x - 1.0)*(x - 1.0)*(x - 1.0)/6.0 + (x - 1.0)*(x - 1.0)*(x - 1.0)*(x - 1.0)*(x - 1.0)*(x - 1.0)*(x - 1.0)/7.0);
-	 --    --return 2.0*(((x+1.0)/(1.0-x)) + ((x+1.0)/(1.0-x))*((x+1.0)/(1.0-x))*((x+1.0)/(1.0-x))/3.0 + ((x+1.0)/(1.0-x))*((x+1.0)/(1.0-x))*((x+1.0)/(1.0-x))*((x+1.0)/(1.0-x))*((x+1.0)/(1.0-x))/5.0 + ((x+1.0)/(1.0-x))*((x+1.0)/(1.0-x))*((x+1.0)/(1.0-x))*((x+1.0)/(1.0-x))*((x+1.0)/(1.0-x))*((x+1.0)/(1.0-x))*((x+1.0)/(1.0-x))/7.0 + ((x+1.0)/(1.0-x))*((x+1.0)/(1.0-x))*((x+1.0)/(1.0-x))*((x+1.0)/(1.0-x))*((x+1.0)/(1.0-x))*((x+1.0)/(1.0-x))*((x+1.0)/(1.0-x))*((x+1.0)/(1.0-x))*((x+1.0)/(1.0-x))/9.0 + ((x+1.0)/(1.0-x))*((x+1.0)/(1.0-x))*((x+1.0)/(1.0-x))*((x+1.0)/(1.0-x))*((x+1.0)/(1.0-x))*((x+1.0)/(1.0-x))*((x+1.0)/(1.0-x))*((x+1.0)/(1.0-x))*((x+1.0)/(1.0-x))*((x+1.0)/(1.0-x))*((x+1.0)/(1.0-x))/11.0); 
-	 --end; 
-
-     action eatOneFruit(p:Patient) is
+	 action eatOneFruit(p:Patient) is
 	 when p.t_registered > 0.0 do 
 	     p.act.fruits:= p.act.fruits + 1.0;
 	 end; 	 
@@ -182,7 +175,7 @@ layer heli is
 	     p.act.weight:= p.act.weight +1.0;
 	 end;
 
-     action updateState(p:Patient) is
+     action updateState(p:Patient;w:World) is
 	 when (true) do 
 	     if (p.t_registered = 0.0 ) then
 		     p.status -> hapa_motivation();
@@ -190,8 +183,39 @@ layer heli is
              p.status -> hapa_volition();
          elsif (p.nmsg_sent > 0.0) then
              -- check target and activity to check volition/progress state 
-            p.status -> hapa_maintenance();  			 
+             p.status -> hapa_maintenance(); 
 		 end if;
+	 end; 	
+	 	 
+     action updateWeeklyActivity(p:Patient;w:World) is
+	 when (w.day - p.t_last_activity > 7.0) do 
+ 		 p.act.fruits:= 0.0
+		 ||p.act.steps:= 0.0
+		 ||p.can_send:=true
+		 ||p.adh := computeAdherance(w,p);
 	 end; 	 
 
+	 --
+	 --action weightPatientProgress(p:Patient) is
+	 --when (p.goal.task'control_weight()) do 
+	 --if ((p.goal.w.v1>0.0) and (p.act.weight>p.goal.target.v1)) then
+	 --end;
+	 
+	 --action stepsPatientProgress(p:Patient) is
+	 --when (p.goal.task'walk_steps_aweek()) do
+	 --	 if  ((p.goal.w.v2>0.0) and (p.act.steps>p.goal.target.v2)) then
+	 --		p.adh: = 1.0 
+	 --		|| p.act.steps = 0.0;
+	 --	 end if;
+	 --end;
+	 
+	 --action fruitsPatientProgress(p:Patient) is
+	 --when ((p.goal.task'eat_fruits_aweak())
+	 --	 if ((p.goal.w.v3>0.0) and (p.act.fruits>p.goal.target.v3)) then
+	 --		p.adh: = 1.0 
+	 --		|| p.act.fruits = 0.0;
+	 --	 end if;
+	 --end;
+
+	 
  end heli;
