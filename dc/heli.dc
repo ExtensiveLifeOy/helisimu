@@ -2,15 +2,15 @@ layer heli is
 
      type Activity is
          weight: real;
-		 steps: integer;
-		 fruits: integer;
+		 steps: real;
+		 fruits: real;
 	 end Activity;
   
 	 type Goal is
 		 typ: (control_weight, walk_steps_aweek, eat_fruits_aweek);    
 		 val: real;  -- reals will include integers values
-	 end Goal;
-
+	 end Goal;	 
+	 
 	 class HeliWeb is 
 	 end HeliWeb;	 
 	 
@@ -22,6 +22,8 @@ layer heli is
          day : real;
      end World;
 
+	 ---- model for Participant as main actor
+	 ---- it could incluid a property for progress if needed
 	 class Patient is
 	     id: integer;
 		 
@@ -33,16 +35,14 @@ layer heli is
 
 		 nmsg_rcvd : integer; -- Number of messages received from the coach
 		 nmsg_sent : real; -- Number of times an Activity was Sent in a week
-		 
-		 
+		 		 
 		 m: real; -- Motivation to comply
 		 v: real; -- compliance history 
 		 prob: real;   -- Probability of sending Activity
+		 
      	 adh: real;    -- Adherence of the patient (idem. PECS model)		 
 		 status: (hapa_motivation, hapa_volition, hapa_maintenance);  -- adding HAPA status
 	 end Patient;
-	 
-     relation recvActivity (HeliWeb, Patient) is  0..1 : 0..99;
 
      relation recvPatientAdherence (Patient, Coach) is 0..1 : 0..1;
      relation recvPatientMessage (Patient, Coach) is 0..1 : 0..1;
@@ -74,22 +74,23 @@ layer heli is
 	 action registerCoach(c:Coach;p:Patient) is
      when (p.t_registered>0.0 and not coachOfPatient(c,p)) do
 		coachOfPatient(c,p);
+	 end;	 
+	 
+	 -- individual goals progress assume value exits
+	 function weightProgress(p: Patient): real is
+		return abs(p.goal.val - p.act.weight)/p.goal.val;
+	 end;
+	 function stepsProgress(p: Patient): real is
+		return 1.0; --abs(p.goal.val - p.act.steps)/p.goal.val;
+	 end;
+	 function fruitsProgress(p: Patient): real is
+		return 1.0; -- abs(p.goal.val - p.act.fruits)/p.goal.val;
 	 end;
 	 
-     action recvActivity(h:HeliWeb; p:Patient) is
-     when (p.t_registered > 0.0) do
- 		 p.nmsg_sent := p.nmsg_sent + 1.0;
-     end;
-	 
+	 -- Adherence as a function of progress
 	 function computeAdherance(w:World; p:Patient) : real is	 
-		 --return p.nmsg_sent / w.day; 
-		 if (p.goal.typ'control_weight()) then
-		     return abs(p.goal.val - p.act.weight)/p.goal.val;
-		 elsif (p.goal.typ'walk_steps_aweek()) then
-		     return abs(p.goal.val - p.act.steps)/p.goal.val;
-		 else (p.goal.typ'eat_fruits_aweek()) then
-		     return abs(p.goal.val - p.act.fruits)/p.goal.val;
-		 end if;
+		 -- return p.nmsg_sent / w.day;   		 
+		return weightProgress(p) *  stepsProgress(p) * fruitsProgress(p);
 	 end;
 
      -- Coach Actions
@@ -110,18 +111,29 @@ layer heli is
      end;
 	 
      -- Patient Actions
+	 -- send a weight Goal
 	 action sendGoalToHeLi(p:Patient; h:HeliWeb; w:World) is -- Registration starts from sending Goal 
      when (p.t_registered = 0.0) do
           isPatientOfHeli(h,p)
 	     ||p.t_registered := w.day
 		 ||p.t_last_activity := w.day
 	     ||p.m:=1.0
+		 ||p.goal:= Goal( typ -> control_weight(), val := 71.0)
          ||p.status -> hapa_motivation(); 		 
      end;
 
      action sendActivity(p:Patient; h:HeliWeb; w:World) is -- Patients send their Activity periodically 
      when (isPatientOfHeli(h,p) and p.t_last_activity<w.day and p.m > 0.0 and p.t_registered >0.0) do
-		 recvActivity(h, p)
+		  p.nmsg_sent := p.nmsg_sent + 1.0 
+		 || p.act.weight := 73.0
+		 || p.adh := computeAdherance(w,p)
+		 || p.t_last_activity := w.day;
+	 end;
+	 
+	  action sendAnotherActivity(p:Patient; h:HeliWeb; w:World) is -- Patients send their Activity periodically 
+     when (isPatientOfHeli(h,p) and p.t_last_activity<w.day and p.m > 0.0 and p.t_registered >0.0) do
+		 p.nmsg_sent := p.nmsg_sent + 1.0 
+		 || p.act.weight := 71.0
 		 || p.adh := computeAdherance(w,p)
 		 || p.t_last_activity := w.day;
 	 end;
@@ -149,12 +161,12 @@ layer heli is
 
      action eatOneFruit(p:Patient) is
 	 when p.t_registered > 0.0 do 
-	     p.act.fruits:= p.act.fruits + 1;
+	     p.act.fruits:= p.act.fruits + 1.0;
 	 end; 	 
 	 
 	 action walked100steps(p:Patient) is
 	 when p.t_registered > 0.0 do 
-	     p.act.steps:= p.act.steps + 100;
+	     p.act.steps:= p.act.steps + 100.0;
 	 end;
  	 
 	 action lost1Kg(p:Patient) is
