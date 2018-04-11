@@ -5,10 +5,17 @@ layer heli is
 		 steps: real;
 		 fruits: real;
 	 end Activity;
+	 
+	 type Real3 is
+		 v1: real;
+		 v2: real;
+		 v3: real;
+	 end Real3;
   
 	 type Goal is
-		 typ: (control_weight, walk_steps_aweek, eat_fruits_aweek);    
-		 val: real;  -- reals will include integers values
+		 task: (control_weight, walk_steps_aweek, eat_fruits_aweek);    
+		 target: Real3;  -- targets for each task
+		 w: Real3; -- weight for each targets
 	 end Goal;	 
 	 
 	 class HeliWeb is 
@@ -63,34 +70,39 @@ layer heli is
      -- Actions	 
 	 action nextDay(w:World) is
      when true do
-		w.day:=w.day+1.0;
+		 w.day:=w.day+1.0;
 	 end;	 	 
 
  	 action registerHeliPatient(h:HeliWeb;p:Patient) is
-     when (p.t_registered=0.0 and not isPatientOfHeli(h,p)) do
-		isPatientOfHeli(h,p);
+     --when (p.t_registered=0.0 and not isPatientOfHeli(h,p)) do
+     when (p.m = 1.0 and not isPatientOfHeli(h,p)) do -- p.t_registered = 0.0
+		 isPatientOfHeli(h,p);
 	 end;
 
 	 action registerCoach(c:Coach;p:Patient) is
      when (p.t_registered>0.0 and not coachOfPatient(c,p)) do
-		coachOfPatient(c,p);
+		 coachOfPatient(c,p);
 	 end;	 
 	 
 	 -- individual goals progress assume value exits
 	 function weightProgress(p: Patient): real is
-		return abs(p.goal.val - p.act.weight)/p.goal.val;
+		 -- return 1.0; 
+		 return abs(p.goal.target.v1 - p.act.weight)/(p.goal.target.v1+0.000001);
 	 end;
 	 function stepsProgress(p: Patient): real is
-		return 1.0; --abs(p.goal.val - p.act.steps)/p.goal.val;
+		 -- return 1.0; 
+		 return abs(p.goal.target.v2 - p.act.steps)/(p.goal.target.v2+0.000001);
 	 end;
 	 function fruitsProgress(p: Patient): real is
-		return 1.0; -- abs(p.goal.val - p.act.fruits)/p.goal.val;
+		 -- return 1.0; 
+		 return abs(p.goal.target.v3 - p.act.fruits)/(p.goal.target.v3+0.000001);
 	 end;
 	 
 	 -- Adherence as a function of progress
 	 function computeAdherance(w:World; p:Patient) : real is	 
 		 -- return p.nmsg_sent / w.day;   		 
-		return weightProgress(p) *  stepsProgress(p) * fruitsProgress(p);
+		 -- return weightProgress(p) *  stepsProgress(p) * fruitsProgress(p);
+		 return (p.goal.w.v1*weightProgress(p) +  p.goal.w.v2*stepsProgress(p) + p.goal.w.v3*fruitsProgress(p))/(p.goal.w.v1 + p.goal.w.v2 + p.goal.w.v3) ;
 	 end;
 
      -- Coach Actions
@@ -118,26 +130,17 @@ layer heli is
 	     ||p.t_registered := w.day
 		 ||p.t_last_activity := w.day
 	     ||p.m:=1.0
-		 ||p.goal:= Goal( typ -> control_weight(), val := 71.0)
+		 --||p.goal:= Goal( task -> control_weight(), target := Real3(v1:=71.0, v2:=0.0, v3:=0.0), w:= Real3(v1:=1.0, v2:=0.0, v3:=0))
          ||p.status -> hapa_motivation(); 		 
      end;
 
      action sendActivity(p:Patient; h:HeliWeb; w:World) is -- Patients send their Activity periodically 
-     when (isPatientOfHeli(h,p) and p.t_last_activity<w.day and p.m > 0.0 and p.t_registered >0.0) do
+     when (isPatientOfHeli(h,p) and p.t_last_activity<=w.day and p.m > 0.0 and p.t_registered >0.0) do
 		  p.nmsg_sent := p.nmsg_sent + 1.0 
-		 || p.act.weight := 73.0
 		 || p.adh := computeAdherance(w,p)
 		 || p.t_last_activity := w.day;
 	 end;
 	 
-	  action sendAnotherActivity(p:Patient; h:HeliWeb; w:World) is -- Patients send their Activity periodically 
-     when (isPatientOfHeli(h,p) and p.t_last_activity<w.day and p.m > 0.0 and p.t_registered >0.0) do
-		 p.nmsg_sent := p.nmsg_sent + 1.0 
-		 || p.act.weight := 71.0
-		 || p.adh := computeAdherance(w,p)
-		 || p.t_last_activity := w.day;
-	 end;
-	 	 
 	 --  this function will execute based on probabilities
 	 action adjustProbabilities(p:Patient) is
 	 when p.t_registered > 0.0 do 
