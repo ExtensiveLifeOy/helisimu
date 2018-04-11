@@ -82,7 +82,14 @@ layer heli is
      end;
 	 
 	 function computeAdherance(w:World; p:Patient) : real is	 
-		 return p.nmsg_sent / w.day; 
+		 --return p.nmsg_sent / w.day; 
+		 if (p.goal.typ'control_weight()) then
+		     return abs(p.goal.val - p.act.weight)/p.goal.val;
+		 elsif (p.goal.typ'walk_steps_aweek()) then
+		     return abs(p.goal.val - p.act.steps)/p.goal.val;
+		 else (p.goal.typ'eat_fruits_aweek()) then
+		     return abs(p.goal.val - p.act.fruits)/p.goal.val;
+		 end if;
 	 end;
 
      -- Coach Actions
