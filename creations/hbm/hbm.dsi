@@ -1,4 +1,4 @@
-instance hbm of heli is 
+instance hbm of braidford is 
 
   object HeliWeb_1 of HeliWeb is
   end

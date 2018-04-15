@@ -5,17 +5,10 @@ layer heli is
 		 steps: real;
 		 fruits: real;
 	 end Activity;
-	 
-	 type Real3 is
-		 v1: real;
-		 v2: real;
-		 v3: real;
-	 end Real3;
   
 	 type Goal is
-		 task: (control_weight, walk_steps_aweek, eat_fruits_aweek);    
-		 target: Real3;  -- targets for each task
-		 w: Real3; -- weight for each targets
+		 typ: (control_weight, walk_steps_aweek, eat_fruits_aweek);    
+		 val: real;  -- reals will include integers values
 	 end Goal;	 
 	 
 	 class HeliWeb is 
@@ -29,11 +22,11 @@ layer heli is
          day : real;
      end World;
 
+	 
 	 ---- model for Participant as main actor
 	 ---- it could incluid a property for progress if needed
 	 class Patient is
 	     id: integer;
-		 can_send: boolean;
 		 
          t_registered : real; --registration day
          t_last_activity : real; --last day when active
@@ -51,6 +44,8 @@ layer heli is
      	 adh: real;    -- Adherence of the patient (idem. PECS model)		 
 		 status: (hapa_motivation, hapa_volition, hapa_maintenance);  -- adding HAPA status
 	 end Patient;
+	 
+	 constant simu_target_weight : real := 71.0;
 
      relation recvPatientAdherence (Patient, Coach) is 0..1 : 0..1;
      relation recvPatientMessage (Patient, Coach) is 0..1 : 0..1;
@@ -71,39 +66,34 @@ layer heli is
      -- Actions	 
 	 action nextDay(w:World) is
      when true do
-		 w.day:=w.day+1.0;
+		w.day:=w.day+1.0;
 	 end;	 	 
 
  	 action registerHeliPatient(h:HeliWeb;p:Patient) is
-     --when (p.t_registered=0.0 and not isPatientOfHeli(h,p)) do
-     when (p.m = 1.0 and not isPatientOfHeli(h,p)) do -- p.t_registered = 0.0
-		 isPatientOfHeli(h,p);
+     when (p.t_registered=0.0 and not isPatientOfHeli(h,p)) do
+		isPatientOfHeli(h,p);
 	 end;
 
 	 action registerCoach(c:Coach;p:Patient) is
      when (p.t_registered>0.0 and not coachOfPatient(c,p)) do
-		 coachOfPatient(c,p);
+		coachOfPatient(c,p);
 	 end;	 
 	 
 	 -- individual goals progress assume value exits
 	 function weightProgress(p: Patient): real is
-		 -- return 1.0; 
-		 return 1.0 - abs(p.goal.target.v1 - p.act.weight)/(p.goal.target.v1+0.000001);
+		return abs(p.goal.val - p.act.weight)/p.goal.val;
 	 end;
 	 function stepsProgress(p: Patient): real is
-		 -- return 1.0; 
-		 return 1.0 - (p.goal.target.v2 - p.act.steps)/(p.goal.target.v2+0.000001);
+		return 1.0; --abs(p.goal.val - p.act.steps)/p.goal.val;
 	 end;
 	 function fruitsProgress(p: Patient): real is
-		 -- return 1.0; 
-		 return 1.0 - (p.goal.target.v3 - p.act.fruits)/(p.goal.target.v3+0.000001);
+		return 1.0; -- abs(p.goal.val - p.act.fruits)/p.goal.val;
 	 end;
 	 
 	 -- Adherence as a function of progress
 	 function computeAdherance(w:World; p:Patient) : real is	 
 		 -- return p.nmsg_sent / w.day;   		 
-		 -- return weightProgress(p) *  stepsProgress(p) * fruitsProgress(p);
-		 return (p.goal.w.v1*weightProgress(p) +  p.goal.w.v2*stepsProgress(p) + p.goal.w.v3*fruitsProgress(p))/(p.goal.w.v1 + p.goal.w.v2 + p.goal.w.v3) ;
+		return weightProgress(p) *  stepsProgress(p) * fruitsProgress(p);
 	 end;
 
      -- Coach Actions
@@ -131,17 +121,48 @@ layer heli is
 	     ||p.t_registered := w.day
 		 ||p.t_last_activity := w.day
 	     ||p.m:=1.0
-		 --||p.goal:= Goal( task -> control_weight(), target := Real3(v1:=71.0, v2:=0.0, v3:=0.0), w:= Real3(v1:=1.0, v2:=0.0, v3:=0))
+		 ||p.goal:= Goal( typ -> control_weight(), val := simu_target_weight)
          ||p.status -> hapa_motivation(); 		 
      end;
 
-     action sendActivity(p:Patient; h:HeliWeb; w:World) is -- Patients send their Activity periodically 
-     when (isPatientOfHeli(h,p) and p.t_last_activity<=w.day and p.m > 0.0 and p.t_registered >0.0 and p.can_send) do
+     action sendActivityOnTarget(p:Patient; h:HeliWeb; w:World) is -- Patients send their Activity periodically 
+     when (isPatientOfHeli(h,p) and p.t_last_activity<w.day and p.m > 0.0 and p.t_registered >0.0) do
 		  p.nmsg_sent := p.nmsg_sent + 1.0 
+		 || p.act.weight := simu_target_weight
 		 || p.adh := computeAdherance(w,p)
 		 || p.t_last_activity := w.day;
 	 end;
 	 
+	 -- weightVariation: (-2.5 ... 3.0);	
+	 function weightVariation(seed: real): real is
+	    return simu_target_weight + seed;
+	 end;	
+	 
+	 -- randomizer works only with integer so we devide to generate real	 	 	 	
+	  action sendRandomWeightActivity(p:Patient; h:HeliWeb; w:World; rnd: integer) is 
+     when (isPatientOfHeli(h,p) and p.t_last_activity<w.day 
+	                            and p.m > 0.0 and p.t_registered >0.0
+                                and rnd > 0 and rnd < 7	) do
+		 p.nmsg_sent := p.nmsg_sent + 1.0 		 
+		 || p.t_last_activity := w.day
+		 || if (rnd = 0) then 
+			 p.act.weight := weightVariation(0.2);
+			elsif (rnd = 1) then
+			 p.act.weight := weightVariation(-2.5);
+			elsif (rnd = 2) then
+			 p.act.weight := weightVariation(-2.0);
+			elsif (rnd = 3) then
+			 p.act.weight := weightVariation(-1.0);
+			elsif (rnd = 4) then
+			 p.act.weight := weightVariation(1.0);
+			elsif (rnd = 5) then
+			 p.act.weight := weightVariation(2.0);
+			elsif (rnd = 6) then
+			 p.act.weight := weightVariation(3.0);
+			end if
+		  || p.adh := computeAdherance(w,p);
+	 end;
+	 	 
 	 --  this function will execute based on probabilities
 	 action adjustProbabilities(p:Patient) is
 	 when p.t_registered > 0.0 do 
@@ -149,13 +170,7 @@ layer heli is
 		 || p.prob:= p.m * p.v * p.adh;
 	 end; 
 
-	 action adjustAdherance(p:Patient) is
-	 when (p.adh > 1.0) do 
-	     p.adh :=1.0
-		 ||p.can_send := false;
-	 end; 
-
-	 action eatOneFruit(p:Patient) is
+     action eatOneFruit(p:Patient) is
 	 when p.t_registered > 0.0 do 
 	     p.act.fruits:= p.act.fruits + 1.0;
 	 end; 	 
@@ -175,7 +190,7 @@ layer heli is
 	     p.act.weight:= p.act.weight +1.0;
 	 end;
 
-     action updateState(p:Patient;w:World) is
+     action updateState(p:Patient) is
 	 when (true) do 
 	     if (p.t_registered = 0.0 ) then
 		     p.status -> hapa_motivation();
@@ -183,39 +198,8 @@ layer heli is
              p.status -> hapa_volition();
          elsif (p.nmsg_sent > 0.0) then
              -- check target and activity to check volition/progress state 
-             p.status -> hapa_maintenance(); 
+            p.status -> hapa_maintenance();  			 
 		 end if;
-	 end; 	
-	 	 
-     action updateWeeklyActivity(p:Patient;w:World) is
-	 when (w.day - p.t_last_activity > 7.0) do 
- 		 p.act.fruits:= 0.0
-		 ||p.act.steps:= 0.0
-		 ||p.can_send:=true
-		 ||p.adh := computeAdherance(w,p);
 	 end; 	 
 
-	 --
-	 --action weightPatientProgress(p:Patient) is
-	 --when (p.goal.task'control_weight()) do 
-	 --if ((p.goal.w.v1>0.0) and (p.act.weight>p.goal.target.v1)) then
-	 --end;
-	 
-	 --action stepsPatientProgress(p:Patient) is
-	 --when (p.goal.task'walk_steps_aweek()) do
-	 --	 if  ((p.goal.w.v2>0.0) and (p.act.steps>p.goal.target.v2)) then
-	 --		p.adh: = 1.0 
-	 --		|| p.act.steps = 0.0;
-	 --	 end if;
-	 --end;
-	 
-	 --action fruitsPatientProgress(p:Patient) is
-	 --when ((p.goal.task'eat_fruits_aweak())
-	 --	 if ((p.goal.w.v3>0.0) and (p.act.fruits>p.goal.target.v3)) then
-	 --		p.adh: = 1.0 
-	 --		|| p.act.fruits = 0.0;
-	 --	 end if;
-	 --end;
-
-	 
  end heli;
