@@ -22,6 +22,7 @@ layer heli is
          day : real;
      end World;
 
+	 
 	 ---- model for Participant as main actor
 	 ---- it could incluid a property for progress if needed
 	 class Patient is
@@ -43,6 +44,8 @@ layer heli is
      	 adh: real;    -- Adherence of the patient (idem. PECS model)		 
 		 status: (hapa_motivation, hapa_volition, hapa_maintenance);  -- adding HAPA status
 	 end Patient;
+	 
+	 constant simu_target_weight : real := 71.0;
 
      relation recvPatientAdherence (Patient, Coach) is 0..1 : 0..1;
      relation recvPatientMessage (Patient, Coach) is 0..1 : 0..1;
@@ -118,24 +121,46 @@ layer heli is
 	     ||p.t_registered := w.day
 		 ||p.t_last_activity := w.day
 	     ||p.m:=1.0
-		 ||p.goal:= Goal( typ -> control_weight(), val := 71.0)
+		 ||p.goal:= Goal( typ -> control_weight(), val := simu_target_weight)
          ||p.status -> hapa_motivation(); 		 
      end;
 
-     action sendActivity(p:Patient; h:HeliWeb; w:World) is -- Patients send their Activity periodically 
+     action sendActivityOnTarget(p:Patient; h:HeliWeb; w:World) is -- Patients send their Activity periodically 
      when (isPatientOfHeli(h,p) and p.t_last_activity<w.day and p.m > 0.0 and p.t_registered >0.0) do
 		  p.nmsg_sent := p.nmsg_sent + 1.0 
-		 || p.act.weight := 73.0
+		 || p.act.weight := simu_target_weight
 		 || p.adh := computeAdherance(w,p)
 		 || p.t_last_activity := w.day;
 	 end;
 	 
-	  action sendAnotherActivity(p:Patient; h:HeliWeb; w:World) is -- Patients send their Activity periodically 
-     when (isPatientOfHeli(h,p) and p.t_last_activity<w.day and p.m > 0.0 and p.t_registered >0.0) do
-		 p.nmsg_sent := p.nmsg_sent + 1.0 
-		 || p.act.weight := 71.0
-		 || p.adh := computeAdherance(w,p)
-		 || p.t_last_activity := w.day;
+	 -- weightVariation: (-2.5 ... 3.0);	
+	 function weightVariation(seed: real): real is
+	    return simu_target_weight + seed;
+	 end;	
+	 
+	 -- randomizer works only with integer so we devide to generate real	 	 	 	
+	  action sendRandomWeightActivity(p:Patient; h:HeliWeb; w:World; rnd: integer) is 
+     when (isPatientOfHeli(h,p) and p.t_last_activity<w.day 
+	                            and p.m > 0.0 and p.t_registered >0.0
+                                and rnd > 0 and rnd < 7	) do
+		 p.nmsg_sent := p.nmsg_sent + 1.0 		 
+		 || p.t_last_activity := w.day
+		 || if (rnd = 0) then 
+			 p.act.weight := weightVariation(0.2);
+			elsif (rnd = 1) then
+			 p.act.weight := weightVariation(-2.5);
+			elsif (rnd = 2) then
+			 p.act.weight := weightVariation(-2.0);
+			elsif (rnd = 3) then
+			 p.act.weight := weightVariation(-1.0);
+			elsif (rnd = 4) then
+			 p.act.weight := weightVariation(1.0);
+			elsif (rnd = 5) then
+			 p.act.weight := weightVariation(2.0);
+			elsif (rnd = 6) then
+			 p.act.weight := weightVariation(3.0);
+			end if
+		  || p.adh := computeAdherance(w,p);
 	 end;
 	 	 
 	 --  this function will execute based on probabilities
@@ -144,20 +169,6 @@ layer heli is
 	     p.v:= 1.0 - pow(0.1,p.nmsg_sent) -- 1.0 - powint(0.1,p.nmsg_sent,1.0)
 		 || p.prob:= p.m * p.v * p.adh;
 	 end; 
-
-	 --function powint(a:real;b:integer; t:real) :real is
-	 --	 for i in 1..b loop
-	 --	     t = t*a;
-	 --	 end loop
-	 --	 return t;
-	 --end
-
-	 --function ln(x:real) :real is
-	 --    -- if x in[-1,1] ln(1+a) = a - a^2/2 + a^3/3 - a^4/4 + a^5/5 - a^6/6 + a^7/7 ...
-	 --    -- if x in[-1,1] ln(1+x/1-x) = 2x + 2x^3/3 + 2x^5/5 + 2x^7/7 + 2x^9/9 + 2x^11/11 ...	 
-	 --    return ((x - 1.0) - (x - 1.0)*(x - 1.0)/2.0 + (x - 1.0)*(x - 1.0)*(x - 1.0)/3.0 - (x - 1.0)*(x - 1.0)*(x - 1.0)*(x - 1.0)/4.0 + (x - 1.0)*(x - 1.0)*(x - 1.0)*(x - 1.0)*(x - 1.0)/5.0 - (x - 1.0)*(x - 1.0)*(x - 1.0)*(x - 1.0)*(x - 1.0)*(x - 1.0)/6.0 + (x - 1.0)*(x - 1.0)*(x - 1.0)*(x - 1.0)*(x - 1.0)*(x - 1.0)*(x - 1.0)/7.0);
-	 --    --return 2.0*(((x+1.0)/(1.0-x)) + ((x+1.0)/(1.0-x))*((x+1.0)/(1.0-x))*((x+1.0)/(1.0-x))/3.0 + ((x+1.0)/(1.0-x))*((x+1.0)/(1.0-x))*((x+1.0)/(1.0-x))*((x+1.0)/(1.0-x))*((x+1.0)/(1.0-x))/5.0 + ((x+1.0)/(1.0-x))*((x+1.0)/(1.0-x))*((x+1.0)/(1.0-x))*((x+1.0)/(1.0-x))*((x+1.0)/(1.0-x))*((x+1.0)/(1.0-x))*((x+1.0)/(1.0-x))/7.0 + ((x+1.0)/(1.0-x))*((x+1.0)/(1.0-x))*((x+1.0)/(1.0-x))*((x+1.0)/(1.0-x))*((x+1.0)/(1.0-x))*((x+1.0)/(1.0-x))*((x+1.0)/(1.0-x))*((x+1.0)/(1.0-x))*((x+1.0)/(1.0-x))/9.0 + ((x+1.0)/(1.0-x))*((x+1.0)/(1.0-x))*((x+1.0)/(1.0-x))*((x+1.0)/(1.0-x))*((x+1.0)/(1.0-x))*((x+1.0)/(1.0-x))*((x+1.0)/(1.0-x))*((x+1.0)/(1.0-x))*((x+1.0)/(1.0-x))*((x+1.0)/(1.0-x))*((x+1.0)/(1.0-x))/11.0); 
-	 --end; 
 
      action eatOneFruit(p:Patient) is
 	 when p.t_registered > 0.0 do 

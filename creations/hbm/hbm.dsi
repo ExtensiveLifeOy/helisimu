@@ -1,4 +1,4 @@
-instance hbm of heli is 
+instance hbm of braidford is 
 
   object HeliWeb_1 of HeliWeb is
   end
@@ -9,17 +9,27 @@ instance hbm of heli is
   end
   object Patient_1 of Patient is
     id := 0;
+    can_send := true;
     t_registered := 0.0;
     t_last_activity := 0.0;
     goal := Goal(
-      typ := enum control_weight(
+      task := enum control_weight(
       );
-      val := 75.0;
+      target := Real3(
+        v1 := 75.0;
+        v2 := 0.0;
+        v3 := 0.0;
+      );
+      w := Real3(
+        v1 := 1.0;
+        v2 := 0.0;
+        v3 := 0.0;
+      );
     );
     act := Activity(
       weight := 100.0;
-      steps := 0;
-      fruits := 0;
+      steps := 0.0;
+      fruits := 0.0;
     );
     nmsg_rcvd := 0;
     nmsg_sent := 0.0;
@@ -32,17 +42,27 @@ instance hbm of heli is
   end
   object Patient_2 of Patient is
     id := 0;
+    can_send := true;
     t_registered := 0.0;
     t_last_activity := 0.0;
     goal := Goal(
-      typ := enum walk_steps_aweek(
+      task := enum walk_steps_aweek(
       );
-      val := 1000.0;
+      target := Real3(
+        v1 := 0.0;
+        v2 := 1000.0;
+        v3 := 0.0;
+      );
+      w := Real3(
+        v1 := 0.0;
+        v2 := 1.0;
+        v3 := 0.0;
+      );
     );
     act := Activity(
       weight := 100.0;
-      steps := 0;
-      fruits := 0;
+      steps := 0.0;
+      fruits := 0.0;
     );
     nmsg_rcvd := 0;
     nmsg_sent := 0.0;
@@ -55,17 +75,27 @@ instance hbm of heli is
   end
   object Patient_3 of Patient is
     id := 0;
+    can_send := true;
     t_registered := 0.0;
     t_last_activity := 0.0;
     goal := Goal(
-      typ := enum eat_fruits_aweek(
+      task := enum eat_fruits_aweek(
       );
-      val := 7.0;
+      target := Real3(
+        v1 := 0.0;
+        v2 := 0.0;
+        v3 := 7.0;
+      );
+      w := Real3(
+        v1 := 0.0;
+        v2 := 0.0;
+        v3 := 1.0;
+      );
     );
     act := Activity(
       weight := 100.0;
-      steps := 0;
-      fruits := 0;
+      steps := 0.0;
+      fruits := 0.0;
     );
     nmsg_rcvd := 0;
     nmsg_sent := 0.0;

@@ -1,4 +1,4 @@
-instance new6 of heli is 
+instance new6 of helitimo is 
 
   object HeliWeb_1 of HeliWeb is
     PQ := <
