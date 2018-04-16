@@ -1,0 +1,63 @@
+  ACTION{ sendGoalToHeLi is p := Patient_1; h := HeliWeb_1; w := World_1; now := 0.0 }
+  ACTION{ add1Kg is p := Patient_1; now := 0.0 }
+  ACTION{ adjustProbabilities is p := Patient_1; now := 0.0 }
+  ACTION{ lost1Kg is p := Patient_1; now := 0.0 }
+  ACTION{ registerCoach is c := Coach_1; p := Patient_1; now := 0.0 } instance Fri Apr 13 10:39:28 PDT 2018 OVERVIEW of braidford is     object HeliWeb_1 of HeliWeb is   end
+  ACTION{ updateState is p := Patient_1; w := World_1; now := 0.0 }
+  ACTION{ adjustProbabilities is p := Patient_1; now := 0.0 }
+  ACTION{ sendMessage2 is c := Coach_1; p := Patient_1; now := 0.0 }
+  ACTION{ sendMessage2 is c := Coach_1; p := Patient_1; now := 0.0 }
+  ACTION{ sendMessage3 is c := Coach_1; p := Patient_1; now := 0.0 }
+  ACTION{ eatOneFruit is p := Patient_1; now := 0.0 }
+  ACTION{ adjustProbabilities is p := Patient_1; now := 0.0 }
+  ACTION{ sendMessage3 is c := Coach_1; p := Patient_1; now := 0.0 }
+  ACTION{ adjustProbabilities is p := Patient_1; now := 0.0 }
+  ACTION{ walked100steps is p := Patient_1; now := 0.0 }
+  ACTION{ eatOneFruit is p := Patient_1; now := 0.0 }
+  ACTION{ updateState is p := Patient_1; w := World_1; now := 0.0 }
+  ACTION{ sendMessage2 is c := Coach_1; p := Patient_1; now := 0.0 }
+  ACTION{ add1Kg is p := Patient_1; now := 0.0 }
+  ACTION{ add1Kg is p := Patient_1; now := 0.0 }
+  ACTION{ sendActivity is p := Patient_1; h := HeliWeb_1; w := World_1; now := 0.0 }
+  ACTION{ eatOneFruit is p := Patient_1; now := 0.0 }
+  ACTION{ lost1Kg is p := Patient_1; now := 0.0 }
+  ACTION{ sendActivity is p := Patient_1; h := HeliWeb_1; w := World_1; now := 0.0 }
+  ACTION{ sendActivity is p := Patient_1; h := HeliWeb_1; w := World_1; now := 0.0 }
+  ACTION{ lost1Kg is p := Patient_1; now := 0.0 }
+  ACTION{ sendActivity is p := Patient_1; h := HeliWeb_1; w := World_1; now := 0.0 }
+  ACTION{ sendMessage3 is c := Coach_1; p := Patient_1; now := 0.0 }
+  ACTION{ walked100steps is p := Patient_1; now := 0.0 }
+  ACTION{ add1Kg is p := Patient_1; now := 0.0 }
+  ACTION{ walked100steps is p := Patient_1; now := 0.0 }
+  ACTION{ add1Kg is p := Patient_1; now := 0.0 }
+  ACTION{ adjustProbabilities is p := Patient_1; now := 0.0 }
+  ACTION{ sendMessage3 is c := Coach_1; p := Patient_1; now := 0.0 }
+  ACTION{ sendMessage3 is c := Coach_1; p := Patient_1; now := 0.0 }
+  ACTION{ adjustProbabilities is p := Patient_1; now := 0.0 }
+  ACTION{ sendActivity is p := Patient_1; h := HeliWeb_1; w := World_1; now := 0.0 }
+  ACTION{ sendMessage3 is c := Coach_1; p := Patient_1; now := 0.0 }
+  ACTION{ walked100steps is p := Patient_1; now := 0.0 }
+  ACTION{ walked100steps is p := Patient_1; now := 0.0 }
+  ACTION{ eatOneFruit is p := Patient_1; now := 0.0 }
+  ACTION{ lost1Kg is p := Patient_1; now := 0.0 }
+  ACTION{ lost1Kg is p := Patient_1; now := 0.0 }
+  ACTION{ updateState is p := Patient_1; w := World_1; now := 0.0 }
+  ACTION{ add1Kg is p := Patient_1; now := 0.0 }
+  ACTION{ add1Kg is p := Patient_1; now := 0.0 }
+  ACTION{ add1Kg is p := Patient_1; now := 0.0 }
+  ACTION{ walked100steps is p := Patient_1; now := 0.0 }
+  ACTION{ adjustProbabilities is p := Patient_1; now := 0.0 }
+  ACTION{ walked100steps is p := Patient_1; now := 0.0 }
+  ACTION{ adjustProbabilities is p := Patient_1; now := 0.0 }
+  ACTION{ adjustProbabilities is p := Patient_1; now := 0.0 }
+  ACTION{ lost1Kg is p := Patient_1; now := 0.0 }
+  ACTION{ updateWeeklyActivity is p := Patient_1; w := World_1; now := 0.0 }
+  ACTION{ eatOneFruit is p := Patient_1; now := 0.0 }
+  ACTION{ walked100steps is p := Patient_1; now := 0.0 }
+  ACTION{ updateWeeklyActivity is p := Patient_1; w := World_1; now := 0.0 }
+  ACTION{ add1Kg is p := Patient_1; now := 0.0 }
+  ACTION{ updateWeeklyActivity is p := Patient_1; w := World_1; now := 0.0 }
+  ACTION{ updateWeeklyActivity is p := Patient_1; w := World_1; now := 0.0 }
+  ACTION{ walked100steps is p := Patient_1; now := 0.0 }
+  ACTION{ walked100steps is p := Patient_1; now := 0.0 }
+  ACTION{ lost1Kg is p := Patient_1; now := 0.0 }
