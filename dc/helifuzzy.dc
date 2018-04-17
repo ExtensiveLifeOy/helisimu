@@ -142,6 +142,16 @@ layer helifuzzy is
 		 || p.t_last_activity := w.day;
 	 end;
 	 
+	 -- sendActivity after receiving a motivational messages
+	 action sendActivityAfterCoaching(p:Patient; h:HeliWeb; w:World) is -- Patients send their Activity periodically 
+     when (isPatientOfHeli(h,p) and p.t_last_activity<=w.day and p.m > 0.0 and p.t_registered >0.0 
+			and p.can_send and p.nmsg_rcvd > 1) do
+		  p.nmsg_sent := p.nmsg_sent + 1.0 
+		 || p.adh := computeAdherance(w,p)
+		 || p.t_last_activity := w.day;
+	 end;
+	 
+	 
 	 --  this function will execute based on probabilities
 	 action adjustProbabilities(p:Patient) is
 	 when p.t_registered > 0.0 do 
@@ -152,7 +162,8 @@ layer helifuzzy is
 	 action adjustAdherance(p:Patient) is
 	 when (p.adh > 1.0) do 
 	     p.adh :=1.0
-		 ||p.can_send := false;
+		 ||p.can_send := false
+		 ||p.nmsg_rcvd :=0;
 	 end; 
 
 	 action eatOneFruit(p:Patient) is
@@ -192,7 +203,8 @@ layer helifuzzy is
  		 p.act.fruits:= 0.0
 		 ||p.act.steps:= 0.0
 		 ||p.can_send:=true
-		 ||p.adh := computeAdherance(w,p);
+		 ||p.adh := computeAdherance(w,p)
+		 || p.nmsg_rcvd :=0;
 	 end; 	 
 
 	 --
