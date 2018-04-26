@@ -148,7 +148,8 @@ layer helifuzzy is
 			and p.can_send and p.nmsg_rcvd > 1) do
 		  p.nmsg_sent := p.nmsg_sent + 1.0 
 		 || p.adh := computeAdherance(w,p)
-		 || p.t_last_activity := w.day;
+		 || p.t_last_activity := w.day
+		 ||p.nmsg_rcvd :=0;
 	 end;
 	 
 	 
@@ -162,8 +163,7 @@ layer helifuzzy is
 	 action adjustAdherance(p:Patient) is
 	 when (p.adh > 1.0) do 
 	     p.adh :=1.0
-		 ||p.can_send := false
-		 ||p.nmsg_rcvd :=0;
+		 ||p.can_send := false;
 	 end; 
 
 	 action eatOneFruit(p:Patient) is
@@ -203,8 +203,7 @@ layer helifuzzy is
  		 p.act.fruits:= 0.0
 		 ||p.act.steps:= 0.0
 		 ||p.can_send:=true
-		 ||p.adh := computeAdherance(w,p)
-		 || p.nmsg_rcvd :=0;
+		 ||p.adh := computeAdherance(w,p);
 	 end; 	 
 
 	 --
