@@ -1,0 +1,1466 @@
+   ACTION{ updateState is p := Patient_2; w := World_1; now := 0.0 }
+   ACTION{ updateState is p := Patient_2; w := World_1; now := 0.0 }
+   ACTION{ sendGoalToHeLi is p := Patient_2; h := HeliWeb_1; w := World_1; now := 0.0 }
+   ACTION{ registerCoach is c := Coach_1; p := Patient_2; now := 0.0 } instance Wed Apr 11 13:56:41 PDT 2018 OVERVIEW of heli is       object HeliWeb_1 of HeliWeb is    end
+   ACTION{ sendMessage2 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage3 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ adjustProbabilities is p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage1 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ sendActivity is p := Patient_2; h := HeliWeb_1; w := World_1; now := 0.0 }
+   ACTION{ eatOneFruit is p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage1 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ lost1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ add1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage1 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ lost1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ sendActivity is p := Patient_2; h := HeliWeb_1; w := World_1; now := 0.0 }
+   ACTION{ sendMessage2 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ eatOneFruit is p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage2 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage2 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ eatOneFruit is p := Patient_2; now := 0.0 }
+   ACTION{ updateState is p := Patient_2; w := World_1; now := 0.0 }
+   ACTION{ sendMessage1 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage1 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage3 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage1 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ adjustProbabilities is p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage2 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage2 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage2 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage1 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ updateWeeklyActivity is p := Patient_2; w := World_1; now := 0.0 }
+   ACTION{ walked100steps is p := Patient_2; now := 0.0 }
+   ACTION{ lost1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage2 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ updateWeeklyActivity is p := Patient_2; w := World_1; now := 0.0 }
+   ACTION{ updateState is p := Patient_2; w := World_1; now := 0.0 }
+   ACTION{ sendMessage1 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ walked100steps is p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage1 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ updateState is p := Patient_2; w := World_1; now := 0.0 }
+   ACTION{ updateWeeklyActivity is p := Patient_2; w := World_1; now := 0.0 }
+   ACTION{ sendMessage1 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage2 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage1 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ walked100steps is p := Patient_2; now := 0.0 }
+   ACTION{ updateWeeklyActivity is p := Patient_2; w := World_1; now := 0.0 }
+   ACTION{ updateWeeklyActivity is p := Patient_2; w := World_1; now := 0.0 }
+   ACTION{ add1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ add1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ updateWeeklyActivity is p := Patient_2; w := World_1; now := 0.0 }
+   ACTION{ updateState is p := Patient_2; w := World_1; now := 0.0 }
+   ACTION{ walked100steps is p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage2 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ updateWeeklyActivity is p := Patient_2; w := World_1; now := 0.0 }
+   ACTION{ sendMessage3 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ updateWeeklyActivity is p := Patient_2; w := World_1; now := 0.0 }
+   ACTION{ sendMessage1 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage1 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ eatOneFruit is p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage3 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ sendActivity is p := Patient_2; h := HeliWeb_1; w := World_1; now := 0.0 }
+   ACTION{ sendMessage1 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage1 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ add1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ walked100steps is p := Patient_2; now := 0.0 }
+   ACTION{ lost1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage2 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ updateState is p := Patient_2; w := World_1; now := 0.0 }
+   ACTION{ eatOneFruit is p := Patient_2; now := 0.0 }
+   ACTION{ add1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage1 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ updateState is p := Patient_2; w := World_1; now := 0.0 }
+   ACTION{ adjustProbabilities is p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage2 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ updateState is p := Patient_2; w := World_1; now := 0.0 }
+   ACTION{ sendMessage2 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage2 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ sendActivity is p := Patient_2; h := HeliWeb_1; w := World_1; now := 0.0 }
+   ACTION{ walked100steps is p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage1 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ sendActivity is p := Patient_2; h := HeliWeb_1; w := World_1; now := 0.0 }
+   ACTION{ sendActivity is p := Patient_2; h := HeliWeb_1; w := World_1; now := 0.0 }
+   ACTION{ walked100steps is p := Patient_2; now := 0.0 }
+   ACTION{ lost1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage1 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ updateState is p := Patient_2; w := World_1; now := 0.0 }
+   ACTION{ lost1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ lost1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage1 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage1 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage1 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ add1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ lost1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ walked100steps is p := Patient_2; now := 0.0 }
+   ACTION{ walked100steps is p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage2 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ adjustProbabilities is p := Patient_2; now := 0.0 }
+   ACTION{ eatOneFruit is p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage3 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage3 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ lost1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ updateState is p := Patient_2; w := World_1; now := 0.0 }
+   ACTION{ updateState is p := Patient_2; w := World_1; now := 0.0 }
+   ACTION{ eatOneFruit is p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage1 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ updateWeeklyActivity is p := Patient_2; w := World_1; now := 0.0 }
+   ACTION{ adjustProbabilities is p := Patient_2; now := 0.0 }
+   ACTION{ sendActivity is p := Patient_2; h := HeliWeb_1; w := World_1; now := 0.0 }
+   ACTION{ sendMessage1 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ adjustProbabilities is p := Patient_2; now := 0.0 }
+   ACTION{ lost1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ updateState is p := Patient_2; w := World_1; now := 0.0 }
+   ACTION{ adjustProbabilities is p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage1 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage2 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage2 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage1 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage1 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage3 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ eatOneFruit is p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage1 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ lost1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage1 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ add1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage1 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage2 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage3 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage1 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage1 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ updateState is p := Patient_2; w := World_1; now := 0.0 }
+   ACTION{ sendActivity is p := Patient_2; h := HeliWeb_1; w := World_1; now := 0.0 }
+   ACTION{ lost1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage1 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage1 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage2 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ adjustProbabilities is p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage2 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ walked100steps is p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage3 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage3 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage2 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage1 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage1 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage2 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage3 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage2 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage1 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ eatOneFruit is p := Patient_2; now := 0.0 }
+   ACTION{ eatOneFruit is p := Patient_2; now := 0.0 }
+   ACTION{ updateState is p := Patient_2; w := World_1; now := 0.0 }
+   ACTION{ sendMessage2 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage3 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage1 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage1 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ updateState is p := Patient_2; w := World_1; now := 0.0 }
+   ACTION{ add1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage2 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage3 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ sendActivity is p := Patient_2; h := HeliWeb_1; w := World_1; now := 0.0 }
+   ACTION{ sendMessage3 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage2 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage3 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ sendActivity is p := Patient_2; h := HeliWeb_1; w := World_1; now := 0.0 }
+   ACTION{ sendMessage2 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage1 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage3 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ adjustProbabilities is p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage1 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage3 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ walked100steps is p := Patient_2; now := 0.0 }
+   ACTION{ add1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage1 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage1 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage2 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ sendActivity is p := Patient_2; h := HeliWeb_1; w := World_1; now := 0.0 }
+   ACTION{ sendMessage2 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage1 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ updateState is p := Patient_2; w := World_1; now := 0.0 }
+   ACTION{ adjustProbabilities is p := Patient_2; now := 0.0 }
+   ACTION{ walked100steps is p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage1 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ walked100steps is p := Patient_2; now := 0.0 }
+   ACTION{ updateState is p := Patient_2; w := World_1; now := 0.0 }
+   ACTION{ sendMessage1 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ eatOneFruit is p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage2 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ lost1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ sendActivity is p := Patient_2; h := HeliWeb_1; w := World_1; now := 0.0 }
+   ACTION{ sendMessage2 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ eatOneFruit is p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage2 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ lost1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ add1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage2 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ add1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage2 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ eatOneFruit is p := Patient_2; now := 0.0 }
+   ACTION{ walked100steps is p := Patient_2; now := 0.0 }
+   ACTION{ walked100steps is p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage2 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage2 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ eatOneFruit is p := Patient_2; now := 0.0 }
+   ACTION{ add1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage3 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ add1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ updateState is p := Patient_2; w := World_1; now := 0.0 }
+   ACTION{ sendMessage2 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage2 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ eatOneFruit is p := Patient_2; now := 0.0 }
+   ACTION{ adjustProbabilities is p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage2 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage2 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ sendActivity is p := Patient_2; h := HeliWeb_1; w := World_1; now := 0.0 }
+   ACTION{ walked100steps is p := Patient_2; now := 0.0 }
+   ACTION{ updateState is p := Patient_2; w := World_1; now := 0.0 }
+   ACTION{ updateState is p := Patient_2; w := World_1; now := 0.0 }
+   ACTION{ updateState is p := Patient_2; w := World_1; now := 0.0 }
+   ACTION{ sendMessage3 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ eatOneFruit is p := Patient_2; now := 0.0 }
+   ACTION{ lost1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ adjustProbabilities is p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage3 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ sendActivity is p := Patient_2; h := HeliWeb_1; w := World_1; now := 0.0 }
+   ACTION{ add1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ sendActivity is p := Patient_2; h := HeliWeb_1; w := World_1; now := 0.0 }
+   ACTION{ lost1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage3 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ lost1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage3 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ sendActivity is p := Patient_2; h := HeliWeb_1; w := World_1; now := 0.0 }
+   ACTION{ lost1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage3 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ walked100steps is p := Patient_2; now := 0.0 }
+   ACTION{ eatOneFruit is p := Patient_2; now := 0.0 }
+   ACTION{ sendActivity is p := Patient_2; h := HeliWeb_1; w := World_1; now := 0.0 }
+   ACTION{ adjustProbabilities is p := Patient_2; now := 0.0 }
+   ACTION{ add1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ sendActivity is p := Patient_2; h := HeliWeb_1; w := World_1; now := 0.0 }
+   ACTION{ add1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ walked100steps is p := Patient_2; now := 0.0 }
+   ACTION{ eatOneFruit is p := Patient_2; now := 0.0 }
+   ACTION{ sendActivity is p := Patient_2; h := HeliWeb_1; w := World_1; now := 0.0 }
+   ACTION{ add1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ lost1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ adjustProbabilities is p := Patient_2; now := 0.0 }
+   ACTION{ sendActivity is p := Patient_2; h := HeliWeb_1; w := World_1; now := 0.0 }
+   ACTION{ walked100steps is p := Patient_2; now := 0.0 }
+   ACTION{ lost1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ eatOneFruit is p := Patient_2; now := 0.0 }
+   ACTION{ updateState is p := Patient_2; w := World_1; now := 0.0 }
+   ACTION{ add1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ updateState is p := Patient_2; w := World_1; now := 0.0 }
+   ACTION{ sendActivity is p := Patient_2; h := HeliWeb_1; w := World_1; now := 0.0 }
+   ACTION{ sendActivity is p := Patient_2; h := HeliWeb_1; w := World_1; now := 0.0 }
+   ACTION{ walked100steps is p := Patient_2; now := 0.0 }
+   ACTION{ adjustProbabilities is p := Patient_2; now := 0.0 }
+   ACTION{ lost1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ sendActivity is p := Patient_2; h := HeliWeb_1; w := World_1; now := 0.0 }
+   ACTION{ add1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ eatOneFruit is p := Patient_2; now := 0.0 }
+   ACTION{ sendActivity is p := Patient_2; h := HeliWeb_1; w := World_1; now := 0.0 }
+   ACTION{ adjustAdherance is p := Patient_2; now := 0.0 }
+   ACTION{ add1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ lost1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ add1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ updateState is p := Patient_2; w := World_1; now := 0.0 }
+   ACTION{ eatOneFruit is p := Patient_2; now := 0.0 }
+   ACTION{ walked100steps is p := Patient_2; now := 0.0 }
+   ACTION{ adjustProbabilities is p := Patient_2; now := 0.0 }
+   ACTION{ updateState is p := Patient_2; w := World_1; now := 0.0 }
+   ACTION{ eatOneFruit is p := Patient_2; now := 0.0 }
+   ACTION{ adjustProbabilities is p := Patient_2; now := 0.0 }
+   ACTION{ updateState is p := Patient_2; w := World_1; now := 0.0 }
+   ACTION{ lost1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ adjustProbabilities is p := Patient_2; now := 0.0 }
+   ACTION{ eatOneFruit is p := Patient_2; now := 0.0 }
+   ACTION{ walked100steps is p := Patient_2; now := 0.0 }
+   ACTION{ walked100steps is p := Patient_2; now := 0.0 }
+   ACTION{ lost1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ walked100steps is p := Patient_2; now := 0.0 }
+   ACTION{ adjustProbabilities is p := Patient_2; now := 0.0 }
+   ACTION{ walked100steps is p := Patient_2; now := 0.0 }
+   ACTION{ eatOneFruit is p := Patient_2; now := 0.0 }
+   ACTION{ adjustProbabilities is p := Patient_2; now := 0.0 }
+   ACTION{ adjustProbabilities is p := Patient_2; now := 0.0 }
+   ACTION{ lost1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ updateWeeklyActivity is p := Patient_2; w := World_1; now := 0.0 }
+   ACTION{ eatOneFruit is p := Patient_2; now := 0.0 }
+   ACTION{ eatOneFruit is p := Patient_2; now := 0.0 }
+   ACTION{ updateWeeklyActivity is p := Patient_2; w := World_1; now := 0.0 }
+   ACTION{ updateWeeklyActivity is p := Patient_2; w := World_1; now := 0.0 }
+   ACTION{ sendActivity is p := Patient_2; h := HeliWeb_1; w := World_1; now := 0.0 }
+   ACTION{ sendMessage1 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ updateState is p := Patient_2; w := World_1; now := 0.0 }
+   ACTION{ sendMessage1 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ updateState is p := Patient_2; w := World_1; now := 0.0 }
+   ACTION{ adjustProbabilities is p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage3 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage2 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ adjustProbabilities is p := Patient_2; now := 0.0 }
+   ACTION{ add1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ walked100steps is p := Patient_2; now := 0.0 }
+   ACTION{ sendActivity is p := Patient_2; h := HeliWeb_1; w := World_1; now := 0.0 }
+   ACTION{ sendMessage2 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage1 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage1 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ walked100steps is p := Patient_2; now := 0.0 }
+   ACTION{ lost1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage1 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ adjustProbabilities is p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage2 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage1 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ updateState is p := Patient_2; w := World_1; now := 0.0 }
+   ACTION{ sendMessage1 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage2 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ adjustProbabilities is p := Patient_2; now := 0.0 }
+   ACTION{ eatOneFruit is p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage1 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage1 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ sendActivity is p := Patient_2; h := HeliWeb_1; w := World_1; now := 0.0 }
+   ACTION{ add1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ sendActivity is p := Patient_2; h := HeliWeb_1; w := World_1; now := 0.0 }
+   ACTION{ updateState is p := Patient_2; w := World_1; now := 0.0 }
+   ACTION{ sendMessage2 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ add1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage3 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage1 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ add1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ sendActivity is p := Patient_2; h := HeliWeb_1; w := World_1; now := 0.0 }
+   ACTION{ sendMessage3 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ sendActivity is p := Patient_2; h := HeliWeb_1; w := World_1; now := 0.0 }
+   ACTION{ sendMessage2 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ lost1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ sendActivity is p := Patient_2; h := HeliWeb_1; w := World_1; now := 0.0 }
+   ACTION{ walked100steps is p := Patient_2; now := 0.0 }
+   ACTION{ walked100steps is p := Patient_2; now := 0.0 }
+   ACTION{ eatOneFruit is p := Patient_2; now := 0.0 }
+   ACTION{ adjustProbabilities is p := Patient_2; now := 0.0 }
+   ACTION{ walked100steps is p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage3 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ eatOneFruit is p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage2 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ add1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage3 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ walked100steps is p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage1 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ updateState is p := Patient_2; w := World_1; now := 0.0 }
+   ACTION{ sendMessage1 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage3 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage3 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage2 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ adjustProbabilities is p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage3 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage2 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ walked100steps is p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage1 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage2 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage1 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ eatOneFruit is p := Patient_2; now := 0.0 }
+   ACTION{ walked100steps is p := Patient_2; now := 0.0 }
+   ACTION{ updateState is p := Patient_2; w := World_1; now := 0.0 }
+   ACTION{ sendMessage3 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage3 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage2 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ updateWeeklyActivity is p := Patient_2; w := World_1; now := 0.0 }
+   ACTION{ updateState is p := Patient_2; w := World_1; now := 0.0 }
+   ACTION{ add1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ sendActivity is p := Patient_2; h := HeliWeb_1; w := World_1; now := 0.0 }
+   ACTION{ add1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ add1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ sendActivity is p := Patient_2; h := HeliWeb_1; w := World_1; now := 0.0 }
+   ACTION{ eatOneFruit is p := Patient_2; now := 0.0 }
+   ACTION{ sendActivity is p := Patient_2; h := HeliWeb_1; w := World_1; now := 0.0 }
+   ACTION{ updateState is p := Patient_2; w := World_1; now := 0.0 }
+   ACTION{ walked100steps is p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage2 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage3 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage1 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ walked100steps is p := Patient_2; now := 0.0 }
+   ACTION{ adjustProbabilities is p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage1 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage2 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ lost1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage2 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage3 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ walked100steps is p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage1 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage1 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ add1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ add1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ sendActivity is p := Patient_2; h := HeliWeb_1; w := World_1; now := 0.0 }
+   ACTION{ updateState is p := Patient_2; w := World_1; now := 0.0 }
+   ACTION{ lost1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ sendActivity is p := Patient_2; h := HeliWeb_1; w := World_1; now := 0.0 }
+   ACTION{ sendActivity is p := Patient_2; h := HeliWeb_1; w := World_1; now := 0.0 }
+   ACTION{ sendActivity is p := Patient_2; h := HeliWeb_1; w := World_1; now := 0.0 }
+   ACTION{ sendMessage1 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ sendActivity is p := Patient_2; h := HeliWeb_1; w := World_1; now := 0.0 }
+   ACTION{ updateState is p := Patient_2; w := World_1; now := 0.0 }
+   ACTION{ eatOneFruit is p := Patient_2; now := 0.0 }
+   ACTION{ eatOneFruit is p := Patient_2; now := 0.0 }
+   ACTION{ lost1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage1 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ sendActivity is p := Patient_2; h := HeliWeb_1; w := World_1; now := 0.0 }
+   ACTION{ walked100steps is p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage1 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ sendActivity is p := Patient_2; h := HeliWeb_1; w := World_1; now := 0.0 }
+   ACTION{ sendActivity is p := Patient_2; h := HeliWeb_1; w := World_1; now := 0.0 }
+   ACTION{ lost1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage2 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage3 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ walked100steps is p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage2 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage3 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage2 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ lost1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage2 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ adjustProbabilities is p := Patient_2; now := 0.0 }
+   ACTION{ add1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage2 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ walked100steps is p := Patient_2; now := 0.0 }
+   ACTION{ sendActivity is p := Patient_2; h := HeliWeb_1; w := World_1; now := 0.0 }
+   ACTION{ add1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ lost1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ adjustProbabilities is p := Patient_2; now := 0.0 }
+   ACTION{ updateState is p := Patient_2; w := World_1; now := 0.0 }
+   ACTION{ eatOneFruit is p := Patient_2; now := 0.0 }
+   ACTION{ adjustProbabilities is p := Patient_2; now := 0.0 }
+   ACTION{ adjustProbabilities is p := Patient_2; now := 0.0 }
+   ACTION{ updateState is p := Patient_2; w := World_1; now := 0.0 }
+   ACTION{ sendActivity is p := Patient_2; h := HeliWeb_1; w := World_1; now := 0.0 }
+   ACTION{ eatOneFruit is p := Patient_2; now := 0.0 }
+   ACTION{ adjustProbabilities is p := Patient_2; now := 0.0 }
+   ACTION{ adjustProbabilities is p := Patient_2; now := 0.0 }
+   ACTION{ updateState is p := Patient_2; w := World_1; now := 0.0 }
+   ACTION{ eatOneFruit is p := Patient_2; now := 0.0 }
+   ACTION{ add1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ updateState is p := Patient_2; w := World_1; now := 0.0 }
+   ACTION{ sendActivity is p := Patient_2; h := HeliWeb_1; w := World_1; now := 0.0 }
+   ACTION{ lost1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ add1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ sendActivity is p := Patient_2; h := HeliWeb_1; w := World_1; now := 0.0 }
+   ACTION{ adjustProbabilities is p := Patient_2; now := 0.0 }
+   ACTION{ eatOneFruit is p := Patient_2; now := 0.0 }
+   ACTION{ walked100steps is p := Patient_2; now := 0.0 }
+   ACTION{ sendActivity is p := Patient_2; h := HeliWeb_1; w := World_1; now := 0.0 }
+   ACTION{ add1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ updateState is p := Patient_2; w := World_1; now := 0.0 }
+   ACTION{ lost1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ updateState is p := Patient_2; w := World_1; now := 0.0 }
+   ACTION{ adjustProbabilities is p := Patient_2; now := 0.0 }
+   ACTION{ walked100steps is p := Patient_2; now := 0.0 }
+   ACTION{ lost1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ walked100steps is p := Patient_2; now := 0.0 }
+   ACTION{ eatOneFruit is p := Patient_2; now := 0.0 }
+   ACTION{ eatOneFruit is p := Patient_2; now := 0.0 }
+   ACTION{ updateState is p := Patient_2; w := World_1; now := 0.0 }
+   ACTION{ walked100steps is p := Patient_2; now := 0.0 }
+   ACTION{ adjustProbabilities is p := Patient_2; now := 0.0 }
+   ACTION{ add1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ sendActivity is p := Patient_2; h := HeliWeb_1; w := World_1; now := 0.0 }
+   ACTION{ walked100steps is p := Patient_2; now := 0.0 }
+   ACTION{ lost1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ eatOneFruit is p := Patient_2; now := 0.0 }
+   ACTION{ walked100steps is p := Patient_2; now := 0.0 }
+   ACTION{ adjustProbabilities is p := Patient_2; now := 0.0 }
+   ACTION{ adjustProbabilities is p := Patient_2; now := 0.0 }
+   ACTION{ walked100steps is p := Patient_2; now := 0.0 }
+   ACTION{ sendActivity is p := Patient_2; h := HeliWeb_1; w := World_1; now := 0.0 }
+   ACTION{ adjustAdherance is p := Patient_2; now := 0.0 }
+   ACTION{ eatOneFruit is p := Patient_2; now := 0.0 }
+   ACTION{ eatOneFruit is p := Patient_2; now := 0.0 }
+   ACTION{ walked100steps is p := Patient_2; now := 0.0 }
+   ACTION{ updateState is p := Patient_2; w := World_1; now := 0.0 }
+   ACTION{ walked100steps is p := Patient_2; now := 0.0 }
+   ACTION{ lost1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ eatOneFruit is p := Patient_2; now := 0.0 }
+   ACTION{ updateState is p := Patient_2; w := World_1; now := 0.0 }
+   ACTION{ adjustProbabilities is p := Patient_2; now := 0.0 }
+   ACTION{ adjustProbabilities is p := Patient_2; now := 0.0 }
+   ACTION{ adjustProbabilities is p := Patient_2; now := 0.0 }
+   ACTION{ walked100steps is p := Patient_2; now := 0.0 }
+   ACTION{ updateState is p := Patient_2; w := World_1; now := 0.0 }
+   ACTION{ adjustProbabilities is p := Patient_2; now := 0.0 }
+   ACTION{ adjustProbabilities is p := Patient_2; now := 0.0 }
+   ACTION{ adjustProbabilities is p := Patient_2; now := 0.0 }
+   ACTION{ eatOneFruit is p := Patient_2; now := 0.0 }
+   ACTION{ walked100steps is p := Patient_2; now := 0.0 }
+   ACTION{ add1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ updateState is p := Patient_2; w := World_1; now := 0.0 }
+   ACTION{ lost1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ add1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ eatOneFruit is p := Patient_2; now := 0.0 }
+   ACTION{ lost1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ walked100steps is p := Patient_2; now := 0.0 }
+   ACTION{ updateWeeklyActivity is p := Patient_2; w := World_1; now := 0.0 }
+   ACTION{ adjustAdherance is p := Patient_2; now := 0.0 }
+   ACTION{ updateWeeklyActivity is p := Patient_2; w := World_1; now := 0.0 }
+   ACTION{ add1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ updateState is p := Patient_2; w := World_1; now := 0.0 }
+   ACTION{ sendMessage1 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ updateState is p := Patient_2; w := World_1; now := 0.0 }
+   ACTION{ add1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ eatOneFruit is p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage1 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ walked100steps is p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage2 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ updateWeeklyActivity is p := Patient_2; w := World_1; now := 0.0 }
+   ACTION{ updateWeeklyActivity is p := Patient_2; w := World_1; now := 0.0 }
+   ACTION{ sendMessage1 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ walked100steps is p := Patient_2; now := 0.0 }
+   ACTION{ updateState is p := Patient_2; w := World_1; now := 0.0 }
+   ACTION{ sendMessage3 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage1 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ updateWeeklyActivity is p := Patient_2; w := World_1; now := 0.0 }
+   ACTION{ sendMessage2 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ lost1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage1 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ walked100steps is p := Patient_2; now := 0.0 }
+   ACTION{ updateWeeklyActivity is p := Patient_2; w := World_1; now := 0.0 }
+   ACTION{ sendMessage1 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ sendActivity is p := Patient_2; h := HeliWeb_1; w := World_1; now := 0.0 }
+   ACTION{ sendMessage1 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ lost1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ updateState is p := Patient_2; w := World_1; now := 0.0 }
+   ACTION{ add1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage2 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ updateState is p := Patient_2; w := World_1; now := 0.0 }
+   ACTION{ add1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage3 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ walked100steps is p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage3 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage3 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage2 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ updateState is p := Patient_2; w := World_1; now := 0.0 }
+   ACTION{ adjustProbabilities is p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage3 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage3 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage1 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage1 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ walked100steps is p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage2 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage2 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage3 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage2 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ updateState is p := Patient_2; w := World_1; now := 0.0 }
+   ACTION{ sendMessage1 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ add1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage1 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage2 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ updateState is p := Patient_2; w := World_1; now := 0.0 }
+   ACTION{ sendActivity is p := Patient_2; h := HeliWeb_1; w := World_1; now := 0.0 }
+   ACTION{ add1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ add1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ eatOneFruit is p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage2 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ adjustProbabilities is p := Patient_2; now := 0.0 }
+   ACTION{ sendActivity is p := Patient_2; h := HeliWeb_1; w := World_1; now := 0.0 }
+   ACTION{ add1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage3 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage1 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ adjustProbabilities is p := Patient_2; now := 0.0 }
+   ACTION{ add1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ lost1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage1 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage2 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ add1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ walked100steps is p := Patient_2; now := 0.0 }
+   ACTION{ eatOneFruit is p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage1 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ add1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ lost1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ eatOneFruit is p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage1 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ adjustProbabilities is p := Patient_2; now := 0.0 }
+   ACTION{ updateState is p := Patient_2; w := World_1; now := 0.0 }
+   ACTION{ sendMessage2 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ eatOneFruit is p := Patient_2; now := 0.0 }
+   ACTION{ adjustProbabilities is p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage1 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ sendActivity is p := Patient_2; h := HeliWeb_1; w := World_1; now := 0.0 }
+   ACTION{ sendMessage2 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ adjustProbabilities is p := Patient_2; now := 0.0 }
+   ACTION{ add1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage3 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ walked100steps is p := Patient_2; now := 0.0 }
+   ACTION{ lost1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ adjustProbabilities is p := Patient_2; now := 0.0 }
+   ACTION{ adjustProbabilities is p := Patient_2; now := 0.0 }
+   ACTION{ updateState is p := Patient_2; w := World_1; now := 0.0 }
+   ACTION{ walked100steps is p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage3 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ add1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ sendActivity is p := Patient_2; h := HeliWeb_1; w := World_1; now := 0.0 }
+   ACTION{ sendMessage2 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage2 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ eatOneFruit is p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage2 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ sendActivity is p := Patient_2; h := HeliWeb_1; w := World_1; now := 0.0 }
+   ACTION{ sendActivity is p := Patient_2; h := HeliWeb_1; w := World_1; now := 0.0 }
+   ACTION{ eatOneFruit is p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage3 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ walked100steps is p := Patient_2; now := 0.0 }
+   ACTION{ updateState is p := Patient_2; w := World_1; now := 0.0 }
+   ACTION{ sendMessage2 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ lost1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ sendActivity is p := Patient_2; h := HeliWeb_1; w := World_1; now := 0.0 }
+   ACTION{ sendMessage3 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ updateState is p := Patient_2; w := World_1; now := 0.0 }
+   ACTION{ add1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage3 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ walked100steps is p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage3 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ eatOneFruit is p := Patient_2; now := 0.0 }
+   ACTION{ walked100steps is p := Patient_2; now := 0.0 }
+   ACTION{ eatOneFruit is p := Patient_2; now := 0.0 }
+   ACTION{ walked100steps is p := Patient_2; now := 0.0 }
+   ACTION{ updateState is p := Patient_2; w := World_1; now := 0.0 }
+   ACTION{ sendActivity is p := Patient_2; h := HeliWeb_1; w := World_1; now := 0.0 }
+   ACTION{ walked100steps is p := Patient_2; now := 0.0 }
+   ACTION{ lost1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ updateState is p := Patient_2; w := World_1; now := 0.0 }
+   ACTION{ add1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ walked100steps is p := Patient_2; now := 0.0 }
+   ACTION{ walked100steps is p := Patient_2; now := 0.0 }
+   ACTION{ adjustProbabilities is p := Patient_2; now := 0.0 }
+   ACTION{ updateState is p := Patient_2; w := World_1; now := 0.0 }
+   ACTION{ sendActivity is p := Patient_2; h := HeliWeb_1; w := World_1; now := 0.0 }
+   ACTION{ lost1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ adjustAdherance is p := Patient_2; now := 0.0 }
+   ACTION{ eatOneFruit is p := Patient_2; now := 0.0 }
+   ACTION{ updateState is p := Patient_2; w := World_1; now := 0.0 }
+   ACTION{ add1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ updateState is p := Patient_2; w := World_1; now := 0.0 }
+   ACTION{ eatOneFruit is p := Patient_2; now := 0.0 }
+   ACTION{ walked100steps is p := Patient_2; now := 0.0 }
+   ACTION{ walked100steps is p := Patient_2; now := 0.0 }
+   ACTION{ eatOneFruit is p := Patient_2; now := 0.0 }
+   ACTION{ eatOneFruit is p := Patient_2; now := 0.0 }
+   ACTION{ add1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ lost1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ walked100steps is p := Patient_2; now := 0.0 }
+   ACTION{ updateState is p := Patient_2; w := World_1; now := 0.0 }
+   ACTION{ walked100steps is p := Patient_2; now := 0.0 }
+   ACTION{ eatOneFruit is p := Patient_2; now := 0.0 }
+   ACTION{ updateState is p := Patient_2; w := World_1; now := 0.0 }
+   ACTION{ updateState is p := Patient_2; w := World_1; now := 0.0 }
+   ACTION{ walked100steps is p := Patient_2; now := 0.0 }
+   ACTION{ eatOneFruit is p := Patient_2; now := 0.0 }
+   ACTION{ add1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ adjustProbabilities is p := Patient_2; now := 0.0 }
+   ACTION{ updateState is p := Patient_2; w := World_1; now := 0.0 }
+   ACTION{ lost1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ lost1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ lost1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ updateWeeklyActivity is p := Patient_2; w := World_1; now := 0.0 }
+   ACTION{ adjustAdherance is p := Patient_2; now := 0.0 }
+   ACTION{ lost1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ updateState is p := Patient_2; w := World_1; now := 0.0 }
+   ACTION{ walked100steps is p := Patient_2; now := 0.0 }
+   ACTION{ eatOneFruit is p := Patient_2; now := 0.0 }
+   ACTION{ add1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ walked100steps is p := Patient_2; now := 0.0 }
+   ACTION{ adjustProbabilities is p := Patient_2; now := 0.0 }
+   ACTION{ updateWeeklyActivity is p := Patient_2; w := World_1; now := 0.0 }
+   ACTION{ updateState is p := Patient_2; w := World_1; now := 0.0 }
+   ACTION{ sendMessage1 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage2 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ eatOneFruit is p := Patient_2; now := 0.0 }
+   ACTION{ walked100steps is p := Patient_2; now := 0.0 }
+   ACTION{ updateState is p := Patient_2; w := World_1; now := 0.0 }
+   ACTION{ add1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage1 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ eatOneFruit is p := Patient_2; now := 0.0 }
+   ACTION{ eatOneFruit is p := Patient_2; now := 0.0 }
+   ACTION{ add1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ sendActivity is p := Patient_2; h := HeliWeb_1; w := World_1; now := 0.0 }
+   ACTION{ sendMessage3 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ eatOneFruit is p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage2 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage2 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ walked100steps is p := Patient_2; now := 0.0 }
+   ACTION{ eatOneFruit is p := Patient_2; now := 0.0 }
+   ACTION{ sendActivity is p := Patient_2; h := HeliWeb_1; w := World_1; now := 0.0 }
+   ACTION{ sendMessage3 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ lost1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage1 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage1 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage3 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ updateState is p := Patient_2; w := World_1; now := 0.0 }
+   ACTION{ sendActivity is p := Patient_2; h := HeliWeb_1; w := World_1; now := 0.0 }
+   ACTION{ sendMessage1 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage3 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage2 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ updateState is p := Patient_2; w := World_1; now := 0.0 }
+   ACTION{ sendMessage1 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage3 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ lost1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ walked100steps is p := Patient_2; now := 0.0 }
+   ACTION{ eatOneFruit is p := Patient_2; now := 0.0 }
+   ACTION{ add1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ updateState is p := Patient_2; w := World_1; now := 0.0 }
+   ACTION{ sendActivity is p := Patient_2; h := HeliWeb_1; w := World_1; now := 0.0 }
+   ACTION{ sendMessage3 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage2 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage2 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ adjustProbabilities is p := Patient_2; now := 0.0 }
+   ACTION{ updateState is p := Patient_2; w := World_1; now := 0.0 }
+   ACTION{ sendMessage1 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage1 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ add1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage1 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage1 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ updateState is p := Patient_2; w := World_1; now := 0.0 }
+   ACTION{ sendMessage1 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage3 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage3 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage3 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage1 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ sendActivity is p := Patient_2; h := HeliWeb_1; w := World_1; now := 0.0 }
+   ACTION{ sendMessage1 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage1 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ adjustProbabilities is p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage2 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ lost1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ sendActivity is p := Patient_2; h := HeliWeb_1; w := World_1; now := 0.0 }
+   ACTION{ sendActivity is p := Patient_2; h := HeliWeb_1; w := World_1; now := 0.0 }
+   ACTION{ sendMessage2 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage2 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage2 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage1 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ adjustProbabilities is p := Patient_2; now := 0.0 }
+   ACTION{ add1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ add1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ adjustProbabilities is p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage2 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage1 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ updateState is p := Patient_2; w := World_1; now := 0.0 }
+   ACTION{ sendMessage1 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage3 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage3 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage1 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage1 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ eatOneFruit is p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage1 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ add1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ add1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage3 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ adjustProbabilities is p := Patient_2; now := 0.0 }
+   ACTION{ eatOneFruit is p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage1 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ adjustProbabilities is p := Patient_2; now := 0.0 }
+   ACTION{ sendActivity is p := Patient_2; h := HeliWeb_1; w := World_1; now := 0.0 }
+   ACTION{ sendActivity is p := Patient_2; h := HeliWeb_1; w := World_1; now := 0.0 }
+   ACTION{ sendMessage2 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage2 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage3 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage1 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage3 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ eatOneFruit is p := Patient_2; now := 0.0 }
+   ACTION{ lost1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ updateState is p := Patient_2; w := World_1; now := 0.0 }
+   ACTION{ updateState is p := Patient_2; w := World_1; now := 0.0 }
+   ACTION{ sendMessage2 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ lost1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage2 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage1 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage2 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ add1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage3 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ walked100steps is p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage2 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ sendActivity is p := Patient_2; h := HeliWeb_1; w := World_1; now := 0.0 }
+   ACTION{ sendActivity is p := Patient_2; h := HeliWeb_1; w := World_1; now := 0.0 }
+   ACTION{ lost1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ adjustProbabilities is p := Patient_2; now := 0.0 }
+   ACTION{ walked100steps is p := Patient_2; now := 0.0 }
+   ACTION{ walked100steps is p := Patient_2; now := 0.0 }
+   ACTION{ walked100steps is p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage3 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage3 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ updateState is p := Patient_2; w := World_1; now := 0.0 }
+   ACTION{ sendActivity is p := Patient_2; h := HeliWeb_1; w := World_1; now := 0.0 }
+   ACTION{ eatOneFruit is p := Patient_2; now := 0.0 }
+   ACTION{ eatOneFruit is p := Patient_2; now := 0.0 }
+   ACTION{ lost1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage3 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ sendActivity is p := Patient_2; h := HeliWeb_1; w := World_1; now := 0.0 }
+   ACTION{ sendMessage3 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ updateState is p := Patient_2; w := World_1; now := 0.0 }
+   ACTION{ eatOneFruit is p := Patient_2; now := 0.0 }
+   ACTION{ eatOneFruit is p := Patient_2; now := 0.0 }
+   ACTION{ eatOneFruit is p := Patient_2; now := 0.0 }
+   ACTION{ add1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage3 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ updateState is p := Patient_2; w := World_1; now := 0.0 }
+   ACTION{ sendMessage3 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ eatOneFruit is p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage3 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage3 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ add1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ walked100steps is p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage3 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ lost1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ adjustProbabilities is p := Patient_2; now := 0.0 }
+   ACTION{ add1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage3 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ eatOneFruit is p := Patient_2; now := 0.0 }
+   ACTION{ lost1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ eatOneFruit is p := Patient_2; now := 0.0 }
+   ACTION{ adjustProbabilities is p := Patient_2; now := 0.0 }
+   ACTION{ add1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ sendActivity is p := Patient_2; h := HeliWeb_1; w := World_1; now := 0.0 }
+   ACTION{ lost1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ eatOneFruit is p := Patient_2; now := 0.0 }
+   ACTION{ walked100steps is p := Patient_2; now := 0.0 }
+   ACTION{ add1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ lost1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ eatOneFruit is p := Patient_2; now := 0.0 }
+   ACTION{ lost1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ eatOneFruit is p := Patient_2; now := 0.0 }
+   ACTION{ add1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ updateState is p := Patient_2; w := World_1; now := 0.0 }
+   ACTION{ updateState is p := Patient_2; w := World_1; now := 0.0 }
+   ACTION{ add1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ walked100steps is p := Patient_2; now := 0.0 }
+   ACTION{ updateWeeklyActivity is p := Patient_2; w := World_1; now := 0.0 }
+   ACTION{ updateWeeklyActivity is p := Patient_2; w := World_1; now := 0.0 }
+   ACTION{ sendActivity is p := Patient_2; h := HeliWeb_1; w := World_1; now := 0.0 }
+   ACTION{ adjustProbabilities is p := Patient_2; now := 0.0 }
+   ACTION{ eatOneFruit is p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage2 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage1 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ lost1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ sendActivity is p := Patient_2; h := HeliWeb_1; w := World_1; now := 0.0 }
+   ACTION{ walked100steps is p := Patient_2; now := 0.0 }
+   ACTION{ adjustProbabilities is p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage1 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage1 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ updateState is p := Patient_2; w := World_1; now := 0.0 }
+   ACTION{ eatOneFruit is p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage3 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ add1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage2 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ sendActivity is p := Patient_2; h := HeliWeb_1; w := World_1; now := 0.0 }
+   ACTION{ sendMessage2 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ sendActivity is p := Patient_2; h := HeliWeb_1; w := World_1; now := 0.0 }
+   ACTION{ sendActivity is p := Patient_2; h := HeliWeb_1; w := World_1; now := 0.0 }
+   ACTION{ updateState is p := Patient_2; w := World_1; now := 0.0 }
+   ACTION{ sendMessage2 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ walked100steps is p := Patient_2; now := 0.0 }
+   ACTION{ add1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ eatOneFruit is p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage1 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ adjustProbabilities is p := Patient_2; now := 0.0 }
+   ACTION{ adjustProbabilities is p := Patient_2; now := 0.0 }
+   ACTION{ updateState is p := Patient_2; w := World_1; now := 0.0 }
+   ACTION{ sendMessage2 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ lost1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage1 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage3 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ adjustProbabilities is p := Patient_2; now := 0.0 }
+   ACTION{ sendActivity is p := Patient_2; h := HeliWeb_1; w := World_1; now := 0.0 }
+   ACTION{ adjustProbabilities is p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage3 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ lost1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ eatOneFruit is p := Patient_2; now := 0.0 }
+   ACTION{ sendActivity is p := Patient_2; h := HeliWeb_1; w := World_1; now := 0.0 }
+   ACTION{ sendActivity is p := Patient_2; h := HeliWeb_1; w := World_1; now := 0.0 }
+   ACTION{ walked100steps is p := Patient_2; now := 0.0 }
+   ACTION{ adjustProbabilities is p := Patient_2; now := 0.0 }
+   ACTION{ sendActivity is p := Patient_2; h := HeliWeb_1; w := World_1; now := 0.0 }
+   ACTION{ updateState is p := Patient_2; w := World_1; now := 0.0 }
+   ACTION{ eatOneFruit is p := Patient_2; now := 0.0 }
+   ACTION{ adjustProbabilities is p := Patient_2; now := 0.0 }
+   ACTION{ adjustProbabilities is p := Patient_2; now := 0.0 }
+   ACTION{ walked100steps is p := Patient_2; now := 0.0 }
+   ACTION{ add1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ walked100steps is p := Patient_2; now := 0.0 }
+   ACTION{ updateState is p := Patient_2; w := World_1; now := 0.0 }
+   ACTION{ sendMessage2 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage3 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ adjustProbabilities is p := Patient_2; now := 0.0 }
+   ACTION{ sendActivity is p := Patient_2; h := HeliWeb_1; w := World_1; now := 0.0 }
+   ACTION{ sendActivity is p := Patient_2; h := HeliWeb_1; w := World_1; now := 0.0 }
+   ACTION{ sendActivity is p := Patient_2; h := HeliWeb_1; w := World_1; now := 0.0 }
+   ACTION{ eatOneFruit is p := Patient_2; now := 0.0 }
+   ACTION{ lost1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ eatOneFruit is p := Patient_2; now := 0.0 }
+   ACTION{ lost1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ eatOneFruit is p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage2 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ lost1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ walked100steps is p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage3 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage3 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ walked100steps is p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage2 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ adjustProbabilities is p := Patient_2; now := 0.0 }
+   ACTION{ updateWeeklyActivity is p := Patient_2; w := World_1; now := 0.0 }
+   ACTION{ updateWeeklyActivity is p := Patient_2; w := World_1; now := 0.0 }
+   ACTION{ sendMessage3 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ updateWeeklyActivity is p := Patient_2; w := World_1; now := 0.0 }
+   ACTION{ walked100steps is p := Patient_2; now := 0.0 }
+   ACTION{ add1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ walked100steps is p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage3 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage3 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage1 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ walked100steps is p := Patient_2; now := 0.0 }
+   ACTION{ lost1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ updateState is p := Patient_2; w := World_1; now := 0.0 }
+   ACTION{ updateWeeklyActivity is p := Patient_2; w := World_1; now := 0.0 }
+   ACTION{ add1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ add1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ updateWeeklyActivity is p := Patient_2; w := World_1; now := 0.0 }
+   ACTION{ walked100steps is p := Patient_2; now := 0.0 }
+   ACTION{ adjustProbabilities is p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage1 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ add1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ updateWeeklyActivity is p := Patient_2; w := World_1; now := 0.0 }
+   ACTION{ updateWeeklyActivity is p := Patient_2; w := World_1; now := 0.0 }
+   ACTION{ updateWeeklyActivity is p := Patient_2; w := World_1; now := 0.0 }
+   ACTION{ add1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage1 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ eatOneFruit is p := Patient_2; now := 0.0 }
+   ACTION{ updateState is p := Patient_2; w := World_1; now := 0.0 }
+   ACTION{ sendMessage1 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ updateState is p := Patient_2; w := World_1; now := 0.0 }
+   ACTION{ sendMessage3 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ updateWeeklyActivity is p := Patient_2; w := World_1; now := 0.0 }
+   ACTION{ sendMessage2 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ adjustProbabilities is p := Patient_2; now := 0.0 }
+   ACTION{ lost1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ walked100steps is p := Patient_2; now := 0.0 }
+   ACTION{ updateWeeklyActivity is p := Patient_2; w := World_1; now := 0.0 }
+   ACTION{ sendMessage3 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ walked100steps is p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage1 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage3 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage2 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ updateWeeklyActivity is p := Patient_2; w := World_1; now := 0.0 }
+   ACTION{ updateWeeklyActivity is p := Patient_2; w := World_1; now := 0.0 }
+   ACTION{ sendMessage2 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ eatOneFruit is p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage1 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ updateWeeklyActivity is p := Patient_2; w := World_1; now := 0.0 }
+   ACTION{ sendMessage3 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ eatOneFruit is p := Patient_2; now := 0.0 }
+   ACTION{ sendActivity is p := Patient_2; h := HeliWeb_1; w := World_1; now := 0.0 }
+   ACTION{ eatOneFruit is p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage2 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage1 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage1 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage1 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ lost1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ eatOneFruit is p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage1 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ eatOneFruit is p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage2 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage3 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ eatOneFruit is p := Patient_2; now := 0.0 }
+   ACTION{ add1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ updateState is p := Patient_2; w := World_1; now := 0.0 }
+   ACTION{ sendActivity is p := Patient_2; h := HeliWeb_1; w := World_1; now := 0.0 }
+   ACTION{ eatOneFruit is p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage1 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage1 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ sendActivity is p := Patient_2; h := HeliWeb_1; w := World_1; now := 0.0 }
+   ACTION{ adjustProbabilities is p := Patient_2; now := 0.0 }
+   ACTION{ sendActivity is p := Patient_2; h := HeliWeb_1; w := World_1; now := 0.0 }
+   ACTION{ lost1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ lost1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage3 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ lost1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage1 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage3 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage1 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ walked100steps is p := Patient_2; now := 0.0 }
+   ACTION{ eatOneFruit is p := Patient_2; now := 0.0 }
+   ACTION{ add1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage3 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ adjustProbabilities is p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage1 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage1 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ lost1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ lost1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage1 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage1 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ add1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ adjustProbabilities is p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage1 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage1 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage1 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ sendActivity is p := Patient_2; h := HeliWeb_1; w := World_1; now := 0.0 }
+   ACTION{ sendMessage1 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage1 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ walked100steps is p := Patient_2; now := 0.0 }
+   ACTION{ walked100steps is p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage1 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage1 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage1 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ walked100steps is p := Patient_2; now := 0.0 }
+   ACTION{ adjustProbabilities is p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage2 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ add1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage3 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ updateState is p := Patient_2; w := World_1; now := 0.0 }
+   ACTION{ sendActivity is p := Patient_2; h := HeliWeb_1; w := World_1; now := 0.0 }
+   ACTION{ eatOneFruit is p := Patient_2; now := 0.0 }
+   ACTION{ sendActivity is p := Patient_2; h := HeliWeb_1; w := World_1; now := 0.0 }
+   ACTION{ adjustProbabilities is p := Patient_2; now := 0.0 }
+   ACTION{ add1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ sendActivity is p := Patient_2; h := HeliWeb_1; w := World_1; now := 0.0 }
+   ACTION{ sendMessage3 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage3 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ updateState is p := Patient_2; w := World_1; now := 0.0 }
+   ACTION{ sendMessage3 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ eatOneFruit is p := Patient_2; now := 0.0 }
+   ACTION{ adjustProbabilities is p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage3 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ walked100steps is p := Patient_2; now := 0.0 }
+   ACTION{ walked100steps is p := Patient_2; now := 0.0 }
+   ACTION{ eatOneFruit is p := Patient_2; now := 0.0 }
+   ACTION{ adjustProbabilities is p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage2 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage2 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ eatOneFruit is p := Patient_2; now := 0.0 }
+   ACTION{ sendActivity is p := Patient_2; h := HeliWeb_1; w := World_1; now := 0.0 }
+   ACTION{ eatOneFruit is p := Patient_2; now := 0.0 }
+   ACTION{ adjustProbabilities is p := Patient_2; now := 0.0 }
+   ACTION{ lost1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage3 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage3 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage3 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage3 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ updateState is p := Patient_2; w := World_1; now := 0.0 }
+   ACTION{ lost1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ updateState is p := Patient_2; w := World_1; now := 0.0 }
+   ACTION{ sendActivity is p := Patient_2; h := HeliWeb_1; w := World_1; now := 0.0 }
+   ACTION{ updateState is p := Patient_2; w := World_1; now := 0.0 }
+   ACTION{ updateState is p := Patient_2; w := World_1; now := 0.0 }
+   ACTION{ walked100steps is p := Patient_2; now := 0.0 }
+   ACTION{ walked100steps is p := Patient_2; now := 0.0 }
+   ACTION{ adjustProbabilities is p := Patient_2; now := 0.0 }
+   ACTION{ walked100steps is p := Patient_2; now := 0.0 }
+   ACTION{ sendActivity is p := Patient_2; h := HeliWeb_1; w := World_1; now := 0.0 }
+   ACTION{ updateState is p := Patient_2; w := World_1; now := 0.0 }
+   ACTION{ add1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ eatOneFruit is p := Patient_2; now := 0.0 }
+   ACTION{ eatOneFruit is p := Patient_2; now := 0.0 }
+   ACTION{ eatOneFruit is p := Patient_2; now := 0.0 }
+   ACTION{ sendActivity is p := Patient_2; h := HeliWeb_1; w := World_1; now := 0.0 }
+   ACTION{ updateState is p := Patient_2; w := World_1; now := 0.0 }
+   ACTION{ walked100steps is p := Patient_2; now := 0.0 }
+   ACTION{ adjustProbabilities is p := Patient_2; now := 0.0 }
+   ACTION{ adjustProbabilities is p := Patient_2; now := 0.0 }
+   ACTION{ lost1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ updateState is p := Patient_2; w := World_1; now := 0.0 }
+   ACTION{ adjustProbabilities is p := Patient_2; now := 0.0 }
+   ACTION{ adjustProbabilities is p := Patient_2; now := 0.0 }
+   ACTION{ eatOneFruit is p := Patient_2; now := 0.0 }
+   ACTION{ sendActivity is p := Patient_2; h := HeliWeb_1; w := World_1; now := 0.0 }
+   ACTION{ adjustProbabilities is p := Patient_2; now := 0.0 }
+   ACTION{ eatOneFruit is p := Patient_2; now := 0.0 }
+   ACTION{ sendActivity is p := Patient_2; h := HeliWeb_1; w := World_1; now := 0.0 }
+   ACTION{ adjustProbabilities is p := Patient_2; now := 0.0 }
+   ACTION{ sendActivity is p := Patient_2; h := HeliWeb_1; w := World_1; now := 0.0 }
+   ACTION{ updateState is p := Patient_2; w := World_1; now := 0.0 }
+   ACTION{ lost1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ adjustProbabilities is p := Patient_2; now := 0.0 }
+   ACTION{ eatOneFruit is p := Patient_2; now := 0.0 }
+   ACTION{ sendActivity is p := Patient_2; h := HeliWeb_1; w := World_1; now := 0.0 }
+   ACTION{ adjustProbabilities is p := Patient_2; now := 0.0 }
+   ACTION{ updateState is p := Patient_2; w := World_1; now := 0.0 }
+   ACTION{ sendActivity is p := Patient_2; h := HeliWeb_1; w := World_1; now := 0.0 }
+   ACTION{ eatOneFruit is p := Patient_2; now := 0.0 }
+   ACTION{ walked100steps is p := Patient_2; now := 0.0 }
+   ACTION{ eatOneFruit is p := Patient_2; now := 0.0 }
+   ACTION{ walked100steps is p := Patient_2; now := 0.0 }
+   ACTION{ add1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ add1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ add1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ adjustProbabilities is p := Patient_2; now := 0.0 }
+   ACTION{ add1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ updateState is p := Patient_2; w := World_1; now := 0.0 }
+   ACTION{ walked100steps is p := Patient_2; now := 0.0 }
+   ACTION{ walked100steps is p := Patient_2; now := 0.0 }
+   ACTION{ sendActivity is p := Patient_2; h := HeliWeb_1; w := World_1; now := 0.0 }
+   ACTION{ eatOneFruit is p := Patient_2; now := 0.0 }
+   ACTION{ walked100steps is p := Patient_2; now := 0.0 }
+   ACTION{ eatOneFruit is p := Patient_2; now := 0.0 }
+   ACTION{ lost1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ adjustProbabilities is p := Patient_2; now := 0.0 }
+   ACTION{ lost1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ walked100steps is p := Patient_2; now := 0.0 }
+   ACTION{ add1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ lost1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ eatOneFruit is p := Patient_2; now := 0.0 }
+   ACTION{ adjustAdherance is p := Patient_2; now := 0.0 }
+   ACTION{ add1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ lost1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ add1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ updateState is p := Patient_2; w := World_1; now := 0.0 }
+   ACTION{ adjustProbabilities is p := Patient_2; now := 0.0 }
+   ACTION{ eatOneFruit is p := Patient_2; now := 0.0 }
+   ACTION{ eatOneFruit is p := Patient_2; now := 0.0 }
+   ACTION{ walked100steps is p := Patient_2; now := 0.0 }
+   ACTION{ add1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ lost1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ lost1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ add1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ lost1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ eatOneFruit is p := Patient_2; now := 0.0 }
+   ACTION{ lost1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ walked100steps is p := Patient_2; now := 0.0 }
+   ACTION{ eatOneFruit is p := Patient_2; now := 0.0 }
+   ACTION{ lost1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ eatOneFruit is p := Patient_2; now := 0.0 }
+   ACTION{ updateState is p := Patient_2; w := World_1; now := 0.0 }
+   ACTION{ eatOneFruit is p := Patient_2; now := 0.0 }
+   ACTION{ eatOneFruit is p := Patient_2; now := 0.0 }
+   ACTION{ updateState is p := Patient_2; w := World_1; now := 0.0 }
+   ACTION{ add1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ add1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ walked100steps is p := Patient_2; now := 0.0 }
+   ACTION{ walked100steps is p := Patient_2; now := 0.0 }
+   ACTION{ walked100steps is p := Patient_2; now := 0.0 }
+   ACTION{ lost1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ walked100steps is p := Patient_2; now := 0.0 }
+   ACTION{ updateState is p := Patient_2; w := World_1; now := 0.0 }
+   ACTION{ adjustProbabilities is p := Patient_2; now := 0.0 }
+   ACTION{ lost1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ walked100steps is p := Patient_2; now := 0.0 }
+   ACTION{ updateState is p := Patient_2; w := World_1; now := 0.0 }
+   ACTION{ walked100steps is p := Patient_2; now := 0.0 }
+   ACTION{ eatOneFruit is p := Patient_2; now := 0.0 }
+   ACTION{ walked100steps is p := Patient_2; now := 0.0 }
+   ACTION{ adjustProbabilities is p := Patient_2; now := 0.0 }
+   ACTION{ add1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ updateWeeklyActivity is p := Patient_2; w := World_1; now := 0.0 }
+   ACTION{ sendActivity is p := Patient_2; h := HeliWeb_1; w := World_1; now := 0.0 }
+   ACTION{ sendActivity is p := Patient_2; h := HeliWeb_1; w := World_1; now := 0.0 }
+   ACTION{ updateState is p := Patient_2; w := World_1; now := 0.0 }
+   ACTION{ sendMessage1 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage1 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage2 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage1 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ eatOneFruit is p := Patient_2; now := 0.0 }
+   ACTION{ walked100steps is p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage2 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ sendActivity is p := Patient_2; h := HeliWeb_1; w := World_1; now := 0.0 }
+   ACTION{ sendActivity is p := Patient_2; h := HeliWeb_1; w := World_1; now := 0.0 }
+   ACTION{ sendMessage3 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ adjustProbabilities is p := Patient_2; now := 0.0 }
+   ACTION{ walked100steps is p := Patient_2; now := 0.0 }
+   ACTION{ walked100steps is p := Patient_2; now := 0.0 }
+   ACTION{ walked100steps is p := Patient_2; now := 0.0 }
+   ACTION{ sendActivity is p := Patient_2; h := HeliWeb_1; w := World_1; now := 0.0 }
+   ACTION{ adjustProbabilities is p := Patient_2; now := 0.0 }
+   ACTION{ updateState is p := Patient_2; w := World_1; now := 0.0 }
+   ACTION{ lost1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ add1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ adjustProbabilities is p := Patient_2; now := 0.0 }
+   ACTION{ updateState is p := Patient_2; w := World_1; now := 0.0 }
+   ACTION{ sendMessage3 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ add1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ updateState is p := Patient_2; w := World_1; now := 0.0 }
+   ACTION{ updateState is p := Patient_2; w := World_1; now := 0.0 }
+   ACTION{ sendMessage3 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ adjustProbabilities is p := Patient_2; now := 0.0 }
+   ACTION{ sendActivity is p := Patient_2; h := HeliWeb_1; w := World_1; now := 0.0 }
+   ACTION{ sendActivity is p := Patient_2; h := HeliWeb_1; w := World_1; now := 0.0 }
+   ACTION{ add1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ adjustProbabilities is p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage2 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ add1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage3 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ sendActivity is p := Patient_2; h := HeliWeb_1; w := World_1; now := 0.0 }
+   ACTION{ add1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ walked100steps is p := Patient_2; now := 0.0 }
+   ACTION{ add1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ updateState is p := Patient_2; w := World_1; now := 0.0 }
+   ACTION{ sendMessage3 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage2 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ lost1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ sendActivity is p := Patient_2; h := HeliWeb_1; w := World_1; now := 0.0 }
+   ACTION{ walked100steps is p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage2 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage2 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ sendActivity is p := Patient_2; h := HeliWeb_1; w := World_1; now := 0.0 }
+   ACTION{ eatOneFruit is p := Patient_2; now := 0.0 }
+   ACTION{ sendActivity is p := Patient_2; h := HeliWeb_1; w := World_1; now := 0.0 }
+   ACTION{ eatOneFruit is p := Patient_2; now := 0.0 }
+   ACTION{ updateState is p := Patient_2; w := World_1; now := 0.0 }
+   ACTION{ updateState is p := Patient_2; w := World_1; now := 0.0 }
+   ACTION{ walked100steps is p := Patient_2; now := 0.0 }
+   ACTION{ walked100steps is p := Patient_2; now := 0.0 }
+   ACTION{ updateState is p := Patient_2; w := World_1; now := 0.0 }
+   ACTION{ sendMessage3 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ add1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage3 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ walked100steps is p := Patient_2; now := 0.0 }
+   ACTION{ sendActivity is p := Patient_2; h := HeliWeb_1; w := World_1; now := 0.0 }
+   ACTION{ walked100steps is p := Patient_2; now := 0.0 }
+   ACTION{ updateState is p := Patient_2; w := World_1; now := 0.0 }
+   ACTION{ updateState is p := Patient_2; w := World_1; now := 0.0 }
+   ACTION{ add1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ eatOneFruit is p := Patient_2; now := 0.0 }
+   ACTION{ updateState is p := Patient_2; w := World_1; now := 0.0 }
+   ACTION{ sendActivity is p := Patient_2; h := HeliWeb_1; w := World_1; now := 0.0 }
+   ACTION{ updateState is p := Patient_2; w := World_1; now := 0.0 }
+   ACTION{ adjustProbabilities is p := Patient_2; now := 0.0 }
+   ACTION{ add1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ updateState is p := Patient_2; w := World_1; now := 0.0 }
+   ACTION{ lost1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ eatOneFruit is p := Patient_2; now := 0.0 }
+   ACTION{ sendActivity is p := Patient_2; h := HeliWeb_1; w := World_1; now := 0.0 }
+   ACTION{ eatOneFruit is p := Patient_2; now := 0.0 }
+   ACTION{ adjustProbabilities is p := Patient_2; now := 0.0 }
+   ACTION{ eatOneFruit is p := Patient_2; now := 0.0 }
+   ACTION{ adjustProbabilities is p := Patient_2; now := 0.0 }
+   ACTION{ add1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ eatOneFruit is p := Patient_2; now := 0.0 }
+   ACTION{ eatOneFruit is p := Patient_2; now := 0.0 }
+   ACTION{ updateState is p := Patient_2; w := World_1; now := 0.0 }
+   ACTION{ lost1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ lost1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ lost1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ lost1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ lost1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ eatOneFruit is p := Patient_2; now := 0.0 }
+   ACTION{ add1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ lost1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ updateWeeklyActivity is p := Patient_2; w := World_1; now := 0.0 }
+   ACTION{ updateState is p := Patient_2; w := World_1; now := 0.0 }
+   ACTION{ eatOneFruit is p := Patient_2; now := 0.0 }
+   ACTION{ lost1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ walked100steps is p := Patient_2; now := 0.0 }
+   ACTION{ adjustProbabilities is p := Patient_2; now := 0.0 }
+   ACTION{ updateWeeklyActivity is p := Patient_2; w := World_1; now := 0.0 }
+   ACTION{ eatOneFruit is p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage3 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage2 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ lost1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ walked100steps is p := Patient_2; now := 0.0 }
+   ACTION{ lost1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage1 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ updateWeeklyActivity is p := Patient_2; w := World_1; now := 0.0 }
+   ACTION{ add1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ eatOneFruit is p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage1 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage2 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage3 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ walked100steps is p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage1 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ lost1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ sendActivity is p := Patient_2; h := HeliWeb_1; w := World_1; now := 0.0 }
+   ACTION{ sendMessage2 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ updateState is p := Patient_2; w := World_1; now := 0.0 }
+   ACTION{ sendActivity is p := Patient_2; h := HeliWeb_1; w := World_1; now := 0.0 }
+   ACTION{ sendMessage3 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ walked100steps is p := Patient_2; now := 0.0 }
+   ACTION{ adjustProbabilities is p := Patient_2; now := 0.0 }
+   ACTION{ add1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ walked100steps is p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage3 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage1 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ sendActivity is p := Patient_2; h := HeliWeb_1; w := World_1; now := 0.0 }
+   ACTION{ eatOneFruit is p := Patient_2; now := 0.0 }
+   ACTION{ sendActivity is p := Patient_2; h := HeliWeb_1; w := World_1; now := 0.0 }
+   ACTION{ sendMessage2 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ sendActivity is p := Patient_2; h := HeliWeb_1; w := World_1; now := 0.0 }
+   ACTION{ add1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ eatOneFruit is p := Patient_2; now := 0.0 }
+   ACTION{ updateState is p := Patient_2; w := World_1; now := 0.0 }
+   ACTION{ sendMessage3 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ add1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ eatOneFruit is p := Patient_2; now := 0.0 }
+   ACTION{ add1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ updateState is p := Patient_2; w := World_1; now := 0.0 }
+   ACTION{ sendMessage1 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ updateState is p := Patient_2; w := World_1; now := 0.0 }
+   ACTION{ sendMessage1 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ add1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ adjustProbabilities is p := Patient_2; now := 0.0 }
+   ACTION{ updateState is p := Patient_2; w := World_1; now := 0.0 }
+   ACTION{ lost1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ updateState is p := Patient_2; w := World_1; now := 0.0 }
+   ACTION{ lost1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ updateState is p := Patient_2; w := World_1; now := 0.0 }
+   ACTION{ eatOneFruit is p := Patient_2; now := 0.0 }
+   ACTION{ walked100steps is p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage1 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage1 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage2 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ add1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ updateState is p := Patient_2; w := World_1; now := 0.0 }
+   ACTION{ add1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ lost1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ add1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ eatOneFruit is p := Patient_2; now := 0.0 }
+   ACTION{ adjustProbabilities is p := Patient_2; now := 0.0 }
+   ACTION{ sendActivity is p := Patient_2; h := HeliWeb_1; w := World_1; now := 0.0 }
+   ACTION{ sendActivity is p := Patient_2; h := HeliWeb_1; w := World_1; now := 0.0 }
+   ACTION{ sendActivity is p := Patient_2; h := HeliWeb_1; w := World_1; now := 0.0 }
+   ACTION{ updateState is p := Patient_2; w := World_1; now := 0.0 }
+   ACTION{ eatOneFruit is p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage2 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ eatOneFruit is p := Patient_2; now := 0.0 }
+   ACTION{ adjustProbabilities is p := Patient_2; now := 0.0 }
+   ACTION{ sendActivity is p := Patient_2; h := HeliWeb_1; w := World_1; now := 0.0 }
+   ACTION{ updateState is p := Patient_2; w := World_1; now := 0.0 }
+   ACTION{ adjustProbabilities is p := Patient_2; now := 0.0 }
+   ACTION{ walked100steps is p := Patient_2; now := 0.0 }
+   ACTION{ sendActivity is p := Patient_2; h := HeliWeb_1; w := World_1; now := 0.0 }
+   ACTION{ sendMessage2 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ lost1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ sendActivity is p := Patient_2; h := HeliWeb_1; w := World_1; now := 0.0 }
+   ACTION{ sendActivity is p := Patient_2; h := HeliWeb_1; w := World_1; now := 0.0 }
+   ACTION{ adjustProbabilities is p := Patient_2; now := 0.0 }
+   ACTION{ updateState is p := Patient_2; w := World_1; now := 0.0 }
+   ACTION{ eatOneFruit is p := Patient_2; now := 0.0 }
+   ACTION{ updateState is p := Patient_2; w := World_1; now := 0.0 }
+   ACTION{ eatOneFruit is p := Patient_2; now := 0.0 }
+   ACTION{ adjustProbabilities is p := Patient_2; now := 0.0 }
+   ACTION{ walked100steps is p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage2 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage3 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ lost1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ lost1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage2 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ lost1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ add1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage2 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ lost1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ updateState is p := Patient_2; w := World_1; now := 0.0 }
+   ACTION{ adjustProbabilities is p := Patient_2; now := 0.0 }
+   ACTION{ eatOneFruit is p := Patient_2; now := 0.0 }
+   ACTION{ eatOneFruit is p := Patient_2; now := 0.0 }
+   ACTION{ updateState is p := Patient_2; w := World_1; now := 0.0 }
+   ACTION{ eatOneFruit is p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage2 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ sendActivity is p := Patient_2; h := HeliWeb_1; w := World_1; now := 0.0 }
+   ACTION{ adjustProbabilities is p := Patient_2; now := 0.0 }
+   ACTION{ lost1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ add1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage3 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ sendActivity is p := Patient_2; h := HeliWeb_1; w := World_1; now := 0.0 }
+   ACTION{ sendMessage3 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ adjustProbabilities is p := Patient_2; now := 0.0 }
+   ACTION{ updateState is p := Patient_2; w := World_1; now := 0.0 }
+   ACTION{ sendMessage3 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ eatOneFruit is p := Patient_2; now := 0.0 }
+   ACTION{ lost1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage3 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ lost1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage3 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ lost1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ add1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ adjustProbabilities is p := Patient_2; now := 0.0 }
+   ACTION{ sendActivity is p := Patient_2; h := HeliWeb_1; w := World_1; now := 0.0 }
+   ACTION{ sendMessage3 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ walked100steps is p := Patient_2; now := 0.0 }
+   ACTION{ lost1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ lost1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ lost1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ eatOneFruit is p := Patient_2; now := 0.0 }
+   ACTION{ updateState is p := Patient_2; w := World_1; now := 0.0 }
+   ACTION{ eatOneFruit is p := Patient_2; now := 0.0 }
+   ACTION{ updateState is p := Patient_2; w := World_1; now := 0.0 }
+   ACTION{ adjustProbabilities is p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage3 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ updateState is p := Patient_2; w := World_1; now := 0.0 }
+   ACTION{ lost1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ eatOneFruit is p := Patient_2; now := 0.0 }
+   ACTION{ lost1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ eatOneFruit is p := Patient_2; now := 0.0 }
+   ACTION{ lost1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ updateWeeklyActivity is p := Patient_2; w := World_1; now := 0.0 }
+   ACTION{ sendActivity is p := Patient_2; h := HeliWeb_1; w := World_1; now := 0.0 }
+   ACTION{ sendMessage2 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ lost1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ sendActivity is p := Patient_2; h := HeliWeb_1; w := World_1; now := 0.0 }
+   ACTION{ sendMessage1 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage2 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage1 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ lost1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage1 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage1 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage2 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage3 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ adjustProbabilities is p := Patient_2; now := 0.0 }
+   ACTION{ updateState is p := Patient_2; w := World_1; now := 0.0 }
+   ACTION{ walked100steps is p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage2 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage1 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage3 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage2 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage1 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ walked100steps is p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage2 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ sendActivity is p := Patient_2; h := HeliWeb_1; w := World_1; now := 0.0 }
+   ACTION{ lost1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ walked100steps is p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage1 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ add1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ updateState is p := Patient_2; w := World_1; now := 0.0 }
+   ACTION{ adjustProbabilities is p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage2 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ updateState is p := Patient_2; w := World_1; now := 0.0 }
+   ACTION{ lost1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ sendActivity is p := Patient_2; h := HeliWeb_1; w := World_1; now := 0.0 }
+   ACTION{ sendMessage1 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage1 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage3 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ lost1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage1 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage3 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage3 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ add1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage3 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ walked100steps is p := Patient_2; now := 0.0 }
+   ACTION{ walked100steps is p := Patient_2; now := 0.0 }
+   ACTION{ eatOneFruit is p := Patient_2; now := 0.0 }
+   ACTION{ sendActivity is p := Patient_2; h := HeliWeb_1; w := World_1; now := 0.0 }
+   ACTION{ eatOneFruit is p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage3 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ sendActivity is p := Patient_2; h := HeliWeb_1; w := World_1; now := 0.0 }
+   ACTION{ sendMessage2 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ adjustProbabilities is p := Patient_2; now := 0.0 }
+   ACTION{ adjustProbabilities is p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage2 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ add1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ lost1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ updateState is p := Patient_2; w := World_1; now := 0.0 }
+   ACTION{ sendMessage2 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ lost1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage3 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ eatOneFruit is p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage2 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage2 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ sendActivity is p := Patient_2; h := HeliWeb_1; w := World_1; now := 0.0 }
+   ACTION{ walked100steps is p := Patient_2; now := 0.0 }
+   ACTION{ updateState is p := Patient_2; w := World_1; now := 0.0 }
+   ACTION{ eatOneFruit is p := Patient_2; now := 0.0 }
+   ACTION{ eatOneFruit is p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage2 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ lost1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ sendActivity is p := Patient_2; h := HeliWeb_1; w := World_1; now := 0.0 }
+   ACTION{ sendMessage3 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ adjustProbabilities is p := Patient_2; now := 0.0 }
+   ACTION{ eatOneFruit is p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage3 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ lost1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ walked100steps is p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage3 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ sendMessage3 is c := Coach_1; p := Patient_2; now := 0.0 }
+   ACTION{ add1Kg is p := Patient_2; now := 0.0 }
+   ACTION{ sendActivity is p := Patient_2; h := HeliWeb_1; w := World_1; now := 0.0 }
+   ACTION{ sendActivity is p := Patient_2; h := HeliWeb_1; w := World_1; now := 0.0 }
+   ACTION{ adjustProbabilities is p := Patient_2; now := 0.0 }
+   ACTION{ updateState is p := Patient_2; w := World_1; now := 0.0 }
+   ACTION{ eatOneFruit is p := Patient_2; now := 0.0 }
+   ACTION{ add1Kg is p := Patient_2; now := 0.0 }
