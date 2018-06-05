@@ -13,25 +13,29 @@ instance Fuzzy3 of helifuzzy is
   object Coach_5 of Coach is
   end
   object World_1 of World is
-    day := 2.0;
+    day := 0.0;
   end
   object Patient_1_1 of Patient is
-    id := 0;
+    id := 11;
     can_send := false;
     t_registered := 0.0;
     t_last_activity := 0.0;
     goal := Goal(
       task := enum control_weight(
       );
-      target := Real3(
-        v1 := 0.0;
+      target := RealVector(
+        v1 := 74.0;
         v2 := 0.0;
         v3 := 0.0;
+        v4 := 0.0;
+        v5 := 0.0;
       );
-      w := Real3(
-        v1 := 0.0;
+      w := RealVector(
+        v1 := 1.0;
         v2 := 0.0;
         v3 := 0.0;
+        v4 := 0.0;
+        v5 := 0.0;
       );
     );
     act := Activity(
@@ -49,22 +53,26 @@ instance Fuzzy3 of helifuzzy is
     );
   end
   object Patient_1_2 of Patient is
-    id := 0;
+    id := 12;
     can_send := false;
     t_registered := 0.0;
     t_last_activity := 0.0;
     goal := Goal(
       task := enum control_weight(
       );
-      target := Real3(
-        v1 := 0.0;
+      target := RealVector(
+        v1 := 75.0;
         v2 := 0.0;
         v3 := 0.0;
+        v4 := 0.0;
+        v5 := 0.0;
       );
-      w := Real3(
-        v1 := 0.0;
+      w := RealVector(
+        v1 := 1.0;
         v2 := 0.0;
         v3 := 0.0;
+        v4 := 0.0;
+        v5 := 0.0;
       );
     );
     act := Activity(
@@ -82,22 +90,26 @@ instance Fuzzy3 of helifuzzy is
     );
   end
   object Patient_1_3 of Patient is
-    id := 0;
+    id := 13;
     can_send := false;
     t_registered := 0.0;
     t_last_activity := 0.0;
     goal := Goal(
       task := enum control_weight(
       );
-      target := Real3(
-        v1 := 0.0;
+      target := RealVector(
+        v1 := 76.0;
         v2 := 0.0;
         v3 := 0.0;
+        v4 := 0.0;
+        v5 := 0.0;
       );
-      w := Real3(
-        v1 := 0.0;
+      w := RealVector(
+        v1 := 1.0;
         v2 := 0.0;
         v3 := 0.0;
+        v4 := 0.0;
+        v5 := 0.0;
       );
     );
     act := Activity(
@@ -115,22 +127,26 @@ instance Fuzzy3 of helifuzzy is
     );
   end
   object Patient_1_4 of Patient is
-    id := 0;
+    id := 14;
     can_send := false;
     t_registered := 0.0;
     t_last_activity := 0.0;
     goal := Goal(
       task := enum control_weight(
       );
-      target := Real3(
-        v1 := 0.0;
+      target := RealVector(
+        v1 := 77.0;
         v2 := 0.0;
         v3 := 0.0;
+        v4 := 0.0;
+        v5 := 0.0;
       );
-      w := Real3(
-        v1 := 0.0;
+      w := RealVector(
+        v1 := 1.0;
         v2 := 0.0;
         v3 := 0.0;
+        v4 := 0.0;
+        v5 := 0.0;
       );
     );
     act := Activity(
@@ -148,22 +164,26 @@ instance Fuzzy3 of helifuzzy is
     );
   end
   object Patient_1_5 of Patient is
-    id := 0;
+    id := 15;
     can_send := false;
     t_registered := 0.0;
     t_last_activity := 0.0;
     goal := Goal(
       task := enum control_weight(
       );
-      target := Real3(
-        v1 := 0.0;
+      target := RealVector(
+        v1 := 78.0;
         v2 := 0.0;
         v3 := 0.0;
+        v4 := 0.0;
+        v5 := 0.0;
       );
-      w := Real3(
-        v1 := 0.0;
+      w := RealVector(
+        v1 := 1.0;
         v2 := 0.0;
         v3 := 0.0;
+        v4 := 0.0;
+        v5 := 0.0;
       );
     );
     act := Activity(
@@ -181,22 +201,26 @@ instance Fuzzy3 of helifuzzy is
     );
   end
   object Patient_2_1 of Patient is
-    id := 0;
+    id := 21;
     can_send := false;
     t_registered := 0.0;
     t_last_activity := 0.0;
     goal := Goal(
-      task := enum control_weight(
+      task := enum walk_steps_aweek(
       );
-      target := Real3(
+      target := RealVector(
         v1 := 0.0;
-        v2 := 0.0;
+        v2 := 1000.0;
         v3 := 0.0;
+        v4 := 0.0;
+        v5 := 0.0;
       );
-      w := Real3(
+      w := RealVector(
         v1 := 0.0;
-        v2 := 0.0;
+        v2 := 1.0;
         v3 := 0.0;
+        v4 := 0.0;
+        v5 := 0.0;
       );
     );
     act := Activity(
@@ -214,22 +238,26 @@ instance Fuzzy3 of helifuzzy is
     );
   end
   object Patient_2_2 of Patient is
-    id := 0;
+    id := 22;
     can_send := false;
     t_registered := 0.0;
     t_last_activity := 0.0;
     goal := Goal(
-      task := enum control_weight(
+      task := enum walk_steps_aweek(
       );
-      target := Real3(
+      target := RealVector(
         v1 := 0.0;
-        v2 := 0.0;
+        v2 := 1010.0;
         v3 := 0.0;
+        v4 := 0.0;
+        v5 := 0.0;
       );
-      w := Real3(
+      w := RealVector(
         v1 := 0.0;
-        v2 := 0.0;
+        v2 := 1.0;
         v3 := 0.0;
+        v4 := 0.0;
+        v5 := 0.0;
       );
     );
     act := Activity(
@@ -247,22 +275,26 @@ instance Fuzzy3 of helifuzzy is
     );
   end
   object Patient_2_3 of Patient is
-    id := 0;
+    id := 23;
     can_send := false;
     t_registered := 0.0;
     t_last_activity := 0.0;
     goal := Goal(
-      task := enum control_weight(
+      task := enum walk_steps_aweek(
       );
-      target := Real3(
+      target := RealVector(
         v1 := 0.0;
-        v2 := 0.0;
+        v2 := 1020.0;
         v3 := 0.0;
+        v4 := 0.0;
+        v5 := 0.0;
       );
-      w := Real3(
+      w := RealVector(
         v1 := 0.0;
-        v2 := 0.0;
+        v2 := 1.0;
         v3 := 0.0;
+        v4 := 0.0;
+        v5 := 0.0;
       );
     );
     act := Activity(
@@ -280,22 +312,26 @@ instance Fuzzy3 of helifuzzy is
     );
   end
   object Patient_2_4 of Patient is
-    id := 0;
+    id := 24;
     can_send := false;
     t_registered := 0.0;
     t_last_activity := 0.0;
     goal := Goal(
-      task := enum control_weight(
+      task := enum walk_steps_aweek(
       );
-      target := Real3(
+      target := RealVector(
         v1 := 0.0;
-        v2 := 0.0;
+        v2 := 1030.0;
         v3 := 0.0;
+        v4 := 0.0;
+        v5 := 0.0;
       );
-      w := Real3(
+      w := RealVector(
         v1 := 0.0;
-        v2 := 0.0;
+        v2 := 1.0;
         v3 := 0.0;
+        v4 := 0.0;
+        v5 := 0.0;
       );
     );
     act := Activity(
@@ -313,22 +349,26 @@ instance Fuzzy3 of helifuzzy is
     );
   end
   object Patient_2_5 of Patient is
-    id := 0;
+    id := 25;
     can_send := false;
     t_registered := 1.0;
     t_last_activity := 1.0;
     goal := Goal(
-      task := enum control_weight(
+      task := enum walk_steps_aweek(
       );
-      target := Real3(
+      target := RealVector(
         v1 := 0.0;
-        v2 := 0.0;
+        v2 := 1040.0;
         v3 := 0.0;
+        v4 := 0.0;
+        v5 := 0.0;
       );
-      w := Real3(
+      w := RealVector(
         v1 := 0.0;
-        v2 := 0.0;
+        v2 := 1.0;
         v3 := 0.0;
+        v4 := 0.0;
+        v5 := 0.0;
       );
     );
     act := Activity(
@@ -346,26 +386,30 @@ instance Fuzzy3 of helifuzzy is
     );
   end
   object Patient_3_1 of Patient is
-    id := 0;
+    id := 31;
     can_send := false;
     t_registered := 1.0;
     t_last_activity := 1.0;
     goal := Goal(
-      task := enum control_weight(
+      task := enum eat_fruits_aweek(
       );
-      target := Real3(
+      target := RealVector(
         v1 := 0.0;
         v2 := 0.0;
-        v3 := 0.0;
+        v3 := 7.0;
+        v4 := 0.0;
+        v5 := 0.0;
       );
-      w := Real3(
+      w := RealVector(
         v1 := 0.0;
         v2 := 0.0;
-        v3 := 0.0;
+        v3 := 1.0;
+        v4 := 0.0;
+        v5 := 0.0;
       );
     );
     act := Activity(
-      weight := -3.0;
+      weight := 100.0;
       steps := 100.0;
       fruits := 0.0;
     );
@@ -379,22 +423,26 @@ instance Fuzzy3 of helifuzzy is
     );
   end
   object Patient_3_2 of Patient is
-    id := 0;
+    id := 32;
     can_send := false;
     t_registered := 0.0;
     t_last_activity := 0.0;
     goal := Goal(
-      task := enum control_weight(
+      task := enum eat_fruits_aweek(
       );
-      target := Real3(
+      target := RealVector(
         v1 := 0.0;
         v2 := 0.0;
-        v3 := 0.0;
+        v3 := 7.0;
+        v4 := 0.0;
+        v5 := 0.0;
       );
-      w := Real3(
+      w := RealVector(
         v1 := 0.0;
         v2 := 0.0;
-        v3 := 0.0;
+        v3 := 1.0;
+        v4 := 0.0;
+        v5 := 0.0;
       );
     );
     act := Activity(
@@ -412,22 +460,26 @@ instance Fuzzy3 of helifuzzy is
     );
   end
   object Patient_3_3 of Patient is
-    id := 0;
+    id := 33;
     can_send := false;
     t_registered := 0.0;
     t_last_activity := 0.0;
     goal := Goal(
-      task := enum control_weight(
+      task := enum eat_fruits_aweek(
       );
-      target := Real3(
+      target := RealVector(
         v1 := 0.0;
         v2 := 0.0;
-        v3 := 0.0;
+        v3 := 7.0;
+        v4 := 0.0;
+        v5 := 0.0;
       );
-      w := Real3(
+      w := RealVector(
         v1 := 0.0;
         v2 := 0.0;
-        v3 := 0.0;
+        v3 := 1.0;
+        v4 := 0.0;
+        v5 := 0.0;
       );
     );
     act := Activity(
@@ -445,22 +497,26 @@ instance Fuzzy3 of helifuzzy is
     );
   end
   object Patient_3_4 of Patient is
-    id := 0;
+    id := 34;
     can_send := false;
     t_registered := 0.0;
     t_last_activity := 0.0;
     goal := Goal(
-      task := enum control_weight(
+      task := enum eat_fruits_aweek(
       );
-      target := Real3(
+      target := RealVector(
         v1 := 0.0;
         v2 := 0.0;
-        v3 := 0.0;
+        v3 := 7.0;
+        v4 := 0.0;
+        v5 := 0.0;
       );
-      w := Real3(
+      w := RealVector(
         v1 := 0.0;
         v2 := 0.0;
-        v3 := 0.0;
+        v3 := 1.0;
+        v4 := 0.0;
+        v5 := 0.0;
       );
     );
     act := Activity(
@@ -478,22 +534,26 @@ instance Fuzzy3 of helifuzzy is
     );
   end
   object Patient_3_5 of Patient is
-    id := 0;
+    id := 35;
     can_send := false;
     t_registered := 0.0;
     t_last_activity := 0.0;
     goal := Goal(
-      task := enum control_weight(
+      task := enum eat_fruits_aweek(
       );
-      target := Real3(
+      target := RealVector(
         v1 := 0.0;
         v2 := 0.0;
-        v3 := 0.0;
+        v3 := 7.0;
+        v4 := 0.0;
+        v5 := 0.0;
       );
-      w := Real3(
+      w := RealVector(
         v1 := 0.0;
         v2 := 0.0;
-        v3 := 0.0;
+        v3 := 1.0;
+        v4 := 0.0;
+        v5 := 0.0;
       );
     );
     act := Activity(
@@ -511,22 +571,26 @@ instance Fuzzy3 of helifuzzy is
     );
   end
   object Patient_4_1 of Patient is
-    id := 0;
+    id := 41;
     can_send := false;
     t_registered := 0.0;
     t_last_activity := 0.0;
     goal := Goal(
-      task := enum control_weight(
+      task := enum inc_physics(
       );
-      target := Real3(
+      target := RealVector(
         v1 := 0.0;
         v2 := 0.0;
         v3 := 0.0;
+        v4 := 60.0;
+        v5 := 0.0;
       );
-      w := Real3(
+      w := RealVector(
         v1 := 0.0;
         v2 := 0.0;
         v3 := 0.0;
+        v4 := 1.0;
+        v5 := 0.0;
       );
     );
     act := Activity(
@@ -544,22 +608,26 @@ instance Fuzzy3 of helifuzzy is
     );
   end
   object Patient_4_2 of Patient is
-    id := 0;
+    id := 42;
     can_send := false;
     t_registered := 0.0;
     t_last_activity := 0.0;
     goal := Goal(
-      task := enum control_weight(
+      task := enum inc_physics(
       );
-      target := Real3(
+      target := RealVector(
         v1 := 0.0;
         v2 := 0.0;
         v3 := 0.0;
+        v4 := 60.0;
+        v5 := 0.0;
       );
-      w := Real3(
+      w := RealVector(
         v1 := 0.0;
         v2 := 0.0;
         v3 := 0.0;
+        v4 := 1.0;
+        v5 := 0.0;
       );
     );
     act := Activity(
@@ -577,22 +645,26 @@ instance Fuzzy3 of helifuzzy is
     );
   end
   object Patient_4_3 of Patient is
-    id := 0;
+    id := 43;
     can_send := false;
     t_registered := 0.0;
     t_last_activity := 0.0;
     goal := Goal(
-      task := enum control_weight(
+      task := enum inc_physics(
       );
-      target := Real3(
+      target := RealVector(
         v1 := 0.0;
         v2 := 0.0;
         v3 := 0.0;
+        v4 := 60.0;
+        v5 := 0.0;
       );
-      w := Real3(
+      w := RealVector(
         v1 := 0.0;
         v2 := 0.0;
         v3 := 0.0;
+        v4 := 1.0;
+        v5 := 0.0;
       );
     );
     act := Activity(
@@ -610,22 +682,26 @@ instance Fuzzy3 of helifuzzy is
     );
   end
   object Patient_4_4 of Patient is
-    id := 0;
+    id := 44;
     can_send := false;
     t_registered := 0.0;
     t_last_activity := 0.0;
     goal := Goal(
-      task := enum control_weight(
+      task := enum inc_physics(
       );
-      target := Real3(
+      target := RealVector(
         v1 := 0.0;
         v2 := 0.0;
         v3 := 0.0;
+        v4 := 60.0;
+        v5 := 0.0;
       );
-      w := Real3(
+      w := RealVector(
         v1 := 0.0;
         v2 := 0.0;
         v3 := 0.0;
+        v4 := 1.0;
+        v5 := 0.0;
       );
     );
     act := Activity(
@@ -643,22 +719,26 @@ instance Fuzzy3 of helifuzzy is
     );
   end
   object Patient_4_5 of Patient is
-    id := 0;
+    id := 45;
     can_send := false;
     t_registered := 1.0;
     t_last_activity := 1.0;
     goal := Goal(
-      task := enum control_weight(
+      task := enum inc_physics(
       );
-      target := Real3(
+      target := RealVector(
         v1 := 0.0;
         v2 := 0.0;
         v3 := 0.0;
+        v4 := 60.0;
+        v5 := 0.0;
       );
-      w := Real3(
+      w := RealVector(
         v1 := 0.0;
         v2 := 0.0;
         v3 := 0.0;
+        v4 := 1.0;
+        v5 := 0.0;
       );
     );
     act := Activity(
@@ -676,22 +756,26 @@ instance Fuzzy3 of helifuzzy is
     );
   end
   object Patient_5_1 of Patient is
-    id := 0;
+    id := 51;
     can_send := false;
     t_registered := 0.0;
     t_last_activity := 0.0;
     goal := Goal(
-      task := enum control_weight(
+      task := enum sleep_better(
       );
-      target := Real3(
+      target := RealVector(
         v1 := 0.0;
         v2 := 0.0;
         v3 := 0.0;
+        v4 := 0.0;
+        v5 := 8.0;
       );
-      w := Real3(
+      w := RealVector(
         v1 := 0.0;
         v2 := 0.0;
         v3 := 0.0;
+        v4 := 0.0;
+        v5 := 1.0;
       );
     );
     act := Activity(
@@ -709,22 +793,26 @@ instance Fuzzy3 of helifuzzy is
     );
   end
   object Patient_5_2 of Patient is
-    id := 0;
+    id := 52;
     can_send := false;
     t_registered := 0.0;
     t_last_activity := 0.0;
     goal := Goal(
-      task := enum control_weight(
+      task := enum sleep_better(
       );
-      target := Real3(
+      target := RealVector(
         v1 := 0.0;
         v2 := 0.0;
         v3 := 0.0;
+        v4 := 0.0;
+        v5 := 8.0;
       );
-      w := Real3(
+      w := RealVector(
         v1 := 0.0;
         v2 := 0.0;
         v3 := 0.0;
+        v4 := 0.0;
+        v5 := 1.0;
       );
     );
     act := Activity(
@@ -742,22 +830,26 @@ instance Fuzzy3 of helifuzzy is
     );
   end
   object Patient_5_3 of Patient is
-    id := 0;
+    id := 53;
     can_send := false;
     t_registered := 0.0;
     t_last_activity := 0.0;
     goal := Goal(
-      task := enum control_weight(
+      task := enum sleep_better(
       );
-      target := Real3(
+      target := RealVector(
         v1 := 0.0;
         v2 := 0.0;
         v3 := 0.0;
+        v4 := 0.0;
+        v5 := 8.0;
       );
-      w := Real3(
+      w := RealVector(
         v1 := 0.0;
         v2 := 0.0;
         v3 := 0.0;
+        v4 := 0.0;
+        v5 := 1.0;
       );
     );
     act := Activity(
@@ -775,22 +867,26 @@ instance Fuzzy3 of helifuzzy is
     );
   end
   object Patient_5_4 of Patient is
-    id := 0;
+    id := 54;
     can_send := false;
     t_registered := 0.0;
     t_last_activity := 0.0;
     goal := Goal(
-      task := enum control_weight(
+      task := enum sleep_better(
       );
-      target := Real3(
+      target := RealVector(
         v1 := 0.0;
         v2 := 0.0;
         v3 := 0.0;
+        v4 := 0.0;
+        v5 := 8.0;
       );
-      w := Real3(
+      w := RealVector(
         v1 := 0.0;
         v2 := 0.0;
         v3 := 0.0;
+        v4 := 0.0;
+        v5 := 1.0;
       );
     );
     act := Activity(
@@ -808,22 +904,26 @@ instance Fuzzy3 of helifuzzy is
     );
   end
   object Patient_5_5 of Patient is
-    id := 0;
+    id := 55;
     can_send := false;
     t_registered := 1.0;
     t_last_activity := 1.0;
     goal := Goal(
-      task := enum control_weight(
+      task := enum sleep_better(
       );
-      target := Real3(
+      target := RealVector(
         v1 := 0.0;
         v2 := 0.0;
         v3 := 0.0;
+        v4 := 0.0;
+        v5 := 8.0;
       );
-      w := Real3(
+      w := RealVector(
         v1 := 0.0;
         v2 := 0.0;
         v3 := 0.0;
+        v4 := 0.0;
+        v5 := 1.0;
       );
     );
     act := Activity(
@@ -841,16 +941,6 @@ instance Fuzzy3 of helifuzzy is
     );
   end
 
-  relation coachOfPatient from Coach to Patient is
-    (Coach_2, Patient_2_5),
-    (Coach_4, Patient_3_1)
-  end
-  relation isPatientOfHeli from HeliWeb to Patient is
-    (HeliWeb_1, Patient_2_5),
-    (HeliWeb_1, Patient_4_5),
-    (HeliWeb_1, Patient_3_1),
-    (HeliWeb_1, Patient_5_5)
-  end
 
   omega := +0.0;
   deadlines := {};
