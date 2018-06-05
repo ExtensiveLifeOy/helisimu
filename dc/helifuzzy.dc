@@ -6,22 +6,27 @@ layer helifuzzy is
 		 fruits: real;
 	 end Activity;
 	 
-	 type Real3 is
-		 v1: real;
-		 v2: real;
-		 v3: real;
-	 end Real3;
+	 type RealVector is
+		 v1: real; -- control_weight
+		 v2: real; -- walk_steps
+		 v3: real; -- eat_fruits
+		 v4: real; -- inc_physics
+		 v5: real; -- sleep_better
+	 end RealVector;
   
+	 -- added increase physical activity ( in minutes ) and sleep_better ( in hours )
 	 type Goal is
-		 task: (control_weight, walk_steps_aweek, eat_fruits_aweek);    
-		 target: Real3;  -- targets for each task
-		 w: Real3; -- weight for each targets
+		 task: (control_weight, walk_steps_aweek, eat_fruits_aweek, inc_physics, sleep_better);    
+		 target: RealVector;  -- targets for each task
+		 w: RealVector; -- weight for each targets
 	 end Goal;	 
 	 
 	 class HeliWeb is 
 	 end HeliWeb;	 
 	 
 	 class Coach is 
+	    id: integer;
+		n_pat: integer;
 	 end Coach;
 	 	 
      ---- represents all external environment 
@@ -30,7 +35,7 @@ layer helifuzzy is
      end World;
 
 	 ---- model for Participant as main actor
-	 ---- it could incluid a property for progress if needed
+	 ---- it could include a property for progress if needed
 	 class Patient is
 	     id: integer;
 		 can_send: boolean;
@@ -55,7 +60,7 @@ layer helifuzzy is
      relation recvPatientAdherence (Patient, Coach) is 0..1 : 0..1;
      relation recvPatientMessage (Patient, Coach) is 0..1 : 0..1;
 
-	 relation isPatientOfHeli (HeliWeb, Patient) is 0..1 : 0..10;
+	 relation isPatientOfHeli (HeliWeb, Patient) is 0..1 : 0..30;
 	 relation coachOfPatient (Coach, Patient) is 0..1 : 0..10;
 
 	 -- Util functions
@@ -81,8 +86,8 @@ layer helifuzzy is
 	 end;
 
 	 action registerCoach(c:Coach;p:Patient) is
-     when (p.t_registered>0.0 and not coachOfPatient(c,p)) do
-		 coachOfPatient(c,p);
+     when (p.t_registered>0.0 and c.n_pat < 10 and not coachOfPatient(c,p)) do
+		 coachOfPatient(c,p) ||  c.n_pat := c.n_pat + 1;
 	 end;	 
 	 
 	 -- individual goals progress assume value exits
@@ -100,9 +105,7 @@ layer helifuzzy is
 	 end;
 	 
 	 -- Adherence as a function of progress
-	 function computeAdherance(w:World; p:Patient) : real is	 
-		 -- return p.nmsg_sent / w.day;   		 
-		 -- return weightProgress(p) *  stepsProgress(p) * fruitsProgress(p);
+	 function computeAdherance(w:World; p:Patient) : real is	  		 
 		 return (p.goal.w.v1*weightProgress(p) +  p.goal.w.v2*stepsProgress(p) + p.goal.w.v3*fruitsProgress(p))/(p.goal.w.v1 + p.goal.w.v2 + p.goal.w.v3) ;
 	 end;
 
@@ -130,8 +133,7 @@ layer helifuzzy is
           isPatientOfHeli(h,p)
 	     ||p.t_registered := w.day
 		 ||p.t_last_activity := w.day
-	     ||p.m:=1.0
-		 --||p.goal:= Goal( task -> control_weight(), target := Real3(v1:=71.0, v2:=0.0, v3:=0.0), w:= Real3(v1:=1.0, v2:=0.0, v3:=0))
+	     ||p.m:=1.0		 
          ||p.status -> hapa_motivation(); 		 
      end;
 
