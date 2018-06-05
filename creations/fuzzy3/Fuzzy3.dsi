@@ -39,9 +39,11 @@ instance Fuzzy3 of helifuzzy is
       );
     );
     act := Activity(
-      weight := 0.0;
-      steps := 0.0;
+      weight := 76.0;
+      steps  := 0.0;
       fruits := 0.0;
+	  physics:= 0.0;
+      sleep  := 0.0;
     );
     nmsg_rcvd := 0;
     nmsg_sent := 0.0;
@@ -76,9 +78,11 @@ instance Fuzzy3 of helifuzzy is
       );
     );
     act := Activity(
-      weight := 0.0;
-      steps := 0.0;
+      weight := 78.0;
+      steps  := 0.0;
       fruits := 0.0;
+	  physics:= 0.0;
+      sleep  := 0.0;
     );
     nmsg_rcvd := 0;
     nmsg_sent := 0.0;
@@ -113,9 +117,11 @@ instance Fuzzy3 of helifuzzy is
       );
     );
     act := Activity(
-      weight := 0.0;
-      steps := 0.0;
+      weight := 78.0;
+      steps  := 0.0;
       fruits := 0.0;
+	  physics:= 0.0;
+      sleep  := 0.0;
     );
     nmsg_rcvd := 0;
     nmsg_sent := 0.0;
@@ -150,9 +156,11 @@ instance Fuzzy3 of helifuzzy is
       );
     );
     act := Activity(
-      weight := 0.0;
-      steps := 0.0;
+      weight := 70.0;
+      steps  := 0.0;
       fruits := 0.0;
+	  physics:= 0.0;
+      sleep  := 0.0;
     );
     nmsg_rcvd := 0;
     nmsg_sent := 0.0;
@@ -187,9 +195,11 @@ instance Fuzzy3 of helifuzzy is
       );
     );
     act := Activity(
-      weight := 0.0;
-      steps := 0.0;
+      weight := 78.0;
+      steps  := 0.0;
       fruits := 0.0;
+	  physics:= 0.0;
+      sleep  := 0.0;
     );
     nmsg_rcvd := 0;
     nmsg_sent := 0.0;
@@ -225,8 +235,10 @@ instance Fuzzy3 of helifuzzy is
     );
     act := Activity(
       weight := 0.0;
-      steps := 0.0;
+      steps  := 0.0;
       fruits := 0.0;
+	  physics:= 1000.0;
+      sleep  := 0.0;
     );
     nmsg_rcvd := 0;
     nmsg_sent := 0.0;
@@ -262,8 +274,10 @@ instance Fuzzy3 of helifuzzy is
     );
     act := Activity(
       weight := 0.0;
-      steps := 0.0;
+      steps  := 1000.0;
       fruits := 0.0;
+	  physics:= 0.0;
+      sleep  := 0.0;
     );
     nmsg_rcvd := 0;
     nmsg_sent := 0.0;
@@ -299,8 +313,10 @@ instance Fuzzy3 of helifuzzy is
     );
     act := Activity(
       weight := 0.0;
-      steps := 0.0;
+      steps  := 1000.0;
       fruits := 0.0;
+	  physics:= 0.0;
+      sleep  := 0.0;
     );
     nmsg_rcvd := 0;
     nmsg_sent := 0.0;
@@ -336,8 +352,10 @@ instance Fuzzy3 of helifuzzy is
     );
     act := Activity(
       weight := 0.0;
-      steps := 0.0;
+      steps  := 1000.0;
       fruits := 0.0;
+	  physics:= 0.0;
+      sleep  := 0.0;
     );
     nmsg_rcvd := 0;
     nmsg_sent := 0.0;
@@ -373,8 +391,10 @@ instance Fuzzy3 of helifuzzy is
     );
     act := Activity(
       weight := 0.0;
-      steps := 200.0;
+      steps  := 1200.0;
       fruits := 3.0;
+	  physics:= 0.0;
+      sleep  := 0.0;
     );
     nmsg_rcvd := 1;
     nmsg_sent := 0.0;
@@ -410,8 +430,10 @@ instance Fuzzy3 of helifuzzy is
     );
     act := Activity(
       weight := 100.0;
-      steps := 100.0;
-      fruits := 0.0;
+      steps  := 100.0;
+      fruits := 5.0;
+	  physics:= 0.0;
+      sleep  := 0.0;
     );
     nmsg_rcvd := 2;
     nmsg_sent := 0.0;
@@ -447,8 +469,10 @@ instance Fuzzy3 of helifuzzy is
     );
     act := Activity(
       weight := 0.0;
-      steps := 0.0;
-      fruits := 0.0;
+      steps  := 0.0;
+      fruits := 5.0;
+	  physics:= 0.0;
+      sleep  := 0.0;
     );
     nmsg_rcvd := 0;
     nmsg_sent := 0.0;
@@ -484,8 +508,10 @@ instance Fuzzy3 of helifuzzy is
     );
     act := Activity(
       weight := 0.0;
-      steps := 0.0;
-      fruits := 0.0;
+      steps  := 0.0;
+      fruits := 5.0;
+	  physics:= 0.0;
+      sleep  := 0.0;
     );
     nmsg_rcvd := 0;
     nmsg_sent := 0.0;
@@ -521,8 +547,10 @@ instance Fuzzy3 of helifuzzy is
     );
     act := Activity(
       weight := 0.0;
-      steps := 0.0;
-      fruits := 0.0;
+      steps  := 0.0;
+      fruits := 3.0;
+	  physics:= 0.0;
+      sleep  := 0.0;
     );
     nmsg_rcvd := 0;
     nmsg_sent := 0.0;
@@ -558,8 +586,10 @@ instance Fuzzy3 of helifuzzy is
     );
     act := Activity(
       weight := 0.0;
-      steps := 0.0;
-      fruits := 0.0;
+      steps  := 0.0;
+      fruits := 3.0;
+	  physics:= 30.0;
+      sleep  := 0.0;
     );
     nmsg_rcvd := 0;
     nmsg_sent := 0.0;
@@ -595,8 +625,10 @@ instance Fuzzy3 of helifuzzy is
     );
     act := Activity(
       weight := 0.0;
-      steps := 0.0;
+      steps  := 0.0;
       fruits := 0.0;
+	  physics:= 30.0;
+      sleep  := 0.0;
     );
     nmsg_rcvd := 0;
     nmsg_sent := 0.0;
@@ -632,8 +664,10 @@ instance Fuzzy3 of helifuzzy is
     );
     act := Activity(
       weight := 0.0;
-      steps := 0.0;
+      steps  := 0.0;
       fruits := 0.0;
+	  physics:= 30.0;
+      sleep  := 0.0;
     );
     nmsg_rcvd := 0;
     nmsg_sent := 0.0;
@@ -669,8 +703,10 @@ instance Fuzzy3 of helifuzzy is
     );
     act := Activity(
       weight := 0.0;
-      steps := 0.0;
+      steps  := 0.0;
       fruits := 0.0;
+	  physics:= 30.0;
+      sleep  := 0.0;
     );
     nmsg_rcvd := 0;
     nmsg_sent := 0.0;
@@ -706,8 +742,10 @@ instance Fuzzy3 of helifuzzy is
     );
     act := Activity(
       weight := 0.0;
-      steps := 0.0;
+      steps  := 0.0;
       fruits := 0.0;
+	  physics:= 30.0;
+      sleep  := 0.0;
     );
     nmsg_rcvd := 0;
     nmsg_sent := 0.0;
@@ -742,9 +780,11 @@ instance Fuzzy3 of helifuzzy is
       );
     );
     act := Activity(
-      weight := 2.0;
-      steps := 100.0;
-      fruits := 1.0;
+      weight := 74.0;
+      steps  := 0.0;
+      fruits := 0.0;
+	  physics:= 60.0;
+      sleep  := 0.0;
     );
     nmsg_rcvd := 0;
     nmsg_sent := 0.0;
@@ -780,8 +820,10 @@ instance Fuzzy3 of helifuzzy is
     );
     act := Activity(
       weight := 0.0;
-      steps := 0.0;
+      steps  := 0.0;
       fruits := 0.0;
+	  physics:= 0.0;
+      sleep  := 7.0;
     );
     nmsg_rcvd := 0;
     nmsg_sent := 0.0;
@@ -817,8 +859,10 @@ instance Fuzzy3 of helifuzzy is
     );
     act := Activity(
       weight := 0.0;
-      steps := 0.0;
+      steps  := 0.0;
       fruits := 0.0;
+	  physics:= 0.0;
+      sleep  := 7.0;
     );
     nmsg_rcvd := 0;
     nmsg_sent := 0.0;
@@ -852,10 +896,12 @@ instance Fuzzy3 of helifuzzy is
         v5 := 1.0;
       );
     );
-    act := Activity(
+   act := Activity(
       weight := 0.0;
-      steps := 0.0;
+      steps  := 0.0;
       fruits := 0.0;
+	  physics:= 0.0;
+      sleep  := 7.0;
     );
     nmsg_rcvd := 0;
     nmsg_sent := 0.0;
@@ -889,10 +935,12 @@ instance Fuzzy3 of helifuzzy is
         v5 := 1.0;
       );
     );
-    act := Activity(
+   act := Activity(
       weight := 0.0;
-      steps := 0.0;
+      steps  := 0.0;
       fruits := 0.0;
+	  physics:= 0.0;
+      sleep  := 7.0;
     );
     nmsg_rcvd := 0;
     nmsg_sent := 0.0;
@@ -927,9 +975,11 @@ instance Fuzzy3 of helifuzzy is
       );
     );
     act := Activity(
-      weight := 1.0;
-      steps := 100.0;
-      fruits := 1.0;
+      weight := 78.0;
+      steps  := 100.0;
+      fruits := 0.0;
+	  physics:= 0.0;
+      sleep  := 7.0;
     );
     nmsg_rcvd := 0;
     nmsg_sent := 0.0;
