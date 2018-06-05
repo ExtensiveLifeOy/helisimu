@@ -25,6 +25,8 @@ layer helifuzzy is
 	 end HeliWeb;	 
 	 
 	 class Coach is 
+	    id: integer;
+		n_pat: integer;
 	 end Coach;
 	 	 
      ---- represents all external environment 
@@ -33,7 +35,7 @@ layer helifuzzy is
      end World;
 
 	 ---- model for Participant as main actor
-	 ---- it could incluid a property for progress if needed
+	 ---- it could include a property for progress if needed
 	 class Patient is
 	     id: integer;
 		 can_send: boolean;
@@ -84,8 +86,8 @@ layer helifuzzy is
 	 end;
 
 	 action registerCoach(c:Coach;p:Patient) is
-     when (p.t_registered>0.0 and not coachOfPatient(c,p)) do
-		 coachOfPatient(c,p);
+     when (p.t_registered>0.0 and c.n_pat < 10 and not coachOfPatient(c,p)) do
+		 coachOfPatient(c,p) ||  c.n_pat := c.n_pat + 1;
 	 end;	 
 	 
 	 -- individual goals progress assume value exits
