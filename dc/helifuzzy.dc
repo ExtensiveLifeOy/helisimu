@@ -133,8 +133,7 @@ layer helifuzzy is
           isPatientOfHeli(h,p)
 	     ||p.t_registered := w.day
 		 ||p.t_last_activity := w.day
-	     ||p.m:=1.0
-		 --||p.goal:= Goal( task -> control_weight(), target := RealVector(v1:=71.0, v2:=0.0, v3:=0.0), w:= RealVector(v1:=1.0, v2:=0.0, v3:=0))
+	     ||p.m:=1.0		 
          ||p.status -> hapa_motivation(); 		 
      end;
 
