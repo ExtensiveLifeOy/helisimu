@@ -4,6 +4,8 @@ layer helifuzzy is
          weight: real;
 		 steps: real;
 		 fruits: real;
+		 physics: real;
+		 sleep: real;
 	 end Activity;
 	 
 	 type RealVector is
@@ -103,10 +105,21 @@ layer helifuzzy is
 		 -- return 1.0; 
 		 return 1.0 - (p.goal.target.v3 - p.act.fruits)/(p.goal.target.v3+0.000001);
 	 end;
+	 function physicalProgress(p: Patient): real is
+		 -- return 1.0; 
+		 return 1.0 - (p.goal.target.v4 - p.act.physics)/(p.goal.target.v4+0.000001);
+	 end;
+	 function sleepProgress(p: Patient): real is
+		 -- return 1.0; 
+		 return 1.0 - (p.goal.target.v5 - p.act.sleep)/(p.goal.target.v5+0.000001);
+	 end;
+	 
+	 
 	 
 	 -- Adherence as a function of progress
 	 function computeAdherance(w:World; p:Patient) : real is	  		 
-		 return (p.goal.w.v1*weightProgress(p) +  p.goal.w.v2*stepsProgress(p) + p.goal.w.v3*fruitsProgress(p))/(p.goal.w.v1 + p.goal.w.v2 + p.goal.w.v3) ;
+		 return (p.goal.w.v1*weightProgress(p) +  p.goal.w.v2*stepsProgress(p) + p.goal.w.v3*fruitsProgress(p) + p.goal.w.v4*physicalProgress(p) + p.goal.w.v5*sleepProgress(p)) /
+		 (p.goal.w.v1 + p.goal.w.v2 + p.goal.w.v3 + p.goal.w.v4 + p.goal.w.v5) ;
 	 end;
 
      -- Coach Actions
@@ -127,13 +140,13 @@ layer helifuzzy is
      end;
 	 
      -- Patient Actions
-	 -- send a weight Goal
+	 -- send a selected Goal
 	 action sendGoalToHeLi(p:Patient; h:HeliWeb; w:World) is -- Registration starts from sending Goal 
      when (p.t_registered = 0.0) do
           isPatientOfHeli(h,p)
 	     ||p.t_registered := w.day
 		 ||p.t_last_activity := w.day
-	     ||p.m:=1.0		 
+	     ||p.m:=1.0		
          ||p.status -> hapa_motivation(); 		 
      end;
 
@@ -186,6 +199,36 @@ layer helifuzzy is
 	 action add1Kg(p:Patient) is
 	 when p.t_registered > 0.0 do 
 	     p.act.weight:= p.act.weight +1.0;
+	 end;
+	 
+	 action goGym60m(p:Patient) is
+	 when p.t_registered > 0.0 do 
+	     p.act.physics:= 60.0;
+	 end;
+	 
+	 action goGym30m(p:Patient) is
+	 when p.t_registered > 0.0 do 
+	     p.act.physics:= 30.0;
+	 end;
+	 
+	 action skipGym(p:Patient) is
+	 when p.t_registered > 0.0 do 
+	     p.act.physics:= 0.0;
+	 end;
+	 
+	 action sleep7h(p:Patient) is
+	 when p.t_registered > 0.0 do 
+	     p.act.sleep:= 7.0;
+	 end;
+	 
+	 action sleep8h(p:Patient) is
+	 when p.t_registered > 0.0 do 
+	     p.act.sleep:= 8.0;
+	 end;
+	 
+	 action sleep6h(p:Patient) is
+	 when p.t_registered > 0.0 do 
+	     p.act.sleep:= 6.0;
 	 end;
 
      action updateState(p:Patient;w:World) is
