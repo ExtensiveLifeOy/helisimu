@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.1.25)  15 APR 2018 19:40
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.1.25)  3 JUN 2018 03:28
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -395,38 +395,68 @@ Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 (/usr/local/texlive/2015/texmf-dist/tex/latex/multirow/multirow.sty
 \bigstrutjot=\dimen127
 )
-(./heli-llncs.aux
+(/usr/local/texlive/2015/texmf-dist/tex/latex/listings/listings.sty
+\lst@mode=\count117
+\lst@gtempboxa=\box54
+\lst@token=\toks21
+\lst@length=\count118
+\lst@currlwidth=\dimen128
+\lst@column=\count119
+\lst@pos=\count120
+\lst@lostspace=\dimen129
+\lst@width=\dimen130
+\lst@newlines=\count121
+\lst@lineno=\count122
+\lst@maxwidth=\dimen131
 
-LaTeX Warning: Label `Fig.hapa' multiply defined.
-
+(/usr/local/texlive/2015/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2014/09/06 1.5e (Carsten Heinz)
+\c@lstnumber=\count123
+\lst@skipnumbers=\count124
+\lst@framebox=\box55
 )
+(/usr/local/texlive/2015/texmf-dist/tex/latex/listings/listings.cfg
+File: listings.cfg 2014/09/06 1.5e listings configuration
+))
+Package: listings 2014/09/06 1.5e (Carsten Heinz)
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/graphics/color.sty
+Package: color 2014/10/28 v1.1a Standard LaTeX Color (DPC)
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/latexconfig/color.cfg
+File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
+)
+Package color Info: Driver file: pdftex.def on input line 142.
+)
+(./heli-llncs.aux)
 \openout1 = `heli-llncs.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
- (/usr/local/texlive/2015/texmf-dist/tex/context/base/supp-pdf.mkii
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+
+(/usr/local/texlive/2015/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count117
-\scratchdimen=\dimen128
-\scratchbox=\box54
-\nofMPsegments=\count118
-\nofMParguments=\count119
-\everyMPshowfont=\toks21
-\MPscratchCnt=\count120
-\MPscratchDim=\dimen129
-\MPnumerator=\count121
-\makeMPintoPDFobject=\count122
-\everyMPtoPDFconversion=\toks22
+\scratchcounter=\count125
+\scratchdimen=\dimen132
+\scratchbox=\box56
+\nofMPsegments=\count126
+\nofMParguments=\count127
+\everyMPshowfont=\toks22
+\MPscratchCnt=\count128
+\MPscratchDim=\dimen133
+\MPnumerator=\count129
+\makeMPintoPDFobject=\count130
+\everyMPtoPDFconversion=\toks23
 ) (/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
 Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
 )
@@ -475,100 +505,151 @@ G,.JBIG2,.JB2,.eps]
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
+\c@lstlisting=\count131
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 30.
+(Font)              <7> on input line 32.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 30.
+(Font)              <5> on input line 32.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <9> on input line 30.
+(Font)              <9> on input line 32.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 30.
+(Font)              <6> on input line 32.
 
 [1
 
 {/usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-<LogicalSolutionNow.png, id=15, 714.0276pt x 477.9456pt>
+[2] <LogicalSolutionNow.png, id=18, 672.5928pt x 365.2044pt>
 File: LogicalSolutionNow.png Graphic file (type png)
 
 <use LogicalSolutionNow.png>
-Package pdftex.def Info: LogicalSolutionNow.png used on input line 65.
-(pdftex.def)             Requested size: 357.01292pt x 238.97221pt.
-
-Overfull \hbox (12.68938pt too wide) in paragraph at lines 64--67
- [] 
- []
-
-[2]
-
-LaTeX Warning: Reference `fig.hapa' on page 3 undefined on input line 102.
-
-
-Overfull \hbox (24.75787pt too wide) in paragraph at lines 102--103
+Package pdftex.def Info: LogicalSolutionNow.png used on input line 69.
+(pdftex.def)             Requested size: 336.29558pt x 182.60175pt.
+ [3 <./LogicalSolutionNow.png>]
+Overfull \hbox (24.75787pt too wide) in paragraph at lines 108--109
 \T1/cmr/m/n/10 phase is sub-di-vided into a pre-action phase(volition) and an a
 c-tion phase(maintenance)
  []
 
-
-Underfull \vbox (badness 4316) has occurred while \output is active []
-
- [3 <./LogicalSolutionNow.png>] <hapa_firem.png, id=30, 722.7pt x 542.025pt>
+<hapa_firem.png, id=28, 721.9773pt x 506.6127pt>
 File: hapa_firem.png Graphic file (type png)
+ <use hapa_firem.png>
+Package pdftex.def Info: hapa_firem.png used on input line 113.
+(pdftex.def)             Requested size: 288.7858pt x 202.64148pt.
 
-<use hapa_firem.png>
-Package pdftex.def Info: hapa_firem.png used on input line 107.
-(pdftex.def)             Requested size: 361.3491pt x 271.01183pt.
-
-Overfull \hbox (17.02556pt too wide) in paragraph at lines 106--109
- [] 
- []
-
-[4 <./hapa_firem.png>] <Hapa.png, id=35, 817.0525pt x 777.90625pt>
+<Hapa.png, id=29, 817.0525pt x 777.90625pt>
 File: Hapa.png Graphic file (type png)
+ <use Hapa.png>
+Package pdftex.def Info: Hapa.png used on input line 114.
+(pdftex.def)             Requested size: 326.81522pt x 311.15698pt.
 
-<use Hapa.png>
-Package pdftex.def Info: Hapa.png used on input line 139.
-(pdftex.def)             Requested size: 408.52525pt x 388.95216pt.
 
-Overfull \hbox (64.2017pt too wide) in paragraph at lines 138--141
+LaTeX Warning: Float too large for page by 1.25806pt on input line 119.
+
+[4] [5 <./hapa_firem.png> <./Hapa.png>] [6]
+<Weight.png, id=43, 401.5pt x 185.69376pt>
+File: Weight.png Graphic file (type png)
+ <use Weight.png>
+Package pdftex.def Info: Weight.png used on input line 163.
+(pdftex.def)             Requested size: 277.69987pt x 128.44333pt.
+
+<Goals.png, id=44, 582.175pt x 228.855pt>
+File: Goals.png Graphic file (type png)
+ <use Goals.png>
+Package pdftex.def Info: Goals.png used on input line 165.
+(pdftex.def)             Requested size: 277.69987pt x 109.1647pt.
+ [7 <./Weight.png> <./Goals.png>]
+Overfull \hbox (23.01765pt too wide) in paragraph at lines 179--205
+[][]
+ []
+
+[8] <DisCoAnimator.png, id=54, 1135.24126pt x 748.7975pt>
+File: DisCoAnimator.png Graphic file (type png)
+
+<use DisCoAnimator.png>
+Package pdftex.def Info: DisCoAnimator.png used on input line 222.
+(pdftex.def)             Requested size: 340.575pt x 224.64098pt.
+ [9]
+(/usr/local/texlive/2015/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2014/09/06 1.5e listings language file
+)
+Underfull \vbox (badness 1540) has occurred while \output is active []
+
+ [10 <./DisCoAnimator.png>]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 249.
+
+ (/usr/local/texlive/2015/texmf-dist/tex/latex/base/omscmr.fd
+File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 249.
+
+[11] <REALvsBRAIDFORDvsPROPOSED.png, id=65, 866.23625pt x 784.9325pt>
+File: REALvsBRAIDFORDvsPROPOSED.png Graphic file (type png)
+
+<use REALvsBRAIDFORDvsPROPOSED.png>
+Package pdftex.def Info: REALvsBRAIDFORDvsPROPOSED.png used on input line 272.
+(pdftex.def)             Requested size: 346.48836pt x 313.96744pt.
+
+Overfull \hbox (2.16481pt too wide) in paragraph at lines 270--274
  [] 
  []
 
-[5] [6] [7 <./Hapa.png>] [8] (./heli-llncs.aux)
+<Patient1-365-fuzzy.png, id=66, 756.8275pt x 270.00874pt>
+File: Patient1-365-fuzzy.png Graphic file (type png)
 
-LaTeX Warning: There were undefined references.
+<use Patient1-365-fuzzy.png>
+Package pdftex.def Info: Patient1-365-fuzzy.png used on input line 283.
+(pdftex.def)             Requested size: 378.41283pt x 135.00403pt.
 
+<Patient2-365-fuzzy.png, id=67, 752.8125pt x 281.05pt>
+File: Patient2-365-fuzzy.png Graphic file (type png)
 
-LaTeX Warning: There were multiply-defined labels.
+<use Patient2-365-fuzzy.png>
+Package pdftex.def Info: Patient2-365-fuzzy.png used on input line 284.
+(pdftex.def)             Requested size: 376.40532pt x 140.52464pt.
 
- ) 
+<Patient3-365-fuzzy.png, id=68, 755.82375pt x 288.07625pt>
+File: Patient3-365-fuzzy.png Graphic file (type png)
+
+<use Patient3-365-fuzzy.png>
+Package pdftex.def Info: Patient3-365-fuzzy.png used on input line 285.
+(pdftex.def)             Requested size: 377.91095pt x 144.03777pt.
+
+Overfull \hbox (34.08928pt too wide) in paragraph at lines 282--287
+ [] 
+ []
+
+[12] [13 <./REALvsBRAIDFORDvsPROPOSED.png (PNG copy)>] [14] [15 <./Patient1-365
+-fuzzy.png> <./Patient2-365-fuzzy.png> <./Patient3-365-fuzzy.png>] [16]
+[17] (./heli-llncs.aux) ) 
 Here is how much of TeX's memory you used:
- 2466 strings out of 493089
- 32051 string characters out of 6134842
- 99842 words of memory out of 5000000
- 5914 multiletter control sequences out of 15000+600000
+ 4377 strings out of 493089
+ 57375 string characters out of 6134842
+ 158215 words of memory out of 5000000
+ 7795 multiletter control sequences out of 15000+600000
  11626 words of font info for 28 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 37i,13n,23p,1164b,354s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}
-</usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><
-/usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></
-usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></us
-r/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/
-local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/loc
-al/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/
-texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/tex
-live/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texl
-ive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texliv
-e/2015/texmf-dist/fonts/type1/public/cm-super/sfbx0900.pfb></usr/local/texlive/
-2015/texmf-dist/fonts/type1/public/cm-super/sfbx1000.pfb></usr/local/texlive/20
-15/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/local/texlive/2015
-/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/local/texlive/2015/t
-exmf-dist/fonts/type1/public/cm-super/sfrm0900.pfb></usr/local/texlive/2015/tex
-mf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on heli-llncs.pdf (8 pages, 644869 bytes).
+ 38i,14n,42p,1706b,1433s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/cm
+-super/cm-super-t1.enc}</usr/local/texlive/2015/texmf-dist/fonts/type1/public/a
+msfonts/cm/cmex10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmmi10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/ams
+fonts/cm/cmmi7.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfo
+nts/cm/cmr10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfont
+s/cm/cmr5.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/c
+m/cmr6.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/c
+mr7.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy
+10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7
+.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/cm-super/sfbx0900.p
+fb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/cm-super/sfbx1000.pfb
+></usr/local/texlive/2015/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb><
+/usr/local/texlive/2015/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></u
+sr/local/texlive/2015/texmf-dist/fonts/type1/public/cm-super/sfrm0900.pfb></usr
+/local/texlive/2015/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
+Output written on heli-llncs.pdf (17 pages, 675212 bytes).
 PDF statistics:
- 99 PDF objects out of 1000 (max. 8388607)
- 67 compressed objects within 1 object stream
+ 140 PDF objects out of 1000 (max. 8388607)
+ 86 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 16 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 51 words of extra memory for PDF output out of 10000 (max. 10000000)
 
