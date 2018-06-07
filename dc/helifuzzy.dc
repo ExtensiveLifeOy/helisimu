@@ -59,9 +59,6 @@ layer helifuzzy is
 		 status: (hapa_motivation, hapa_volition, hapa_maintenance);  -- adding HAPA status
 	 end Patient;
 
-     relation recvPatientAdherence (Patient, Coach) is 0..1 : 0..1;
-     relation recvPatientMessage (Patient, Coach) is 0..1 : 0..1;
-
 	 relation isPatientOfHeli (HeliWeb, Patient) is 0..1 : 0..30;
 	 relation coachOfPatient (Coach, Patient) is 0..1 : 0..10;
 
@@ -85,11 +82,13 @@ layer helifuzzy is
      --when (p.t_registered=0.0 and not isPatientOfHeli(h,p)) do
      when (p.m = 1.0 and not isPatientOfHeli(h,p)) do -- p.t_registered = 0.0
 		 isPatientOfHeli(h,p);
-	 end;
-
+	 end;		
+	 
 	 action registerCoach(c:Coach;p:Patient) is
-     when (p.t_registered>0.0 and c.n_pat < 10 and not coachOfPatient(c,p)) do
-		 coachOfPatient(c,p) ||  c.n_pat := c.n_pat + 1;
+     when ( forall coach: Coach :: not coachOfPatient(coach,p) ) do
+	      if (p.t_registered>0.0 and c.n_pat < 10 and not coachOfPatient(c,p)) then
+		   	 coachOfPatient(c,p) ||  c.n_pat := c.n_pat + 1;
+		  end if;
 	 end;	 
 	 
 	 -- individual goals progress assume value exits
