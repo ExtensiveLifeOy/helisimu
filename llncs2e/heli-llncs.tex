@@ -1,44 +1,79 @@
-% This is LLNCS.DOC the documentation file of
-% the LaTeX2e class from Springer-Verlag
-% for Lecture Notes in Computer Science, version 2.4
-\documentclass{llncs}
-%\usepackage{llncsdoc}
+%%%%%%%%%%%%%%%%%%%% author.tex %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
-\usepackage[T1]{fontenc}
-\usepackage[utf8]{inputenc}
+% sample root file for your "contribution" to a contributed volume
+%
+% Use this file as a template for your own input.
+%
+%%%%%%%%%%%%%%%% Springer %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\usepackage{cite}
-%\usepackage {natbib}
-\usepackage{graphicx}
+
+% RECOMMENDED %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[graybox]{svmult}
+
+% choose options for [] as required from the list
+% in the Reference Guide
+
+\usepackage{mathptmx}       % selects Times Roman as basic font
+\usepackage{helvet}         % selects Helvetica as sans-serif font
+\usepackage{courier}        % selects Courier as typewriter font
+\usepackage{type1cm}        % activate if the above 3 fonts are
+                            % not available on your system
+%
+\usepackage{makeidx}         % allows index generation
+\usepackage{graphicx}        % standard LaTeX graphics tool
+                             % when including figure files
+\usepackage{multicol}        % used for the two-column index
+\usepackage[bottom]{footmisc}% places footnotes at page bottom
+
 \usepackage{multirow}
 \usepackage{listings}
-\usepackage{color}
+
+
+% see the list of further useful packages
+% in the Reference Guide
+
+\makeindex             % used for the subject index
+                       % please use the style svind.ist with
+                       % your makeindex program
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{document}
 
-\title{Fuzzy Simulation of Human Behaviour in the Health-e-Living System}
-
-\author{Remberto Martinez\inst{1} \and Marcos Tong\inst{1} \and Luis Diago\inst{2,3} \and Timo Nummenmaa\inst{4} \and Jyrki Nummenmaa \inst{4}}
-
+\title*{Fuzzy Simulation of Human Behaviour in the Health-e-Living System}
+% Use \titlerunning{Short Title} for an abbreviated version of
+% your contribution title if the original one is too long
+%\author{Name of First Author and Name of Second Author}
+\author{Remberto Martinez \and Marcos Tong \and Luis Diago \and Timo Nummenmaa \and Jyrki Nummenmaa}
+\authorrunning{Martinez et. al} 
+% Use \authorrunning{Short Title} for an abbreviated version of
+% your contribution title if the original one is too long
+%\institute{Name of First Author \at Name, Address of Institute, \email{name@email.address}
+%\and Name of Second Author \at Name, Address of Institute \email{name@email.address}}
 \institute{
-ExtensiveLife Oy, Lohkaretie 2 B 9, 33470 Tampere, Finland
+Remberto Martinez \at ExtensiveLife Oy, Lohkaretie 2 B 9, 33470 Tampere, Finland, \email{remberto@health-e-living.com}
 \and
-Interlocus Inc, Yokohama City 226-8510, Japan
+Marcos Tong \at ExtensiveLife Oy, Lohkaretie 2 B 9, 33470 Tampere, Finland, \email{marcos@health-e-living.com}
+\and
+Luis Diago \at Interlocus Inc, Yokohama City 226-8510 and Meiji Institute for Advanced Study of Mathematical Sciences Meiji University, 4-21-1 Nakano, Tokyo 164-8525, Japan , \email{ldiago@i-locus.com}
 \and 
-Meiji Institute for Advanced Study of Mathematical Sciences\\ Meiji University, 4-21-1 Nakano, Tokyo 164-8525, Japan
+Timo Nummenmaa \at University of Tampere, Finland, \email{timo.nummenmaa@gmail.com}
 \and 
-University of Tampere, Finland}
+Jyrki Nummenmaa \at University of Tampere, Finland, \email{Jyrki.Nummenmaa@staff.uta.fi}
+}
 
-\maketitle
 %
-\begin{abstract}
+% Use the package "url.sty" to avoid
+% problems with special characters
+% used in your e-mail or web address
+%
+\maketitle
 
-This chapter shows an application of fuzzy set theory to preventive health support systems where adherence to medical treatment is an important measure to promote health and reduce health care costs. Preventive health care information technology systems design include ensuring adherence to treatment through Just-In-Time Adaptive Interventions (JITAI). Determining the timing of the intervention and the appropriate intervention strategy are two of the main difficulties facing current systems. In this work, a JITAI system called Health-e-living (Heli) was developed for a group of patients with type-2 diabetes. During the development stages of Heli it was verified that the state of each user is fuzzy and it is difficult to get the right moment to send motivational message without being annoying. A fuzzy formula is proposed to measure the adherence of patients to their goals. 
-As the adherence measurement needed more data, it was introduce the DisCo software toolset for formal specifications, the modelling of human behaviour and health action process approach (HAPA) to simulate the interactions between users of the Heli system. The effectiveness of interventions is essential in any JITAI system and the proposed formula allows Heli to send motivational messages in correspondence with the status of each user as to evaluate the efficiency of any intervention strategy.
+\abstract*{This chapter shows an application of fuzzy set theory to preventive health support systems where adherence to medical treatment is an important measure to promote health and reduce health care costs. Preventive health care information technology systems design include ensuring adherence to treatment through Just-In-Time Adaptive Interventions (JITAI). Determining the timing of the intervention and the appropriate intervention strategy are two of the main difficulties facing current systems. In this work, a JITAI system called Health-e-living (Heli) was developed for a group of patients with type-2 diabetes. During the development stages of Heli it was verified that the state of each user is fuzzy and it is difficult to get the right moment to send motivational message without being annoying. A fuzzy formula is proposed to measure the adherence of patients to their goals. 
+As the adherence measurement needed more data, it was introduce the DisCo software toolset for formal specifications, the modelling of human behaviour and health action process approach (HAPA) to simulate the interactions between users of the Heli system. The effectiveness of interventions is essential in any JITAI system and the proposed formula allows Heli to send motivational messages in correspondence with the status of each user as to evaluate the efficiency of any intervention strategy.}
 
-\end{abstract}
-
-\keywords{JITAI, Behaviour analysis, Fuzzy measures, Human behaviour simulation}
+\abstract{This chapter shows an application of fuzzy set theory to preventive health support systems where adherence to medical treatment is an important measure to promote health and reduce health care costs. Preventive health care information technology systems design include ensuring adherence to treatment through Just-In-Time Adaptive Interventions (JITAI). Determining the timing of the intervention and the appropriate intervention strategy are two of the main difficulties facing current systems. In this work, a JITAI system called Health-e-living (Heli) was developed for a group of patients with type-2 diabetes. During the development stages of Heli it was verified that the state of each user is fuzzy and it is difficult to get the right moment to send motivational message without being annoying. A fuzzy formula is proposed to measure the adherence of patients to their goals. 
+As the adherence measurement needed more data, it was introduce the DisCo software toolset for formal specifications, the modelling of human behaviour and health action process approach (HAPA) to simulate the interactions between users of the Heli system. The effectiveness of interventions is essential in any JITAI system and the proposed formula allows Heli to send motivational messages in correspondence with the status of each user as to evaluate the efficiency of any intervention strategy.}
 
 
 \section{Introduction}
@@ -264,7 +299,6 @@ As it is shown in Fig.\ref{Fig.REALvsSIM}, the values of adherence are higher fo
 \begin{figure}
   \begin{center}
   \begin{tabular}{c}
-    %\includegraphics[scale=0.4]{REALvsSIM.png}\\
     \includegraphics[scale=0.4]{REALvsBRAIDFORDvsPROPOSED.png}\\
     \end{tabular}
     \caption{Comparison of the histograms (upper part) and probability distribution function (PDF, lower part) for simulated and real values of adh.}
@@ -297,9 +331,9 @@ The introduction of  HAPA and human behaviour factors in the model required a be
 While DisCo specifications were enough to describe the real system implementation, it could be expanded to give more freedom in modelling. The relationships between classes were enough to represent the Heli world in the simulator. Main limitations of current DisCo specification toolset is the ability to specify complex mathematical formulas and the reduced semantics set during the simulation preparation. The Animator tool was pleasant to use, however some improvements are needed to implement  external factors variability for the system under modelling during execution time. For the logs output processing it is desirable to add an export functionality to common standard formats like csv or database connectors. After several iterations of modelling, It was possible to generate large amount of data to discover new knowledge about real system. The data generated is found useful for other phases of software testing cycle in stage level systems. 
 
 More research is required to understand the impact of behavioural interventions on real life user lifestyle achievements and what aspects of user motivation is triggering the intention of resilience improvements.
+
  
 \begin{thebibliography}{99}
-\bibliographystyle{splncs}
 
 \bibitem{Aaltonen} T. Aaltonen, M. Katara, and R. Pitkanen. DisCo toolset - the new generation. Journal of Universal Computer Science, 7(1):3-18, 2001.
 
@@ -343,7 +377,7 @@ More research is required to understand the impact of behavioural interventions 
 
 \bibitem{rem2012} Remberto Martinez and Marcos Tong: Can Mobile Health Deliver Participatory Medicine to  All Citizens in Modern Society? 4th International Conference on Well-Being in the Information Society, WIS 2012, Turku, 22 August 2012 - 24 August 2012 Pages 83-90.
 
-\bibitem{rem2017}  R. Martinez et all: Fuzzy Adherence Formula for the Evaluation of Just-In-Time Adaptive Interventions in the Health-e-living System. Proceedings of ISFUROS Symposium,  2017.
+\bibitem{rem2017}  Remberto Martinez, Marcos Tong and Luis Diago: Fuzzy Adherence Formula for the Evaluation of Just-In-Time Adaptive Interventions in the Health-e-living System. Proceedings of ISFUROS Symposium,  2017.
 
 \bibitem{Wan} Wai Yin Lam and Paula Fresco.: Medication Adherence Measures: An Overview. BioMed Research International Volume 2015, Article ID 217047, 12 pages doi: 10.1155/2015/217047
 
@@ -353,5 +387,3 @@ More research is required to understand the impact of behavioural interventions 
 
 
 \end{document}
-
-
