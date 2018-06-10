@@ -1,44 +1,79 @@
-% This is LLNCS.DOC the documentation file of
-% the LaTeX2e class from Springer-Verlag
-% for Lecture Notes in Computer Science, version 2.4
-\documentclass{llncs}
-%\usepackage{llncsdoc}
+%%%%%%%%%%%%%%%%%%%% author.tex %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
-\usepackage[T1]{fontenc}
-\usepackage[utf8]{inputenc}
+% sample root file for your "contribution" to a contributed volume
+%
+% Use this file as a template for your own input.
+%
+%%%%%%%%%%%%%%%% Springer %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\usepackage{cite}
-%\usepackage {natbib}
-\usepackage{graphicx}
+
+% RECOMMENDED %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[graybox]{svmult}
+
+% choose options for [] as required from the list
+% in the Reference Guide
+
+\usepackage{mathptmx}       % selects Times Roman as basic font
+\usepackage{helvet}         % selects Helvetica as sans-serif font
+\usepackage{courier}        % selects Courier as typewriter font
+\usepackage{type1cm}        % activate if the above 3 fonts are
+                            % not available on your system
+%
+\usepackage{makeidx}         % allows index generation
+\usepackage{graphicx}        % standard LaTeX graphics tool
+                             % when including figure files
+\usepackage{multicol}        % used for the two-column index
+\usepackage[bottom]{footmisc}% places footnotes at page bottom
+
 \usepackage{multirow}
 \usepackage{listings}
-\usepackage{color}
+
+
+% see the list of further useful packages
+% in the Reference Guide
+
+\makeindex             % used for the subject index
+                       % please use the style svind.ist with
+                       % your makeindex program
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{document}
 
-\title{Fuzzy Simulation of Human Behaviour in the Health-e-Living System}
-
-\author{Remberto Martinez\inst{1} \and Marcos Tong\inst{1} \and Luis Diago\inst{2,3} \and Timo Nummenmaa\inst{4} \and Jyrki Nummenmaa \inst{4}}
-
+\title*{Fuzzy Simulation of Human Behaviour in the Health-e-Living System}
+% Use \titlerunning{Short Title} for an abbreviated version of
+% your contribution title if the original one is too long
+%\author{Name of First Author and Name of Second Author}
+\author{Remberto Martinez \and Marcos Tong \and Luis Diago \and Timo Nummenmaa \and Jyrki Nummenmaa}
+\authorrunning{Martinez et. al} 
+% Use \authorrunning{Short Title} for an abbreviated version of
+% your contribution title if the original one is too long
+%\institute{Name of First Author \at Name, Address of Institute, \email{name@email.address}
+%\and Name of Second Author \at Name, Address of Institute \email{name@email.address}}
 \institute{
-ExtensiveLife Oy, Lohkaretie 2 B 9, 33470 Tampere, Finland
+Remberto Martinez \at ExtensiveLife Oy, Lohkaretie 2 B 9, 33470 Tampere, Finland, \email{remberto@health-e-living.com}
 \and
-Interlocus Inc, Yokohama City 226-8510, Japan
+Marcos Tong \at ExtensiveLife Oy, Lohkaretie 2 B 9, 33470 Tampere, Finland, \email{marcos@health-e-living.com}
+\and
+Luis Diago \at Interlocus Inc, Yokohama City 226-8510 and Meiji Institute for Advanced Study of Mathematical Sciences Meiji University, 4-21-1 Nakano, Tokyo 164-8525, Japan , \email{ldiago@i-locus.com}
 \and 
-Meiji Institute for Advanced Study of Mathematical Sciences\\ Meiji University, 4-21-1 Nakano, Tokyo 164-8525, Japan
+Timo Nummenmaa \at University of Tampere, Finland, \email{timo.nummenmaa@gmail.com}
 \and 
-University of Tampere, Finland}
+Jyrki Nummenmaa \at University of Tampere, Finland, \email{Jyrki.Nummenmaa@staff.uta.fi}
+}
 
-\maketitle
 %
-\begin{abstract}
+% Use the package "url.sty" to avoid
+% problems with special characters
+% used in your e-mail or web address
+%
+\maketitle
 
-This chapter shows an application of fuzzy set theory to preventive health support systems where adherence to medical treatment is an important measure to promote health and reduce health care costs. Preventive health care information technology systems design include ensuring adherence to treatment through Just-In-Time Adaptive Interventions (JITAI). Determining the timing of the intervention and the appropriate intervention strategy are two of the main difficulties facing current systems. In this work, a JITAI system called Health-e-living (Heli) was developed for a group of patients with type-2 diabetes. During the development stages of Heli it was verified that the state of each user is fuzzy and it is difficult to get the right moment to send motivational message without being annoying. A fuzzy formula is proposed to measure the adherence of patients to their goals. 
-As the adherence measurement needed more data, it was introduce the DisCo software toolset for formal specifications, the modelling of human behaviour and health action process approach (HAPA) to simulate the interactions between users of the Heli system. The effectiveness of interventions is essential in any JITAI system and the proposed formula allows Heli to send motivational messages in correspondence with the status of each user as to evaluate the efficiency of any intervention strategy.
+\abstract*{This chapter shows an application of fuzzy set theory to preventive health support systems where adherence to medical treatment is an important measure to promote health and reduce health care costs. Preventive health care information technology systems design include ensuring adherence to treatment through Just-In-Time Adaptive Interventions (JITAI). Determining the timing of the intervention and the appropriate intervention strategy are two of the main difficulties facing current systems. In this work, a JITAI system called Health-e-living (Heli) was developed for a group of patients with type-2 diabetes. During the development stages of Heli it was verified that the state of each user is fuzzy and it is difficult to get the right moment to send motivational message without being annoying. A fuzzy formula is proposed to measure the adherence of patients to their goals. 
+As the adherence measurement needed more data, it was introduce the DisCo software toolset for formal specifications, the modelling of human behaviour and health action process approach (HAPA) to simulate the interactions between users of the Heli system. The effectiveness of interventions is essential in any JITAI system and the proposed formula allows Heli to send motivational messages in correspondence with the status of each user as to evaluate the efficiency of any intervention strategy.}
 
-\end{abstract}
-
-\keywords{JITAI, Behaviour analysis, Fuzzy measures, Human behaviour simulation}
+\abstract{This chapter shows an application of fuzzy set theory to preventive health support systems where adherence to medical treatment is an important measure to promote health and reduce health care costs. Preventive health care information technology systems design include ensuring adherence to treatment through Just-In-Time Adaptive Interventions (JITAI). Determining the timing of the intervention and the appropriate intervention strategy are two of the main difficulties facing current systems. In this work, a JITAI system called Health-e-living (Heli) was developed for a group of patients with type-2 diabetes. During the development stages of Heli it was verified that the state of each user is fuzzy and it is difficult to get the right moment to send motivational message without being annoying. A fuzzy formula is proposed to measure the adherence of patients to their goals. 
+As the adherence measurement needed more data, it was introduce the DisCo software toolset for formal specifications, the modelling of human behaviour and health action process approach (HAPA) to simulate the interactions between users of the Heli system. The effectiveness of interventions is essential in any JITAI system and the proposed formula allows Heli to send motivational messages in correspondence with the status of each user as to evaluate the efficiency of any intervention strategy.}
 
 
 \section{Introduction}
@@ -54,7 +89,7 @@ In our previous work  presented at ISFUROS 2017~\cite{rem2017} we have applied f
 The data simulated includes the HAPA model ~\cite{MacPhail}, the adherence formula specifications developed in our previous work and the human behaviour model reported in~\cite{Brailsford2016}
 to demonstrate the advantages of using fuzzy rules extracted from real system data, compare these rules validity in simulated data  and to discovers a new user behaviour or a new user type that is not available in the real system or in the scientific literature.
 
-The rest of the chapter is organised as follows. First, section \ref{sec.heli} introduces the Heli system, our previous fuzzy formula for measuring user's adherence to de system and the modelling of Human Behaviour with a simplified HAPA model. Section \ref{sec.helimodel} briefly describes the Disco simulation and Heli adherence formula specification. Section \ref{sec.rules} presents the proposed method to extract rules from the simulations and section \ref{sec.results} compare the results of the proposed approach with the approach reported in ~\cite{Brailsford2016} to demonstrate the advantages of modelling human behaviour using fuzzy rules extracted from adherence data. Finally, conclusions and future works are presented in section~\ref{sec.conclusions}
+The rest of the chapter is organised as follows. First, section \ref{sec.heli} introduces the Heli system, our previous fuzzy formula for measuring user's adherence to de system and the modelling of Human Behaviour with a simplified HAPA model. Section \ref{sec.helimodel} briefly describes the Disco simulation and Heli adherence formula specification. Section \ref{sec.rules} presents the proposed method to extract rules from the simulations and section \ref{sec.results} compares the results of the proposed approach with the approach reported in~\cite{Brailsford2016} to demonstrate the advantages of modelling human behaviour using fuzzy rules extracted from adherence data. Finally, conclusions and future works are presented in section~\ref{sec.conclusions}
 
 \section{Health-e-living (Heli) System}
 \label{sec.heli}
@@ -171,8 +206,9 @@ There were 126 users registered in Heli from 2013/07 to 2017/03 (including 8 sys
 \end{figure} 
 
 \subsection {Computing Adherance and state of the patients}
+\label{sec.patient_states}
 
-Several authors~\cite{Murray2016, Nahum-Shani, MacPhail} have emphasized the importance of having computational models of human behaviour to monitor the dynamics of an individual's internal state and context in real time. The adaptation requires monitoring the individual to decide (a) whether the individual is in a state that requires support; (b) what type (or amount) of support is needed given the individual's state; and (c) whether providing this support has the potential to disrupt the desired process. In our previous work we focus on the design and evaluation of effective interventions exploring patients self-reporting states and sending motivational messages based on a dimensional approach. Table~\ref{Tab.States} shows 7 dimensions, 13 states and some examples of motivational messages used in the intervention. Note that the messages are associated to the dimensions and not to the states of the patients, since the states vary over time and in some cases the states were not reported during the system test stage (e.g. states marked with "-" in the table). Current probabilities of the states are included within parenthesis. Motivational messages are sent to the patients based on their states and the computed adherence to their proximal outcomes.
+Several authors~\cite{Murray2016, Nahum-Shani, MacPhail} have emphasized the importance of having computational models of human behaviour to monitor the dynamics of an individual's internal state and context in real time. The adaptation requires monitoring the individual to decide (a) whether the individual is in a state that requires support; (b) what type (or amount) of support is needed given the individual's state; and (c) whether providing this support has the potential to disrupt the desired process. In our previous work we focus on the design and evaluation of effective interventions exploring patients self-reporting states and sending motivational messages based on a dimensional approach. Table~\ref{Tab.States} shows 7 dimensions, 13 states and some examples of motivational messages used in the intervention. Note that the messages are associated to the dimensions and not to the states of the patients, since the states vary over time and in some cases the states were not reported during the system test stage (e.g. states marked with "-" in the table). Current probabilities of the states are included within parenthesis. Motivational messages are sent to the patients based on the computed adherence to their proximal outcomes and their reported states (i.e. feedbacks). 
 
 \begin{table}[h]
 \caption{ Health-e-Living Intervention Approach}
@@ -208,13 +244,9 @@ The Waikato Environment for Knowledge Analysis (WEKA)~\cite{WEKA} software was u
 
 \subsection {Disco Simulation}
 
-A formal specification should state precisely what a completed piece of software is supposed to do, but not how the task should be achieved \cite{Diller}. Formal specifications are a powerful method for modelling system behaviour, usually used in software development. DisCo is primarily intended for the specification of reactive systems and its semantics have been defined with the Temporal Logic of Actions \cite{Lamport}.  
-The DisCo software toolset \cite{Aaltonen}, originally developed at the Tampere University of Technology, includes a compiler for compiling specifications created in the DisCo language, a graphical animation tool for animation and simulation of those specifications, and a scenario tool for representing execution traces as Message Sequence Charts.
+A formal specification should state precisely what a completed piece of software is supposed to do, but not how the task should be achieved \cite{Diller}. Formal specifications are a powerful method for modelling system behaviour, usually used in software development. DisCo is primarily intended for the specification of reactive systems and its semantics have been defined with the Temporal Logic of Actions \cite{Lamport}. The DisCo software toolset \cite{Aaltonen}, originally developed at the Tampere University of Technology, includes a compiler for compiling specifications created in the DisCo language, a graphical animation tool for animation and simulation of those specifications, and a scenario tool for representing execution traces as Message Sequence Charts. The human interaction with Heli system was specified using DisCo language and the simulation was executed in DisCo Animator version DisCo2000\^{}2  presented in \cite{Nummenmaa}.  
 
-The human interaction with Heli system was specified using DisCo language and the simulation was executed in DisCo Animator version DisCo2000\^{}2  presented in \cite{Nummenmaa}.  
-
-The main purpose of using DisCo specifications was to generate large amount of data as close as possible to the real world data collected while modelling a Human Behaviour that includes goals settings and the intention of acting upon the achievement of those goals. Running the simulation on DisCo animator supported the probability of a user providing input to the system, the adherence formula computation based on those entries and the probability of a user reacting after receiving a feedback message from Heli  \cite{rem2017}.
-
+The main purpose of using DisCo specifications was to generate large amount of data as close as possible to the real world data collected while modelling a Human Behaviour that includes goals settings and the intention of acting upon the achievement of those goals. Running the simulation on DisCo animator supported the probability of a user providing input to the system, the adherence formula computation based on those entries and the probability of a user reacting after receiving a feedback message from Heli~\cite{rem2017}.
  
 \begin{figure}
   \begin{center}
@@ -226,10 +258,9 @@ The main purpose of using DisCo specifications was to generate large amount of d
 \end{center}
 \end{figure} 
 
-In figure 3 the Heli simulation world consists of  four classes (patient, coach, Heli system and external world) that  can interact between each others through actions. Actions are enabled on the simulation according to their guard ( simulation system state and relationship between classes). Enabled actions are selected  for execution nondeterministically ( with weighted probability) in any specific execution time. When a participant user (patient) registers to Heli system and select a goal (i.e monitor own weight ),  a relation isPatientOfHeli becomes active and indicates that the participant is already in the HAPA\_Motivational state.
-After running a simulation for a period equivalent to 367 days, the adherence to the system is observed and computed as the number of data inputs during a week period of time.  All modelled users were registered and defined a goal ( on targets related to weight management, better nutrition and increase physical activity level), when no EMA entries are available in an evaluation period of time the simulation assigns the user to HAPA\_Motivational state. Later on when EMA entries are available during the week, the user is considered in HAPA\_Volitional or HAPA\_Maintenance state and the contents of each entries can be used to compute the progress over time towards the selected goal (see Fig.\ref{Fig.hapa}).
+In figure~\ref{Fig.Animator} the Heli simulation world consists of  four classes (patient, coach, Heli system and external world) that  can interact between each others through actions. Actions are enabled on the simulation according to their guard ( simulation system state and relationship between classes). Enabled actions are selected  for execution nondeterministically ( with weighted probability) in any specific execution time. When a participant user (patient) registers to Heli system and selects a goal (i.e monitor own weight ),  a relation $isPatientOfHeli$ becomes active and indicates that the participant is already in the HAPA\_Motivational state. After running a simulation for a period equivalent to 367 days, the adherence to the system is observed and computed as the number of data inputs during a week period of time.  All modelled users were registered and defined a goal ( on targets related to weight management, better nutrition and increase physical activity level), when no EMA entries are available in an evaluation period of time the simulation assigns the user to HAPA\_Motivational state. Later on when EMA entries are available during the week, the user is considered in HAPA\_Volitional or HAPA\_Maintenance state and the contents of each entries can be used to compute the progress over time towards the selected goal (see Fig.\ref{Fig.hapa}).
 
-On each recorded entry, the simulation computes the probability of entering next input, the compliance history and the new value of adherence. Over the elapsed time of every two weeks, in the simulated world,  is possible to assess the value of adherence and based on that the system sends personalised messages according to user attribute compliance: not\_very\_active, active and very\_active. Since the simulation purpose was to generate data and not to represent the messages personalisation, the model increased the probability of sending more user activity for those users where the value of adherence was closer to 1( max).  This feature represents a participant resilience to cope with external environment setbacks. Resilience can be simplified to include user's emotional commitment and the ability to learn from a failure and to keep own goal as a user being of two types: responsive and not\_responsive. A user being responsive will have a high correlation with user in HAPA\_Volitional or HAPA\_Maintenance states, having moderately high adherence or  high adherence.
+There are more than 1200 records per patient on average in the simulation. On each recorded entry, the simulation computes the probability of entering next input, the compliance history and the new value of adherence. Over the elapsed time of every two weeks, in the simulated world,  is possible to assess the value of adherence and based on that the system sends personalised messages according to user attribute compliance: not\_very\_active, active and very\_active. Since the simulation purpose was to generate data and not to represent the messages personalisation, the model increased the probability of sending more user activity for those users where the value of adherence was closer to 1( max).  This feature represents a participant resilience to cope with external environment setbacks. Resilience can be simplified to include user's emotional commitment and the ability to learn from a failure and to keep own goal as a user being of two types: responsive and not\_responsive. A user being responsive will have a high correlation with user in HAPA\_Volitional or HAPA\_Maintenance states, having moderately high adherence or  high adherence.
 
 \begin{lstlisting}[language=Python, caption=Functions used in the Disco specification of Adherence in equation (\ref{Eq.AdheranceFWA})]
 
@@ -257,7 +288,7 @@ On each recorded entry, the simulation computes the probability of entering next
 \section {Fuzzy Rules extraction from Time Series}
 \label{sec.rules}
 
-As in our previous research the The Waikato Environment for Knowledge Analysis (WEKA)~\cite{WEKA} software was used to predict the state of above three patients. Instead of using the state reported by the patients, we used the three states included in the HAPA model (motivational, volitional and maintenance) to find a correspondence between the HAPA states and previous states reported by the real participants.  Using a 10-fold cross-validation method to predict the HAPA states with J48 classifier the accuracy was  99.76\%, 98.63\% and 99.20\% for each patient respectively. As the states of the patients are fixed by the simulator in the HAPA model, we find a mapping between the values of adherence in the precedents of the rules and the values of adherence in the previous states reported by the patient in the real Heli-system. In the current simulation of the system from the specifications, the HAPA states only depend on the registration process and the number of messages sent to the Heli by the Participants. The are is not specification detailed for the changes in the HAPA states after the Patient entered the maintenance state. The factors to modify the states are currently under investigation and modelling.
+As in our previous research the The Waikato Environment for Knowledge Analysis (WEKA)~\cite{WEKA} software was used to predict the state of above three patients. Instead of using the state reported by the patients, we used the three states included in the HAPA model (motivational, volitional and maintenance) to find a correspondence between the HAPA states and previous states reported by the real participants.  Using a 10-fold cross-validation method to predict the HAPA states with J48 classifier the accuracy was  99.76\%, 98.63\% and 99.20\% for each patient respectively. As the states of the patients are fixed by the simulator in the HAPA model, we find a mapping between the values of adherence in the precedents of the rules and the values of adherence in the previous states reported by the patient in the real Heli-system. In the current simulation of the system from the specifications, the HAPA states only depend on the registration process and the number of messages sent to the Heli by the Participants. There is not specification detailed for the changes in the HAPA states after the Patient entered the maintenance state. The factors to modify the states are currently under investigation and modelling.
 
 \section {Preliminary Results}
 \label{sec.results}
@@ -268,7 +299,6 @@ As it is shown in Fig.\ref{Fig.REALvsSIM}, the values of adherence are higher fo
 \begin{figure}
   \begin{center}
   \begin{tabular}{c}
-    %\includegraphics[scale=0.4]{REALvsSIM.png}\\
     \includegraphics[scale=0.4]{REALvsBRAIDFORDvsPROPOSED.png}\\
     \end{tabular}
     \caption{Comparison of the histograms (upper part) and probability distribution function (PDF, lower part) for simulated and real values of adh.}
@@ -276,7 +306,7 @@ As it is shown in Fig.\ref{Fig.REALvsSIM}, the values of adherence are higher fo
 \end{center}
 \end{figure} 
 
-However, we consider that the main objective of this work has been fulfilled, since we were able to increase the number of data by means of simulation and at the same time predict the states in which the patient is (according to HAPA) from the values of adherence computed by the proposed fuzzy formula in~(\ref{Eq.AdheranceFWA}). Finally, Figure~\ref{Fig.TimeSeries} shows the results of the simulations with Disco for 367 days with the 3 patients, the coach and the Heli system shown in Fig.\ref{Fig.Animator}. The average number of entries randomly generated was 2.4 times larger than the real data. The simulation shows that some pattern of adherence exists according to the type of goal set by the Patient. For example, Patient 1, that tried to control the weight below 75Kg never reached the goal during one year. On the contrary, Patient 2 and Patient 3 who settled their goals related with physical activities (e.g. walk more than 1000 steps a week) and nutrition (e.g. eat more than 7 fruits a week) could achieve their goal several times in the year.  As it is shown in Fig.~\ref{Fig.TimeSeries} for Patient 2 and Patient 3 show a cyclic behaviour. After the patient reach the goal the adherence is reduced. Although this behaviour was included in the specification it can be consider in some agreement with real life. 
+However, we consider that the main objective of this work has been fulfilled, since we were able to increase the number of data by means of simulation and at the same time predict the states in which the patient is (according to HAPA) from the values of adherence computed by the proposed fuzzy formula in~(\ref{Eq.AdheranceFWA}). Finally, Figure~\ref{Fig.TimeSeries} shows the results of the simulations with Disco for 367 days with the 3 patients, the coach and the Heli system shown in Fig.\ref{Fig.Animator}. The average number of entries randomly generated was 2.4 times larger than the real data mainly because the number of messages sent by the automatic heli coach is much smaller than those of the simulated. In the real heli, the automatic coach generates a motivational message every 2 weeks for each patient, so it would be around 25 a year maximum or 50 if the patient provides some feedback (see the patient states in section \ref{sec.patient_states}). A human coach could generate a little more. In the simulation, the messages are generated daily in a random way so the number of records is greater. However, the simulation shows that some pattern of adherence exists according to the type of goal settled by the Patient. For example, Patient 1, that tried to control the weight below 75Kg never reached the goal during one year. On the contrary, Patient 2 and Patient 3 who settled their goals related with physical activities (e.g. walk more than 1000 steps a week) and nutrition (e.g. eat more than 7 fruits a week) could achieve their goal several times in the year.  As it is shown, Fig.~\ref{Fig.TimeSeries} shows a cyclic behaviour for Patient 2 and Patient 3. After the patient reached the goal the adherence is reduced. Although this behaviour was included in the specification it can be consider in some agreement with real life. 
 \begin{figure}
   \begin{center}
   \begin{tabular}{c}
@@ -294,53 +324,16 @@ However, we consider that the main objective of this work has been fulfilled, si
 
 JITAI systems like Heli appear to be a promising framework for developing mHealth interventions. In Heli, the number of users with fuzzy adherence was very small (25/98 $\approx$ 25.5\%) because most users (73/98 $\approx$ 74.5\%) prefer to use the system to store daily data without a specific goal. However, the  proposed interventions showed that even after several stress inputs patients do not leave the system. Although this research is still in its infancy, fuzzy measures like the proposed adherence formula constitute a practical option  to measure the way a patient approaches by successive approximations in time to a certain goal. The chapter showed by mean of simulation that there is a close correspondence between real world adherence of the patients and its computational model. 
 
-The simplified model used in simulation did not include the reactiveness of users when receiving motivational messages from Heli automatic coach. Future works should expand the model to improve user personal motivation and perceived self-efficacy. For example by using the data available after user profiling or the data collected from system usage.  Another interesting approach would be to measure adherence when the model allows to change a goal after several weeks of simulation execution.
+The simplified model used in simulation did not include the reactiveness of users when receiving motivational messages from Heli automatic coach. The ways to adjust the number of registered records during simulation to agree with those of the real life is currently under investigation. Future works should expand the model to improve user personal motivation and perceived self-efficacy. For example by using the data available after user profiling or the data collected from system usage.  Another interesting approach would be to measure adherence when the model allows to change a goal after several weeks of simulation execution.
 
 The introduction of  HAPA and human behaviour factors in the model required a better understanding of the user. The data collected from the real system was used to decide what relations and actions were the most important for state transitions and adherence computation.
 
-While DisCo specifications were enough to describe the real system implementation, it could be expanded to give more freedom in modelling. The relationships between classes were enough to represent the Heli world in the simulator. Main limitations of current DisCo specification toolset is the ability to specify complex mathematical formulas and the reduced semantics set during the simulation preparation. 
-
-The Animator tool was pleasant to use, however some improvements are needed to implement  external factors variability for the system under modelling during execution time. For the logs output processing it is desirable to add an export functionality to common standard formats like csv or database connectors.
-
-After several iterations of modelling, It was possible to generate large amount of data to discover new knowledge about real system. The data generated is found useful for other phases of software testing cycle in stage level systems. 
+While DisCo specifications were enough to describe the real system implementation, it could be expanded to give more freedom in modelling. The relationships between classes were enough to represent the Heli world in the simulator. Main limitations of current DisCo specification toolset is the ability to specify complex mathematical formulas and the reduced semantics set during the simulation preparation. The Animator tool was pleasant to use, however some improvements are needed to implement  external factors variability for the system under modelling during execution time. For the logs output processing it is desirable to add an export functionality to common standard formats like csv or database connectors. After several iterations of modelling, It was possible to generate large amount of data to discover new knowledge about real system. The data generated is found useful for other phases of software testing cycle in stage level systems. 
 
 More research is required to understand the impact of behavioural interventions on real life user lifestyle achievements and what aspects of user motivation is triggering the intention of resilience improvements.
+
  
-
-%JITAI systems like Heli appear to be a promising framework for developing mHealth interventions; however, this research is still in its infancy. Fuzzy measures like the proposed adherence formula constitute a practical option to model phenomena with the inherent uncertainty. Machine learning can be also a potent tool to enhance the effectiveness of a JITAI based computational models of human behaviour like the health action process approach (HAPA)\cite{MacPhail}.
-%JITAI systems like Heli appear to be a promising framework for developing mHealth interventions. In Heli, the number of users with fuzzy adherence was very small (25/98 $\approx$ 25.5\%) because most users (73/98 $\approx$ 74.5\%) prefer to use the system to store daily data without a specific goal. However, the  proposed interventions showed that even after several stress inputs patients do not leave the system. Although this research is still in its infancy, fuzzy measures like the proposed adherence formula constitute a practical option to model phenomena with the inherent uncertainty like the patient state measurement. As the emotional dimensions used in the research may not be the most adequate, we are currently pursuing researches to use machine learning tools to enhance the effectiveness of Heli based on computational models of human behaviour like the health action process approach (HAPA)\cite{MacPhail}.
-
-% --------------
-% 101 - do not send more messages --- desinterest
-% 102 - keep up the good work --- maintenance
-% 103 - prime to change --- motivation
-% 104 - physical activity increase ---maintenance
-% 105 - moderate active everyday life --- maintenance
-% 106 - reduce sedentary time --- maintenance
-% 107 - vegetables and fruits --- maintenance
-% 108 - better proteins --- maintenance
-% 109 - good carbs --- maintenance
-% 110 - regular meal pattern --- maintenance
-% 111 - healthy fats --- maintenance
-%
-% En los estados nuevos estan relacionados los goals directamente.
-% Rem : Me interesa sacar la probabilidad de que un usuario se mueva de un estado a otro.
-% Por ejemplo: del 103 al 104...109 y entre 104...109 puede saltar librement
-% el 101 es muy dificil moverlo porque esta desinteresado
-% y el 102 porque esta muy bien y no necesita ningun cambio
-% del 103 al 109 son los estados que demuestran apego al sistema
-% El sistema viejo es mas rectivo/retrospectivo
-% El sistema nuevo es mas predictivo
-%
-
-%After several stress inputs patients do not leave the system.
-
-%Most users (73/98 = 74.5\%) prefer to use the system to store daily data without a specific goal.
-
-%The emotional dimensions selected were not the most adequate
-
 \begin{thebibliography}{99}
-\bibliographystyle{splncs}
 
 \bibitem{Aaltonen} T. Aaltonen, M. Katara, and R. Pitkanen. DisCo toolset - the new generation. Journal of Universal Computer Science, 7(1):3-18, 2001.
 
@@ -357,8 +350,6 @@ More research is required to understand the impact of behavioural interventions 
 \bibitem{Giabbanelli2006} Angela Torres and Juan J. Nieto Fuzzy Logic in Medicine and Bioinformatics, Journal of Biomedicine and Biotechnology Volume 2006, Article ID 91908, Pages 1?7, DOI 10.1155/JBB/2006/91908
 
 \bibitem{Giabbanelli2014} Philippe J Giabbanelli and Rik Crutzen, Creating groups with similar expected behavioural response in randomized controlled trials: a fuzzy cognitive map approach, BMC Medical Research Methodology 2014, 14:130.
-
-%\bibitem{guidebook} Facilitating Treatment Adherence: A  Practitioner's Guidebook
 
 \bibitem{Gursel2016} Gursel G. Healthcare, uncertainty, and fuzzy logic. Digit Med 2016;2:101-12
 
@@ -384,10 +375,9 @@ More research is required to understand the impact of behavioural interventions 
 
 \bibitem{Prado} Carlos A Prado-Aguilar, Yolanda V Martinez, Yolanda Segovia-Bernal, Rosendo Reyes-Martnez and Raul Arias-Ulloa Performance of two questionnaires to measure treatment adherence in patients with Type-2 Diabetes, BMC Public Health. 2009 Jan 26;9:38. doi: 10.1186/1471-2458-9-38.
 
-%\bibitem{Sidorkiewicz} Stephanie Sidorkiewicz, Viet-Thi Tran, Cecile Cousyn, Elodie Perrodeau, and Philippe Ravaud: Development and validation of an instrument to assess treatment adherence for each individual drug taken by a patient.
 \bibitem{rem2012} Remberto Martinez and Marcos Tong: Can Mobile Health Deliver Participatory Medicine to  All Citizens in Modern Society? 4th International Conference on Well-Being in the Information Society, WIS 2012, Turku, 22 August 2012 - 24 August 2012 Pages 83-90.
 
-\bibitem{rem2017}  R. Martinez et all: Fuzzy Adherence Formula for the Evaluation of Just-In-Time Adaptive Interventions in the Health-e-living System. Proceedings of ISFUROS Symposium,  2017.
+\bibitem{rem2017}  Remberto Martinez, Marcos Tong and Luis Diago: Fuzzy Adherence Formula for the Evaluation of Just-In-Time Adaptive Interventions in the Health-e-living System. Proceedings of ISFUROS Symposium,  2017.
 
 \bibitem{Wan} Wai Yin Lam and Paula Fresco.: Medication Adherence Measures: An Overview. BioMed Research International Volume 2015, Article ID 217047, 12 pages doi: 10.1155/2015/217047
 
@@ -397,5 +387,3 @@ More research is required to understand the impact of behavioural interventions 
 
 
 \end{document}
-
-
